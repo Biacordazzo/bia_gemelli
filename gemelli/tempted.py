@@ -279,8 +279,9 @@ def tempted_factorize(table: biom.Table,
     (individual_biplot,
      state_loadings,
      dists,
-     svd_center) = res_
-    return individual_biplot, state_loadings, dists, svd_center
+     svd_center,
+     tensor_copy) = res_
+    return individual_biplot, state_loadings, dists, svd_center, tensor_copy
 
 
 def tempted(table: biom.Table,
@@ -479,6 +480,10 @@ def tempted(table: biom.Table,
                      replicate_handling=replicate_handling,
                      svd_centralized=svd_centralized,
                      n_components_centralize=n_components_centralize)
+    
+    print("copy tensor after pre-processing")
+    tensor_copy = copy.deepcopy(tensor)
+
     # run TEMPTED
     tempted_res = tempted_helper(tensor.individual_id_tables_centralized,
                                  tensor.individual_id_state_orders,
@@ -545,7 +550,7 @@ def tempted(table: biom.Table,
     svd_center.index.name = 'sampleid'
     state_loadings.index.name = 'sampleid'
 
-    return individual_ord, state_loadings, dists, svd_center
+    return individual_ord, state_loadings, dists, svd_center, tensor_copy
 
 
 def tempted_helper(individual_id_tables,
