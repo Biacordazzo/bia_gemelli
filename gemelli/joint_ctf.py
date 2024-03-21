@@ -1,10 +1,7 @@
 import copy
-import biom
 import numpy as np
 import pandas as pd
 import warnings
-import itertools
-from typing import Callable
 from scipy.spatial import distance
 from skbio import (OrdinationResults,
                    DistanceMatrix)
@@ -12,11 +9,8 @@ from scipy.sparse.linalg import svds
 
 from gemelli.optspace import svd_sort
 from gemelli.ctf import ctf_table_processing
-from gemelli.preprocessing import (build_sparse,
-                                   matrix_rclr)
-from gemelli._defaults import (DEFAULT_COMP, DEFAULT_MSC,
-                               DEFAULT_MFC, DEFAULT_MFF,
-                               DEFAULT_TEMPTED_PC,
+from gemelli.preprocessing import build_sparse
+from gemelli._defaults import (DEFAULT_COMP, 
                                DEFAULT_TEMPTED_EP,
                                DEFAULT_TEMPTED_SMTH,
                                DEFAULT_TEMPTED_RES,
