@@ -2,11 +2,7 @@ import copy
 import numpy as np
 import pandas as pd
 import warnings
-from scipy.spatial import distance
-from skbio import (OrdinationResults,
-                   DistanceMatrix)
 from scipy.sparse.linalg import svds
-
 from gemelli.optspace import svd_sort
 from gemelli.ctf import ctf_table_processing
 from gemelli.preprocessing import build_sparse
@@ -154,6 +150,97 @@ def udpate_residuals(table_mods, a_hat, b_hats,
 
     return tables_update, rsquared
 
+def get_prop_var(individual_loadings, 
+                 feature_loadings, lambda_coeffs, 
+                 n_components, centering=True):
+    '''
+    Get the proportion of variance explained by each component
+
+    Parameters
+    ----------
+    individual_loadings: np.narray, required
+        Subject loadings
+    
+    feature_loadings: dictionary, required
+        Feature loadings
+        keys = component
+        values = dictionary of modality-specific loadings
+    
+    lambda_coeffs: dictionary, required
+        Singular values
+    
+    n_components: int, required
+        The underlying rank of the data and number of
+        output dimentions.
+
+    centering: bool, optional : Default is True
+        Whether to re-center using a final svd
+
+    Returns
+    ----------
+    var_explained: dictionary
+        Proportion of variance explained by the
+        lambdas in each modality
+        keys = modality
+        values = component
+    '''
+    
+    #initialize subject and feature matrices
+    n_individuals_all = individual_loadings.shape[0]
+
+    a_hat_mat = pd.DataFrame(np.zeros((n_individuals_all, n_components)),
+                                       index=individual_loadings.index,
+                                       columns=individual_loadings.columns)
+    b_hat_mat = {}
+
+    for component in feature_loadings.keys():
+
+        b_hats = feature_loadings[component]
+        lambdas = lambda_coeffs[component]
+        b_hats_centered = []
+
+        for modality in b_hats.keys():
+            #sort and center feature loadings
+            b_hat = b_hats[modality].copy()
+            #b_hat = b_hat[b_hat.argsort()]
+            b_hat -= b_hat.mean(axis=0)
+            #multiply by singular value
+            lambda_mod = lambdas.loc[modality]
+            b_hat = lambda_mod * b_hat
+            b_hats_centered.extend(b_hat)
+
+        b_hat_mat[component] = b_hats_centered
+
+        #sort and center individual loadings
+        a_hat = individual_loadings[component]
+        #a_hat = a_hat[a_hat.argsort()]
+        a_hat -= a_hat.mean(axis=0)
+        a_hat_mat[component] = a_hat
+        
+    #concat feature matrix
+    b_hat_mat = pd.DataFrame(b_hat_mat)
+
+    if centering:
+        # re-center using a final svd
+        X = a_hat_mat.values @ b_hat_mat.T.values
+        possible_comp = [np.min(X.shape), n_components]
+        biplot_components = np.min(possible_comp)
+        X = X - X.mean(axis=0)
+        X = X - X.mean(axis=1).reshape(-1, 1)
+        u, s, v = svds(X, k=biplot_components, which='LM')
+        u, s, v = svd_sort(u, np.diag(s), v)
+        p = s * (1 / s.sum())
+        p = np.array(p[:biplot_components])
+
+        #save to dataframe
+        var_explained = pd.DataFrame(p.diagonal(), 
+                                     index=a_hat_mat.columns,
+                                     columns=['var_explained'])
+    else:
+        var_explained = lambda_coeffs.div(lambda_coeffs.sum(axis=1), 
+                                          axis=0)
+    return var_explained
+
 def reformat_loadings(original_loadings,
                       table_mods, n_components,
                       features=False):
@@ -256,22 +343,23 @@ def summation_check(mod_keys,
         columns = component
 
     prop_explained: dataframe, required
-        Coefficients of determination associated
-        with each lambda
-        rows = modality
-        columns = component
+        Proportion of variance explained by each
+        component
 
     Returns
     ----------
     Updated loadings and singular values
     '''
 
+    #initialize variables
     original_a_hat = copy.deepcopy(individual_loadings)
     individual_loadings = {}
-    
+    #determine sorting based on proportion of var explained
+    new_order = np.argsort(-prop_explained.values.flatten())
+    prop_explained = prop_explained.iloc[new_order]
+
     for modality in mod_keys:
         #revise the signs of eigenvalues
-        print(modality)
         lambda_ = np.array(lambda_coeff.loc[modality])
         lambda_ = np.where(lambda_ < 0, -lambda_, lambda_)
         a_hat = pd.DataFrame(np.where(lambda_[:, np.newaxis].T < 0,
@@ -289,23 +377,22 @@ def summation_check(mod_keys,
         #revise the signs of state loadings
         sgn_state_loadings = np.sign(phi_hat.sum(axis=0))
         phi_hat *= sgn_state_loadings
-        #save updated loadings and order by prop explained
-        prop_mod = np.array(prop_explained.loc[modality])
-        new_order = np.argsort(-prop_mod)
         #get original col names
         col_names = phi_hat.columns
+        #reorder loadings
         feature_loadings[modality] = b_hat.iloc[:, new_order]
         individual_loadings[modality] = a_hat.iloc[:, new_order]
         state_loadings[modality] = phi_hat.iloc[:, new_order]
         lambda_coeff.loc[modality] = lambda_[new_order]
-        prop_explained.loc[modality] = prop_mod[new_order]
         #make sure col names are updated too
         feature_loadings[modality].columns = col_names
         individual_loadings[modality].columns = col_names
         state_loadings[modality].columns = col_names
         lambda_coeff.columns = col_names
-        prop_explained.columns = col_names
 
+    #rename columns in case order of components changed
+    prop_explained.index = col_names
+    
     return (feature_loadings, individual_loadings, 
             state_loadings, lambda_coeff, prop_explained)
 
@@ -379,13 +466,17 @@ def update_lambda(individual_id_tables, ti,
         values = DataFrame, required
             rows = features
             columns = samples
+
     ti: list of int, required
         Time points within predefined interval for
         each individual 
+
     a_hat: np.narray, required
         Subject loadings from the previous iteration
+
     phi_hat: np.narray, required
         Temporal loadings from the previous iteration
+
     b_hat: np.narray, required
         Feature loadings from the previous iteration
 
@@ -1011,6 +1102,9 @@ def joint_ctf_helper(individual_id_tables,
     prop_explained = pd.DataFrame(np.zeros((len(table_mods), n_components)),
                                   index=table_mods.keys(),
                                   columns=n_component_col_names)
+    var_explained = pd.DataFrame(np.zeros((len(table_mods), n_components)),
+                                 index=table_mods.keys(),
+                                 columns=n_component_col_names)
     feature_cov_mats = {}
 
     #for the dicts below
@@ -1032,7 +1126,7 @@ def joint_ctf_helper(individual_id_tables,
         lambda_coeff.iloc[:, r] = list(lambdas.values())
         feature_loadings[comp_name] = b_hats
         state_loadings[comp_name] = phi_hats
-        
+
         #calculate residuals and update tables
         tables_update, rsquared = udpate_residuals(table_mods, a_hat, b_hats, 
                                                    phi_hats, times, lambdas)
@@ -1042,6 +1136,10 @@ def joint_ctf_helper(individual_id_tables,
         feature_cov_mat = feature_covariance(table_mods, b_hats, lambdas)
         feature_cov_mats[comp_name] = feature_cov_mat
         #note: could subset loadings/feature list first to calculate cov_mat
+
+    #calculate prop of variance explained
+    var_explained = get_prop_var(individual_loadings, feature_loadings, 
+                                 lambda_coeff, n_components)
 
     #reformat feature and state loadings
     feature_loadings = reformat_loadings(feature_loadings,
@@ -1056,12 +1154,12 @@ def joint_ctf_helper(individual_id_tables,
      individual_loadings,
      state_loadings,
      lambda_coeff,
-     prop_explained) = summation_check(table_mods.keys(),
+     var_explained) = summation_check(table_mods.keys(),
                                        feature_loadings, 
                                        individual_loadings,
                                        state_loadings, 
                                        lambda_coeff,
-                                       prop_explained)    
+                                       var_explained)
     #return original time points
     time_return = np.linspace(norm_interval[0],
                               norm_interval[1],
@@ -1077,7 +1175,7 @@ def joint_ctf_helper(individual_id_tables,
                                        axis=1)
     return (individual_loadings, feature_loadings, 
             state_loadings, lambda_coeff, 
-            prop_explained, feature_cov_mats)
+            var_explained, feature_cov_mats)
 
 def joint_ctf(tables, 
               sample_metadatas,
