@@ -158,16 +158,20 @@ def get_prop_var(individual_loadings,
 
     Parameters
     ----------
-    individual_loadings: np.narray, required
+    individual_loadings: dataframe, required
         Subject loadings
+        index = individual IDs
+        columns = component
     
     feature_loadings: dictionary, required
         Feature loadings
-        keys = component
-        values = dictionary of modality-specific loadings
+        keys = modality
+        values = dataframe of loadings for each component
     
-    lambda_coeffs: dictionary, required
+    lambda_coeffs: dataframe, required
         Singular values
+        index = modality
+        columns = component
     
     n_components: int, required
         The underlying rank of the data and number of
@@ -187,42 +191,43 @@ def get_prop_var(individual_loadings,
     
     #initialize subject and feature matrices
     n_individuals_all = individual_loadings.shape[0]
-
     a_hat_mat = pd.DataFrame(np.zeros((n_individuals_all, n_components)),
                                        index=individual_loadings.index,
                                        columns=individual_loadings.columns)
-    b_hat_mat = {}
-
-    for component in feature_loadings.keys():
-
-        b_hats = feature_loadings[component]
-        lambdas = lambda_coeffs[component]
-        b_hats_centered = []
-
-        for modality in b_hats.keys():
-            #sort and center feature loadings
-            b_hat = b_hats[modality].copy()
-            #b_hat = b_hat[b_hat.argsort()]
-            b_hat -= b_hat.mean(axis=0)
-            #multiply by singular value
-            lambda_mod = lambdas.loc[modality]
-            b_hat = lambda_mod * b_hat
-            b_hats_centered.extend(b_hat)
-
-        b_hat_mat[component] = b_hats_centered
-
-        #sort and center individual loadings
+    
+    #sort and center individual loadings
+    for component in individual_loadings.columns:
         a_hat = individual_loadings[component]
-        #a_hat = a_hat[a_hat.argsort()]
         a_hat -= a_hat.mean(axis=0)
         a_hat_mat[component] = a_hat
-        
+    
+    #initialize dataframe to store feature loadings
+    b_hat_mat_lst = []
+    
+    for modality in feature_loadings.keys():
+    
+        b_hats = feature_loadings[modality]
+        lambdas = lambda_coeffs.loc[modality]
+        b_hats_centered = {}
+
+        #sort and center feature loadings
+        for component in b_hats.keys():
+            b_hat = b_hats[component].copy()
+            b_hat -= b_hat.mean(axis=0)
+            #multiply by singular value
+            lambda_mod = lambdas[component]
+            b_hats_centered[component] = lambda_mod * b_hat
+
+        #create dataframe block
+        b_hat_mat_mod = pd.DataFrame(b_hats_centered).T
+        b_hat_mat_lst.append(b_hat_mat_mod)
+
     #concat feature matrix
-    b_hat_mat = pd.DataFrame(b_hat_mat)
+    b_hat_mat = pd.concat(b_hat_mat_lst, axis=1)
 
     if centering:
         # re-center using a final svd
-        X = a_hat_mat.values @ b_hat_mat.T.values
+        X = a_hat_mat.values @ b_hat_mat.values
         possible_comp = [np.min(X.shape), n_components]
         biplot_components = np.min(possible_comp)
         X = X - X.mean(axis=0)
@@ -240,6 +245,63 @@ def get_prop_var(individual_loadings,
         var_explained = lambda_coeffs.div(lambda_coeffs.sum(axis=1), 
                                           axis=0)
     return var_explained
+
+def lambda_sort(feature_loadings,
+                state_loadings, lambdas):
+    '''
+    Reorder and rename components based on the magnitude
+    of their corresponding singular values
+
+    Parameters
+    ----------
+    feature_loadings: dictionary, required
+        Feature loadings
+        keys = modality
+        values = dataframe of loadings for each component
+
+    state_loadings: dictionary, required
+        Temporal loadings
+        keys = modality
+        values = dataframe of loadings for each component
+    
+    lambda_coeffs: dataframe, required
+        Singular values
+        index = modality
+        columns = component
+
+    Returns
+    ----------
+    Loadings with reordered components
+    '''
+
+    #save component labels
+    components = lambdas.columns
+    n_components = len(components)
+    n_mods = len(lambdas.index)
+    sorted_lambdas = pd.DataFrame(np.zeros((n_mods, n_components)),
+                                  index=lambdas.index,
+                                  columns=components)
+    
+    for mod in lambdas.index:
+
+        #get mod-specific lambdas
+        lambda_mod = lambdas.loc[mod].copy()
+        order = np.argsort(-lambda_mod)
+        #save sorted lambdas
+        sorted_lambdas.loc[mod] = lambda_mod[order].values
+        col_order = [components[i] for i in order]
+        #sort feature loadings
+        b_hat = feature_loadings[mod]
+        b_hat = b_hat[col_order]
+        b_hat.columns = components
+        feature_loadings[mod] = b_hat
+        #sort state loadings
+        phi_hat = state_loadings[mod]
+        phi_hat = phi_hat[col_order]
+        phi_hat.columns = components
+        state_loadings[mod] = phi_hat
+
+    return feature_loadings, state_loadings, sorted_lambdas
 
 def reformat_loadings(original_loadings,
                       table_mods, n_components,
@@ -1137,16 +1199,23 @@ def joint_ctf_helper(individual_id_tables,
         feature_cov_mats[comp_name] = feature_cov_mat
         #note: could subset loadings/feature list first to calculate cov_mat
 
-    #calculate prop of variance explained
-    var_explained = get_prop_var(individual_loadings, feature_loadings, 
-                                 lambda_coeff, n_components)
-
-    #reformat feature and state loadings
+   #reformat feature and state loadings
     feature_loadings = reformat_loadings(feature_loadings,
                                          table_mods, n_components,
                                          features=True) 
     state_loadings = reformat_loadings(state_loadings,
                                        table_mods, n_components)
+    
+    #make sure lambdas are sorted in descending order per modality
+    #print("pre-lambda sorting lambdas\n", lambda_coeff)
+    (feature_loadings, 
+    state_loadings,
+    lambda_coeff) = lambda_sort(feature_loadings, 
+                                state_loadings, lambda_coeff)
+
+    #calculate prop of variance explained
+    var_explained = get_prop_var(individual_loadings, feature_loadings, 
+                                 lambda_coeff, n_components)
     
     #revise the signs to make sure summation is nonnegative
     #and order based on coefficient of determination
