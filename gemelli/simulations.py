@@ -226,7 +226,7 @@ def build_block_model(
                                            rank + 1)]).flatten(),
                                  columns=['example'],
                                  index=['sample_' + str(x)
-                                        for x in range(0, num_samples - 2)])
+                                        for x in range(1, num_samples+1)])
 
     X_noise = X_true.copy()
     X_noise = np.array(X_noise)
