@@ -509,6 +509,9 @@ def feature_covariance(table_mods, b_hats, lambdas):
     feature_cov_mat = pd.DataFrame(feature_cov_mat, 
                                    index=all_feature_ids, 
                                    columns=all_feature_ids)
+    #normalize so that values are between -1 and 1
+    feature_cov_mat = 2*(feature_cov_mat - feature_cov_mat.min().min()) \
+        / (feature_cov_mat.max().max() - feature_cov_mat.min().min()) - 1
 
     return feature_cov_mat
 
@@ -1143,6 +1146,7 @@ def joint_ctf_helper(individual_id_tables,
         interval = (timestamps_all[0], timestamps_all[-1])
     #define the input time range, equal to interval if none defined
     input_time_range = (timestamps_all[0], timestamps_all[-1])
+    
     #format time points and keep points in defined interval
     (table_mods, times,
     Kmats, Kmat_outputs,
@@ -1188,7 +1192,6 @@ def joint_ctf_helper(individual_id_tables,
         lambda_coeff.iloc[:, r] = list(lambdas.values())
         feature_loadings[comp_name] = b_hats
         state_loadings[comp_name] = phi_hats
-
         #calculate residuals and update tables
         tables_update, rsquared = udpate_residuals(table_mods, a_hat, b_hats, 
                                                    phi_hats, times, lambdas)
@@ -1198,25 +1201,22 @@ def joint_ctf_helper(individual_id_tables,
         feature_cov_mat = feature_covariance(table_mods, b_hats, lambdas)
         feature_cov_mats[comp_name] = feature_cov_mat
         #note: could subset loadings/feature list first to calculate cov_mat
-
+   
    #reformat feature and state loadings
     feature_loadings = reformat_loadings(feature_loadings,
                                          table_mods, n_components,
                                          features=True) 
     state_loadings = reformat_loadings(state_loadings,
                                        table_mods, n_components)
-    
     #make sure lambdas are sorted in descending order per modality
     #print("pre-lambda sorting lambdas\n", lambda_coeff)
     (feature_loadings, 
     state_loadings,
     lambda_coeff) = lambda_sort(feature_loadings, 
                                 state_loadings, lambda_coeff)
-
     #calculate prop of variance explained
     var_explained = get_prop_var(individual_loadings, feature_loadings, 
                                  lambda_coeff, n_components)
-    
     #revise the signs to make sure summation is nonnegative
     #and order based on coefficient of determination
     (feature_loadings, 
