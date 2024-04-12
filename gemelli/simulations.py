@@ -147,6 +147,52 @@ def block_diagonal_gaus(
 
     return mat
 
+def shape_noise(X_true, shape_function,
+                sps_lst, fts_lst):
+    """
+    Adds x-shaped noise (e.g. sine, sigmoid) to the
+    true data
+
+    Parameters
+    ----------
+    X_true : np.array
+        The true data
+
+    shape_function : list
+        List of function(s) to be applied to the data
+
+    sps_lst : list
+        List of sample indexes (cols) to apply 
+        corresponding function(s) to
+    
+    fts_lst : list
+        List of feature indexes (rows) to apply 
+        corresponding function(s) to
+
+    Returns
+    -------
+    np.array
+        The data with x-shaped noise added
+    """
+
+    #get shape of true data
+    _, cols = X_true.shape
+    #initialize array to store noise
+    X_noise = np.array([], dtype=np.int64).reshape(0,cols)
+
+    for fts, sps, func in zip(fts_lst, sps_lst, shape_function):
+        #get sample subset
+        X_true_sub = X_true[fts, sps]
+        #apply function
+        if func is not None:
+            vfunc = np.vectorize(func)
+            X_noise_sub = vfunc(X_true_sub)
+        else:
+            X_noise_sub = X_true_sub
+        #vstack
+        X_noise = np.vstack([X_noise, X_noise_sub])
+    
+    return X_noise
 
 def build_block_model(
         rank,
@@ -157,6 +203,9 @@ def build_block_model(
         num_samples,
         num_features,
         overlap=0,
+        shape_function=None,
+        sps_lst=None,
+        fts_lst=None,
         mapping_on=True):
     """
     Generates hetero and homo scedastic noise on base truth block
@@ -218,6 +267,17 @@ def build_block_model(
         overlap,
         minval=.01,
         maxval=C_)
+    
+    X_noise = X_true.copy()
+    X_noise = np.array(X_noise)
+
+    # add x-shaped noise to true data
+    if shape_function is not None:
+        X_noise = shape_noise(X_true, shape_function,
+                              sps_lst, fts_lst)
+    else:
+        pass
+
     if mapping_on:
         # make a mock mapping data
         mappning_ = pd.DataFrame(np.array([['Cluster %s' % str(x)] *
@@ -228,8 +288,6 @@ def build_block_model(
                                  index=['sample_' + str(x)
                                         for x in range(1, num_samples+1)])
 
-    X_noise = X_true.copy()
-    X_noise = np.array(X_noise)
     # add Homoscedastic noise
     X_noise = Homoscedastic(X_noise, hoced)
     # add Heteroscedastic noise
