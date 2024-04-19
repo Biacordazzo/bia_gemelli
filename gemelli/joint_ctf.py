@@ -510,8 +510,8 @@ def feature_covariance(table_mods, b_hats, lambdas):
                                    index=all_feature_ids, 
                                    columns=all_feature_ids)
     #normalize so that values are between -1 and 1
-    feature_cov_mat = 2*(feature_cov_mat - feature_cov_mat.min().min()) \
-        / (feature_cov_mat.max().max() - feature_cov_mat.min().min()) - 1
+    max_value = np.max(np.abs(feature_cov_mat.values))
+    feature_cov_mat = feature_cov_mat / max_value
 
     return feature_cov_mat
 
