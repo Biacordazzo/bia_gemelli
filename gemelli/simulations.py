@@ -147,28 +147,45 @@ def block_diagonal_gaus(
 
     return mat
 
-def shape_noise(X_true, shape_function,
-                sps_lst, fts_lst):
+def shape_noise(X, 
+                fxs,
+                f_intervals,
+                s_intervals,
+                n_timepoints=10,
+                col_handle='individual'):
     """
     Adds x-shaped noise (e.g. sine, sigmoid) to the
     true data
 
     Parameters
     ----------
-    X_true : np.array
+    X : np.array
         The true data
 
-    shape_function : list
-        List of function(s) to be applied to the data
+    fxs : list
+        List of functions to apply to the data
 
-    sps_lst : list
-        List of sample indexes (cols) to apply 
-        corresponding function(s) to
+    f_intervals : list
+        List of tuples of the form (f1, f2) where
+        f1 is the start index and f2 is the end index
+        of the features to apply the function to
     
-    fts_lst : list
-        List of feature indexes (rows) to apply 
-        corresponding function(s) to
-
+    s_intervals : list
+        List of tuples of the form (s1, s2) where
+        s1 is the start index and s2 is the end index 
+        of the samples to apply the function to
+    
+    n_timepoints : int
+        Number of timepoints per individual
+        Assumes that all individuals have the 
+        same number of timepoints
+    
+    col_handle : str
+        How to handle  (individuals)
+        'individual': apply function to all 
+            timepoints in each individual
+        'all': apply function to all columns
+    
     Returns
     -------
     np.array
@@ -176,23 +193,37 @@ def shape_noise(X_true, shape_function,
     """
 
     #get shape of true data
-    _, cols = X_true.shape
-    #initialize array to store noise
-    X_noise = np.array([], dtype=np.int64).reshape(0,cols)
+    rows, cols = X.shape
 
-    for fts, sps, func in zip(fts_lst, sps_lst, shape_function):
-        #get sample subset
-        X_true_sub = X_true[fts, sps]
-        #apply function
-        if func is not None:
-            vfunc = np.vectorize(func)
-            X_noise_sub = vfunc(X_true_sub)
-        else:
-            X_noise_sub = X_true_sub
-        #vstack
-        X_noise = np.vstack([X_noise, X_noise_sub])
-    
-    return X_noise
+    #loop through functions
+    for func, features, individuals in \
+        zip(fxs, f_intervals, s_intervals):
+
+        for f_coord, s_coord in zip(features, individuals):
+            f1, f2 = f_coord
+            s1, s2 = tuple(int(idx/n_timepoints) for idx in s_coord)
+            #get sample subset
+            if col_handle == 'individual':
+                #loop through individuals
+                for i in range(s1, s2):
+                    idx1 = i*n_timepoints
+                    idx2 = (i+1)*n_timepoints
+                    X_sub = X[f1:f2, idx1:idx2]
+                    X_sub_noise = np.apply_along_axis(func, 
+                                                      tps=10, 
+                                                      axis=1, 
+                                                      arr=X_sub)
+                    #update data
+                    X[f1:f2, idx1:idx2] = X_sub_noise
+            else:
+                X_sub = X[f1:f2, :]
+                X_sub_noise = np.apply_along_axis(func, 
+                                                  tps=cols, 
+                                                  axis=1, 
+                                                  arr=X_sub)
+                #update data
+                X[f1:f2, :] = X_sub_noise
+    return X
 
 def build_block_model(
         rank,
@@ -202,11 +233,14 @@ def build_block_model(
         C_,
         num_samples,
         num_features,
+        num_timepoints,
+        col_handle='individual',
         overlap=0,
-        shape_function=None,
-        sps_lst=None,
-        fts_lst=None,
-        mapping_on=True):
+        fxs=None,
+        f_intervals=None,
+        s_intervals=None,
+        mapping_on=True,
+        X_noise=None):
     """
     Generates hetero and homo scedastic noise on base truth block
     diagonal with Gaussian distributed values within blocks.
@@ -216,7 +250,6 @@ def build_block_model(
 
     rank : int
         Number of blocks
-
 
     hoced : int
         Amount of homoscedastic noise
@@ -238,13 +271,39 @@ def build_block_model(
 
     num_samples : int
         Number of columns
+    
+    num_timepoints : int
+        Number of timepoints per individual. Assumes all
+        individuals have the same number.
+
+    col_handle : str
+        How to handle  (individuals)
+        'individual': apply function to all 
+            timepoints in each individual
+        'all': apply function to all columns
 
     overlap : int
         The Number of overlapping columns (Default = 0)
 
+    fxs : list
+        List of functions to apply to the data
+
+    f_intervals : list
+        List of tuples of the form (f1, f2) where
+        f1 is the start index and f2 is the end index
+        of the features to apply the function to
+    
+    s_intervals : list
+        List of tuples of the form (s1, s2) where
+        s1 is the start index and s2 is the end index 
+        of the samples to apply the function to
+
     mapping_on : bool
         if true will return pandas dataframe mock mapping file by block
 
+    X_noise: np.array, default is None
+        Data with pre-added gaussian noise. Use this to ensure
+        the same underlying data is used for multiple simulations
 
     Returns
     -------
@@ -256,47 +315,45 @@ def build_block_model(
     Note
     ----
     The number of blocks specified by `nblocks` needs to be greater than 1.
-
     """
 
     # make a mock OTU table
-    X_true = block_diagonal_gaus(
-        num_samples,
-        num_features,
-        rank,
-        overlap,
-        minval=.01,
-        maxval=C_)
+    X_true = block_diagonal_gaus(num_samples,
+                                 num_features,
+                                 rank, overlap,
+                                 minval=.01,
+                                 maxval=C_)
+    if X_noise is None:
+        if mapping_on:
+            # make a mock mapping data
+            mappning_ = pd.DataFrame(np.array([['Cluster %s' % str(x)] *
+                                            int(num_samples / rank)
+                                            for x in range(1,
+                                            rank + 1)]).flatten(),
+                                    columns=['example'],
+                                    index=['sample_' + str(x)
+                                            for x in range(1, num_samples+1)])
+        X_noise = X_true.copy()
+        X_noise = np.array(X_noise)
+        # add Homoscedastic noise
+        X_noise = Homoscedastic(X_noise, hoced)
+        # add Heteroscedastic noise
+        X_noise = Heteroscedastic(X_noise, hsced)
+        # Induce low-density into the matrix
+        X_noise = Subsample(X_noise, spar, num_samples)
     
-    X_noise = X_true.copy()
-    X_noise = np.array(X_noise)
-
-    # add x-shaped noise to true data
-    if shape_function is not None:
-        X_noise = shape_noise(X_true, shape_function,
-                              sps_lst, fts_lst)
+    if fxs is not None:
+        X_signal = X_noise.copy()
+        # introduce specific signal(s)
+        X_signal = shape_noise(X_signal, fxs,
+                               f_intervals, s_intervals,
+                               n_timepoints=num_timepoints,
+                               col_handle=col_handle)
     else:
-        pass
-
-    if mapping_on:
-        # make a mock mapping data
-        mappning_ = pd.DataFrame(np.array([['Cluster %s' % str(x)] *
-                                           int(num_samples / rank)
-                                           for x in range(1,
-                                           rank + 1)]).flatten(),
-                                 columns=['example'],
-                                 index=['sample_' + str(x)
-                                        for x in range(1, num_samples+1)])
-
-    # add Homoscedastic noise
-    X_noise = Homoscedastic(X_noise, hoced)
-    # add Heteroscedastic noise
-    X_noise = Heteroscedastic(X_noise, hsced)
-    # Induce low-density into the matrix
-    X_noise = Subsample(X_noise, spar, num_samples)
-
+        X_signal = X_noise.copy()
+    
     # return the base truth and noisy data
     if mapping_on:
-        return X_true, X_noise, mappning_
+        return X_true, X_noise, X_signal, mappning_
     else:
-        return X_true, X_noise
+        return X_true, X_noise, X_signal
