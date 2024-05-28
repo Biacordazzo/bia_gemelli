@@ -781,16 +781,16 @@ def decomposition_iter(table_mods, individual_id_lst,
         a_num = {}
         a_denom = {}
         b_hat_difs = {}
+
         for modality in table_mods.keys():
-            
             #get key modality-specific variables
             table_mod = table_mods[modality]
             ti, ind_vec = times[modality]
             Kmat = Kmats[modality]
             Kmat_output = Kmat_outputs[modality]
             n_individuals = len(table_mod)
-            first_ind = list(table_mod.keys())[0]
-            n_features = table_mod[first_ind].shape[0]
+            mod_id_lst = list(table_mod.keys())
+            n_features = table_mod[mod_id_lst[0]].shape[0]
             
             if t == 0:
                 #initialize feature and subject loadings
@@ -803,6 +803,8 @@ def decomposition_iter(table_mods, individual_id_lst,
                 #update feature loadings
                 b_temp = b_num[modality]
                 common_denom_flat = np.array(list(common_denom[modality].values()))
+                #get a_hat from a_total based on ids in current modality
+                a_hat = np.array([a_total[id] for id in mod_id_lst])
                 b_new = np.dot(b_temp, a_hat) / np.dot(common_denom_flat, a_hat ** 2)
                 b_hat = b_new / np.sqrt(np.sum(b_new ** 2))
                 b_hat_difs[modality] = np.sum((b_hats[modality] - b_hat) ** 2)
@@ -832,14 +834,19 @@ def decomposition_iter(table_mods, individual_id_lst,
         a_tilde = np.array([a_num[id] / a_denom[id] for id in individual_id_lst])
         a_scaling = np.sqrt(np.sum(a_tilde ** 2))
         a_new = np.array([a_tilde[i] / a_scaling for i in range(len(a_tilde))])
-        a_hat_dif = np.sum((a_hat - a_new) ** 2)
-        a_hat = a_new
+        if t == 0:
+            a_hat_dif = np.sum((a_new) ** 2)
+        elif t > 0:
+            a_hat_dif = np.sum((a_hat_t - a_new) ** 2)
+        #save a_new to a_total dict
+        a_total = {key: a_new[i] for i, key in enumerate(individual_id_lst)}
+        a_hat_t = a_new
         #check for convergence
         dif = max([a_hat_dif]+list(b_hat_difs.values())) #or take mean of b_hat_difs?    
         t += 1
     print("Reached convergence in {} iterations".format(t))
 
-    return a_hat, b_hats, phi_hats, lambdas
+    return a_hat_t, b_hats, phi_hats, lambdas
 
 def format_time(individual_id_tables,
                 individual_id_state_orders, 
@@ -1137,8 +1144,9 @@ def joint_ctf_helper(individual_id_tables,
     #get all individual IDs
     individual_id_lst = list(orders_update.keys())
     n_individuals_all = len(individual_id_lst)
-    #get all time points across all modalities
-    timestamps_all = np.concatenate(list(orders_update.values()), axis=1)
+    timestamps_all = []
+    for arr in list(orders_update.values()):
+        timestamps_all.extend(arr)
     timestamps_all = np.concatenate(timestamps_all)
     timestamps_all = np.unique(timestamps_all)
     #set the interval if none is given
