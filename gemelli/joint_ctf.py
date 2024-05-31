@@ -1138,7 +1138,9 @@ def joint_ctf_helper(individual_id_tables,
     individual_id_lst = list(orders_update.keys())
     n_individuals_all = len(individual_id_lst)
     #get all time points across all modalities
-    timestamps_all = np.concatenate(list(orders_update.values()), axis=1)
+    timestamps_all = []
+    for arr in list(orders_update.values()):
+        timestamps_all.extend(arr)
     timestamps_all = np.concatenate(timestamps_all)
     timestamps_all = np.unique(timestamps_all)
     #set the interval if none is given
