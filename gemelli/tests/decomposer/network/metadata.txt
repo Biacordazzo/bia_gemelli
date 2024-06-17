@@ -1,0 +1,576 @@
+sample_name	season	subjects	add_0c	add_0c_group	facility	timepoint
+soil.hip.SHSU.2017.045.2017.12.25.day14	winter	2017.045	154.4	active	SHSU	154
+soil.hip.SHSU.2017.045.2017.12.26.day15	winter	2017.045	161.6	active	SHSU	162
+soil.hip.SHSU.2017.045.2017.12.24.day13	winter	2017.045	149.05	active	SHSU	149
+soil.hip.SHSU.2017.045.2017.12.23.day12	winter	2017.045	139.9	active	SHSU	140
+soil.hip.SHSU.2017.045.2017.12.21.day10	winter	2017.045	117.15	active	SHSU	117
+soil.hip.SHSU.2017.045.2017.12.22.day11	winter	2017.045	132.15	active	SHSU	132
+soil.hip.SHSU.2017.045.2017.12.20.day9	winter	2017.045	99.65	active	SHSU	100
+soil.hip.SHSU.2017.045.2017.12.19.day8	winter	2017.045	82.45	active	SHSU	82
+soil.hip.SHSU.2017.045.2017.12.17.day6	winter	2017.045	47.45	early	SHSU	47
+soil.hip.SHSU.2017.045.2017.12.18.day7	winter	2017.045	61.6	active	SHSU	62
+soil.hip.SHSU.2017.045.2017.12.16.day5	winter	2017.045	36.9	early	SHSU	37
+soil.hip.SHSU.2017.045.2017.12.15.day4	winter	2017.045	29.15	early	SHSU	29
+soil.hip.SHSU.2017.045.2017.12.13.day2	winter	2017.045	7.2	early	SHSU	7
+soil.hip.SHSU.2017.045.2017.12.14.day3	winter	2017.045	18.9	early	SHSU	19
+soil.hip.SHSU.2017.045.2017.12.12.day1	winter	2017.045	0	day0	SHSU	0
+soil.hip.SHSU.2017.043.2017.12.18.day19	winter	2017.043	205	advanced	SHSU	205
+soil.hip.SHSU.2017.043.2017.12.19.day20	winter	2017.043	225.85	advanced	SHSU	226
+soil.hip.SHSU.2017.043.2017.12.16.day17	winter	2017.043	180.3	active	SHSU	180
+soil.hip.SHSU.2017.043.2017.12.14.day15	winter	2017.043	162.3	active	SHSU	162
+soil.hip.SHSU.2017.043.2017.12.15.day16	winter	2017.043	172.55	active	SHSU	173
+soil.hip.SHSU.2017.043.2017.12.13.day14	winter	2017.043	150.6	active	SHSU	151
+soil.hip.SHSU.2017.043.2017.12.12.day13	winter	2017.043	143.4	active	SHSU	143
+soil.hip.SHSU.2017.043.2017.12.09.day10	winter	2017.043	111.45	active	SHSU	111
+soil.hip.SHSU.2017.043.2017.12.08.day9	winter	2017.043	103.65	active	SHSU	104
+soil.hip.SHSU.2017.043.2017.12.06.day7	winter	2017.043	96.1	active	SHSU	96
+soil.hip.SHSU.2017.043.2017.12.07.day8	winter	2017.043	100.55	active	SHSU	101
+soil.hip.SHSU.2017.043.2017.12.05.day6	winter	2017.043	88.6	active	SHSU	89
+soil.hip.SHSU.2017.043.2017.12.04.day5	winter	2017.043	72.5	active	SHSU	73
+soil.hip.SHSU.2017.043.2017.12.02.day3	winter	2017.043	31.95	early	SHSU	32
+soil.hip.SHSU.2017.043.2017.12.03.day4	winter	2017.043	49.45	early	SHSU	49
+soil.hip.SHSU.2017.043.2017.12.01.day2	winter	2017.043	14.75	early	SHSU	15
+soil.hip.SHSU.2017.043.2017.11.30.day1	winter	2017.043	0	day0	SHSU	0
+soil.hip.UTK.K016.09.2017.Jan.26.day20	winter	K016.09	212.9	advanced	UTK	213
+soil.hip.UTK.K016.09.2017.Jan.27.day21	winter	K016.09	215.9	advanced	UTK	216
+soil.hip.UTK.K016.09.2017.Jan.25.day19	winter	K016.09	202.2	advanced	UTK	202
+soil.hip.UTK.K016.09.2017.Jan.24.day18	winter	K016.09	194.1	active	UTK	194
+soil.hip.UTK.K016.09.2017.Jan.22.day16	winter	K016.09	174.6	active	UTK	175
+soil.hip.UTK.K016.09.2017.Jan.23.day17	winter	K016.09	186.2	active	UTK	186
+soil.hip.UTK.K016.09.2017.Jan.21.day15	winter	K016.09	161	active	UTK	161
+soil.hip.UTK.K016.09.2017.Jan.20.day14	winter	K016.09	148.3	active	UTK	148
+soil.hip.UTK.K016.09.2017.Jan.18.day12	winter	K016.09	124.1	active	UTK	124
+soil.hip.UTK.K016.09.2017.Jan.19.day13	winter	K016.09	133.9	active	UTK	134
+soil.hip.UTK.K016.09.2017.Jan.17.day11	winter	K016.09	109.7	active	UTK	110
+soil.hip.UTK.K016.09.2017.Jan.16.day10	winter	K016.09	94.1	active	UTK	94
+soil.hip.UTK.K016.09.2017.Jan.14.day8	winter	K016.09	64.5	active	UTK	65
+soil.hip.UTK.K016.09.2017.Jan.15.day9	winter	K016.09	80.4	active	UTK	80
+soil.hip.UTK.K016.09.2017.Jan.13.day7	winter	K016.09	49.3	early	UTK	49
+soil.hip.UTK.K016.09.2017.Jan.12.day6	winter	K016.09	32.8	early	UTK	33
+soil.hip.UTK.K016.09.2017.Jan.10.day4	winter	K016.09	3.9	early	UTK	4
+soil.hip.UTK.K016.09.2017.Jan.11.day5	winter	K016.09	15.8	early	UTK	16
+soil.hip.UTK.K016.09.2017.Jan.09.day3	winter	K016.09	0	early	UTK	0
+soil.hip.UTK.K016.09.2017.Jan.08.day2	winter	K016.09	0	early	UTK	0
+soil.hip.UTK.K016.07.2017.Jan.26.day20	winter	K016.07	212.9	advanced	UTK	213
+soil.hip.UTK.K016.07.2017.Jan.25.day19	winter	K016.07	202.2	advanced	UTK	202
+soil.hip.UTK.K016.07.2017.Jan.23.day17	winter	K016.07	186.2	active	UTK	186
+soil.hip.UTK.K016.07.2017.Jan.24.day18	winter	K016.07	194.1	active	UTK	194
+soil.hip.UTK.K016.07.2017.Jan.22.day16	winter	K016.07	174.6	active	UTK	175
+soil.hip.UTK.K016.07.2017.Jan.19.day13	winter	K016.07	133.9	active	UTK	134
+soil.hip.UTK.K016.07.2017.Jan.20.day14	winter	K016.07	148.3	active	UTK	148
+soil.hip.UTK.K016.07.2017.Jan.18.day12	winter	K016.07	124.1	active	UTK	124
+soil.hip.UTK.K016.07.2017.Jan.17.day11	winter	K016.07	109.7	active	UTK	110
+soil.hip.UTK.K016.07.2017.Jan.15.day9	winter	K016.07	80.4	active	UTK	80
+soil.hip.UTK.K016.07.2017.Jan.16.day10	winter	K016.07	94.1	active	UTK	94
+soil.hip.UTK.K016.07.2017.Jan.11.day5	winter	K016.07	15.8	early	UTK	16
+soil.hip.UTK.K016.07.2017.Jan.12.day6	winter	K016.07	32.8	early	UTK	33
+soil.hip.UTK.K016.07.2017.Jan.10.day4	winter	K016.07	3.9	early	UTK	4
+soil.hip.UTK.K016.07.2017.Jan.06.day1	winter	K016.07	0	day0	UTK	0
+soil.hip.UTK.K016.07.2017.Jan.08.day2	winter	K016.07	0	early	UTK	0
+soil.hip.UTK.K016.08.2017.Jan.27.day21	winter	K016.08	215.9	advanced	UTK	216
+soil.hip.UTK.K016.08.2017.Jan.26.day20	winter	K016.08	212.9	advanced	UTK	213
+soil.hip.UTK.K016.08.2017.Jan.24.day18	winter	K016.08	194.1	active	UTK	194
+soil.hip.UTK.K016.08.2017.Jan.23.day17	winter	K016.08	186.2	active	UTK	186
+soil.hip.UTK.K016.08.2017.Jan.22.day16	winter	K016.08	174.6	active	UTK	175
+soil.hip.UTK.K016.08.2017.Jan.20.day14	winter	K016.08	148.3	active	UTK	148
+soil.hip.UTK.K016.08.2017.Jan.21.day15	winter	K016.08	161	active	UTK	161
+soil.hip.UTK.K016.08.2017.Jan.19.day13	winter	K016.08	133.9	active	UTK	134
+soil.hip.UTK.K016.08.2017.Jan.16.day10	winter	K016.08	94.1	active	UTK	94
+soil.hip.UTK.K016.08.2017.Jan.17.day11	winter	K016.08	109.7	active	UTK	110
+soil.hip.UTK.K016.08.2017.Jan.15.day9	winter	K016.08	80.4	active	UTK	80
+soil.hip.UTK.K016.08.2017.Jan.14.day8	winter	K016.08	64.5	active	UTK	65
+soil.hip.UTK.K016.08.2017.Jan.13.day7	winter	K016.08	49.3	early	UTK	49
+soil.hip.UTK.K016.08.2017.Jan.11.day5	winter	K016.08	15.8	early	UTK	16
+soil.hip.UTK.K016.08.2017.Jan.10.day4	winter	K016.08	3.9	early	UTK	4
+soil.hip.UTK.K016.08.2017.Jan.08.day2	winter	K016.08	0	early	UTK	0
+soil.hip.UTK.K016.08.2017.Jan.09.day3	winter	K016.08	0	early	UTK	0
+soil.hip.UTK.K016.08.2017.Jan.06.day1	winter	K016.08	0	day0	UTK	0
+soil.hip.CMU.17.04.2017.03.day21	winter	Mr 17-04	267.15	advanced	CMU	267
+soil.hip.CMU.17.04.2017.03.day19	winter	Mr 17-04	243.55	advanced	CMU	244
+soil.hip.CMU.17.04.2017.03.day20	winter	Mr 17-04	254.4	advanced	CMU	254
+soil.hip.CMU.17.04.2017.03.day18	winter	Mr 17-04	235.2	advanced	CMU	235
+soil.hip.CMU.17.04.2017.03.day17	winter	Mr 17-04	224.05	advanced	CMU	224
+soil.hip.CMU.17.04.2017.03.day15	winter	Mr 17-04	202.45	advanced	CMU	202
+soil.hip.CMU.17.04.2017.03.day16	winter	Mr 17-04	213.25	advanced	CMU	213
+soil.hip.CMU.17.04.2017.03.day14	winter	Mr 17-04	191.65	active	CMU	192
+soil.hip.CMU.17.04.2017.03.day11	winter	Mr 17-04	144.95	active	CMU	145
+soil.hip.CMU.17.04.2017.03.day12	winter	Mr 17-04	162.45	active	CMU	162
+soil.hip.CMU.17.04.2017.03.day9	winter	Mr 17-04	109.7	active	CMU	110
+soil.hip.CMU.17.04.2017.03.day7	winter	Mr 17-04	76.65	active	CMU	77
+soil.hip.CMU.17.04.2017.03.day8	winter	Mr 17-04	92.2	active	CMU	92
+soil.hip.CMU.17.04.2017.03.day5	winter	Mr 17-04	46.95	early	CMU	47
+soil.hip.CMU.17.04.2017.03.day3	winter	Mr 17-04	24.15	early	CMU	24
+soil.hip.CMU.17.04.2017.03.day4	winter	Mr 17-04	34.15	early	CMU	34
+soil.hip.CMU.17.04.2017.03.day1	winter	Mr 17-04	0	day0	CMU	0
+soil.hip.CMU.17.01.2017.01.day22	winter	Mrs. 17-01	33.65	early	CMU	34
+soil.hip.CMU.17.01.2017.01.day20	winter	Mrs. 17-01	33.4	early	CMU	33
+soil.hip.CMU.17.01.2017.01.day19	winter	Mrs. 17-01	28.95	early	CMU	29
+soil.hip.CMU.17.01.2017.01.day17	winter	Mrs. 17-01	27.8	early	CMU	28
+soil.hip.CMU.17.01.2017.01.day18	winter	Mrs. 17-01	28.65	early	CMU	29
+soil.hip.CMU.17.01.2017.01.day16	winter	Mrs. 17-01	26.7	early	CMU	27
+soil.hip.CMU.17.01.2017.01.day13	winter	Mrs. 17-01	22.8	early	CMU	23
+soil.hip.CMU.17.01.2017.01.day14	winter	Mrs. 17-01	24.75	early	CMU	25
+soil.hip.CMU.17.01.2017.01.day12	winter	Mrs. 17-01	20.3	early	CMU	20
+soil.hip.SHSU.2017.046.2018.01.08.day21	winter	2017.046	156	active	SHSU	156
+soil.hip.SHSU.2017.046.2018.01.07.day20	winter	2017.046	144.6	active	SHSU	145
+soil.hip.SHSU.2017.046.2018.01.05.day18	winter	2017.046	122.1	active	SHSU	122
+soil.hip.SHSU.2017.046.2018.01.02.day15	winter	2017.046	109.2	active	SHSU	109
+soil.hip.SHSU.2017.046.2017.12.31.day13	winter	2017.046	109.15	active	SHSU	109
+soil.hip.SHSU.2017.046.2017.01.01.day14	winter	2017.046	109.2	active	SHSU	109
+soil.hip.SHSU.2017.046.2017.12.30.day12	winter	2017.046	105	active	SHSU	105
+soil.hip.SHSU.2017.046.2017.12.29.day11	winter	2017.046	95.8	active	SHSU	96
+soil.hip.SHSU.2017.046.2017.12.27.day9	winter	2017.046	83.6	active	SHSU	84
+soil.hip.SHSU.2017.046.2017.12.28.day10	winter	2017.046	88.3	active	SHSU	88
+soil.hip.SHSU.2017.046.2017.12.26.day8	winter	2017.046	79.15	active	SHSU	79
+soil.hip.SHSU.2017.046.2017.12.23.day5	winter	2017.046	57.45	active	SHSU	57
+soil.hip.SHSU.2017.046.2017.12.24.day6	winter	2017.046	66.6	active	SHSU	67
+soil.hip.SHSU.2017.046.2017.12.21.day3	winter	2017.046	34.7	early	SHSU	35
+soil.hip.SHSU.2017.046.2017.12.19.day1	winter	2017.046	0	day0	SHSU	0
+soil.hip.SHSU.2017.046.2017.12.20.day2	winter	2017.046	17.2	early	SHSU	17
+soil.hip.SHSU.2017.045.2017.12.31.day20	winter	2017.045	191.6	active	SHSU	192
+soil.hip.SHSU.2017.045.2017.12.29.day18	winter	2017.045	178.25	active	SHSU	178
+soil.hip.SHSU.2017.045.2017.12.30.day19	winter	2017.045	187.45	active	SHSU	187
+soil.hip.SHSU.2017.045.2017.12.28.day17	winter	2017.045	170.75	active	SHSU	171
+soil.hip.CMU.16.15.2016.12.day7	winter	Mr. 16-15	12.45	early	CMU	12
+soil.hip.CMU.16.15.2016.12.day6	winter	Mr. 16-15	12.45	early	CMU	12
+soil.hip.CMU.17.01.2017.01.day9	winter	Mrs. 17-01	8.65	early	CMU	9
+soil.hip.CMU.17.01.2017.01.day10	winter	Mrs. 17-01	12.25	early	CMU	12
+soil.hip.CMU.17.01.2017.01.day8	winter	Mrs. 17-01	6.15	early	CMU	6
+soil.hip.CMU.17.01.2017.01.day4	winter	Mrs. 17-01	0	early	CMU	0
+soil.hip.CMU.17.01.2017.01.day3	winter	Mrs. 17-01	0	early	CMU	0
+soil.hip.CMU.17.01.2017.01.day2	winter	Mrs. 17-01	0	early	CMU	0
+soil.hip.CMU.17.01.2017.01.day1	winter	Mrs. 17-01	0	day0	CMU	0
+soil.hip.CMU.16.15.2016.12.day20	winter	Mr. 16-15	19.35	early	CMU	19
+soil.hip.CMU.16.15.2016.12.day17	winter	Mr. 16-15	18.8	early	CMU	19
+soil.hip.CMU.16.15.2016.12.day18	winter	Mr. 16-15	19.35	early	CMU	19
+soil.hip.CMU.16.15.2016.12.day16	winter	Mr. 16-15	18.8	early	CMU	19
+soil.hip.CMU.16.15.2016.12.day12	winter	Mr. 16-15	12.7	early	CMU	13
+soil.hip.CMU.16.15.2016.12.day9	winter	Mr. 16-15	12.45	early	CMU	12
+soil.hip.UTK.K016.06.2016.10.25.day21	fall	UTK.K016.06	373.2	advanced	UTK	373
+soil.hip.UTK.K016.06.2016.10.24.day20	fall	UTK.K016.06	357.1	advanced	UTK	357
+soil.hip.UTK.K016.06.2016.10.21.day17	fall	UTK.K016.06	316.6	advanced	UTK	317
+soil.hip.UTK.K016.06.2016.10.22.day18	fall	UTK.K016.06	328.2	advanced	UTK	328
+soil.hip.UTK.K016.06.2016.10.20.day16	fall	UTK.K016.06	299.7	advanced	UTK	300
+soil.hip.UTK.K016.06.2016.10.19.day15	fall	UTK.K016.06	276	advanced	UTK	276
+soil.hip.UTK.K016.06.2016.10.17.day13	fall	UTK.K016.06	229.7	advanced	UTK	230
+soil.hip.UTK.K016.06.2016.10.18.day14	fall	UTK.K016.06	252.1	advanced	UTK	252
+soil.hip.UTK.K016.06.2016.10.16.day12	fall	UTK.K016.06	209.3	advanced	UTK	209
+soil.hip.UTK.K016.06.2016.10.15.day11	fall	UTK.K016.06	187.6	active	UTK	188
+soil.hip.UTK.K016.06.2016.10.13.day9	fall	UTK.K016.06	146.4	active	UTK	146
+soil.hip.UTK.K016.06.2016.10.14.day10	fall	UTK.K016.06	166.5	active	UTK	167
+soil.hip.UTK.K016.06.2016.10.11.day7	fall	UTK.K016.06	112.4	active	UTK	112
+soil.hip.UTK.K016.06.2016.10.09.day5	fall	UTK.K016.06	79.4	active	UTK	79
+soil.hip.UTK.K016.06.2016.10.08.day4	fall	UTK.K016.06	62.5	active	UTK	63
+soil.hip.UTK.K016.06.2016.10.07.day3	fall	UTK.K016.06	40.8	early	UTK	41
+soil.hip.UTK.K016.06.2016.10.05.day1	fall	UTK.K016.06	0	day0	UTK	0
+soil.hip.UTK.K016.06.2016.10.06.day2	fall	UTK.K016.06	20.4	early	UTK	20
+soil.hip.UTK.K016.05.2016.10.16.day21	fall	UTK.K016.05	383	advanced	UTK	383
+soil.hip.UTK.K016.05.2016.10.15.day20	fall	UTK.K016.05	361.3	advanced	UTK	361
+soil.hip.UTK.K016.05.2016.10.13.day18	fall	UTK.K016.05	320.1	advanced	UTK	320
+soil.hip.UTK.K016.05.2016.10.14.day19	fall	UTK.K016.05	340.2	advanced	UTK	340
+soil.hip.UTK.K016.05.2016.10.12.day17	fall	UTK.K016.05	302.8	advanced	UTK	303
+soil.hip.UTK.K016.05.2016.10.11.day16	fall	UTK.K016.05	286.1	advanced	UTK	286
+soil.hip.UTK.K016.05.2016.10.09.day14	fall	UTK.K016.05	253.1	advanced	UTK	253
+soil.hip.UTK.K016.05.2016.10.10.day15	fall	UTK.K016.05	269.7	advanced	UTK	270
+soil.hip.UTK.K016.05.2016.10.08.day13	fall	UTK.K016.05	236.2	advanced	UTK	236
+soil.hip.UTK.K016.05.2016.10.05.day10	fall	UTK.K016.05	173.7	active	UTK	174
+soil.hip.UTK.K016.05.2016.10.06.day11	fall	UTK.K016.05	194.1	active	UTK	194
+soil.hip.UTK.K016.05.2016.10.02.day7	fall	UTK.K016.05	111.5	active	UTK	112
+soil.hip.UTK.K016.05.2016.09.30.day5	fall	UTK.K016.05	76.2	active	UTK	76
+soil.hip.UTK.K016.05.2016.09.29.day4	fall	UTK.K016.05	60.4	active	UTK	60
+soil.hip.UTK.K016.05.2016.09.27.day2	fall	UTK.K016.05	21.3	early	UTK	21
+soil.hip.UTK.K016.05.2016.09.28.day3	fall	UTK.K016.05	41.7	early	UTK	42
+soil.hip.UTK.K016.05.2016.09.26.day1	fall	UTK.K016.05	0	day0	UTK	0
+soil.hip.UTK.K016.04.2016.10.16.day21	fall	UTK.K016.04	383	advanced	UTK	383
+soil.hip.UTK.K016.04.2016.10.14.day19	fall	UTK.K016.04	340.2	advanced	UTK	340
+soil.hip.UTK.K016.04.2016.10.15.day20	fall	UTK.K016.04	361.3	advanced	UTK	361
+soil.hip.UTK.K016.04.2016.10.13.day18	fall	UTK.K016.04	320.1	advanced	UTK	320
+soil.hip.UTK.K016.04.2016.10.12.day17	fall	UTK.K016.04	302.8	advanced	UTK	303
+soil.hip.UTK.K016.04.2016.10.10.day15	fall	UTK.K016.04	269.7	advanced	UTK	270
+soil.hip.UTK.K016.04.2016.10.09.day14	fall	UTK.K016.04	253.1	advanced	UTK	253
+soil.hip.UTK.K016.04.2016.10.08.day13	fall	UTK.K016.04	236.2	advanced	UTK	236
+soil.hip.UTK.K016.04.2016.10.07.day12	fall	UTK.K016.04	214.5	advanced	UTK	215
+soil.hip.UTK.K016.04.2016.10.05.day10	fall	UTK.K016.04	173.7	active	UTK	174
+soil.hip.UTK.K016.04.2016.10.04.day9	fall	UTK.K016.04	152.3	active	UTK	152
+soil.hip.UTK.K016.04.2016.10.02.day7	fall	UTK.K016.04	111.5	active	UTK	112
+soil.hip.UTK.K016.04.2016.10.03.day8	fall	UTK.K016.04	130.7	active	UTK	131
+soil.hip.UTK.K016.04.2016.09.27.day2	fall	UTK.K016.04	21.3	early	UTK	21
+soil.hip.UTK.K016.04.2016.09.26.day1	fall	UTK.K016.04	0	day0	UTK	0
+soil.hip.SHSU.2016.076.2016.12.11.day20	fall	2016.076	236.4	advanced	SHSU	236
+soil.hip.SHSU.2016.076.2016.12.12.day21	fall	2016.076	254.5	advanced	SHSU	255
+soil.hip.SHSU.2016.076.2016.12.10.day19	fall	2016.076	219.45	advanced	SHSU	219
+soil.hip.SHSU.2016.076.2016.12.09.day18	fall	2016.076	213.9	advanced	SHSU	214
+soil.hip.SHSU.2016.076.2016.12.07.day16	fall	2016.076	203	advanced	SHSU	203
+soil.hip.SHSU.2016.076.2016.12.08.day17	fall	2016.076	210.25	advanced	SHSU	210
+soil.hip.SHSU.2016.076.2016.12.06.day15	fall	2016.076	190.5	active	SHSU	191
+soil.hip.SHSU.2016.076.2016.12.05.day14	fall	2016.076	178.6	active	SHSU	179
+soil.hip.SHSU.2016.076.2016.12.03.day12	fall	2016.076	159.15	active	SHSU	159
+soil.hip.SHSU.2016.076.2016.12.04.day13	fall	2016.076	169.15	active	SHSU	169
+soil.hip.SHSU.2016.076.2016.12.02.day11	fall	2016.076	149.4	active	SHSU	149
+soil.hip.SHSU.2016.076.2016.12.01.day10	fall	2016.076	137.75	active	SHSU	138
+soil.hip.SHSU.2016.076.2016.11.29.day8	fall	2016.076	116.1	active	SHSU	116
+soil.hip.SHSU.2016.076.2016.11.30.day9	fall	2016.076	127.45	active	SHSU	127
+soil.hip.SHSU.2016.076.2016.11.28.day7	fall	2016.076	99.45	active	SHSU	99
+soil.hip.SHSU.2016.076.2016.11.23.day2	fall	2016.076	15.55	early	SHSU	16
+soil.hip.SHSU.2016.076.2016.11.22.day1	fall	2016.076	0	day0	SHSU	0
+soil.hip.SHSU.2016.072.2016.11.23.day20	fall	2016.072	342.45	advanced	SHSU	342
+soil.hip.SHSU.2016.076.2016.11.27.day6	fall	2016.076	80.3	active	SHSU	80
+soil.hip.SHSU.2016.076.2016.11.25.day4	fall	2016.076	47.5	early	SHSU	48
+soil.hip.SHSU.2016.076.2016.11.26.day5	fall	2016.076	63.6	active	SHSU	64
+soil.hip.SHSU.2016.076.2016.11.24.day3	fall	2016.076	30.55	early	SHSU	31
+soil.hip.SHSU.2016.072.2016.11.20.day17	fall	2016.072	289.9	advanced	SHSU	290
+soil.hip.SHSU.2016.072.2016.11.21.day18	fall	2016.072	305.2	advanced	SHSU	305
+soil.hip.SHSU.2016.072.2016.11.19.day16	fall	2016.072	281	advanced	SHSU	281
+soil.hip.SHSU.206.072.2016.11.16.day13	fall	2016.072	230.7	advanced	SHSU	231
+soil.hip.SHSU.2016.072.2016.11.15.day12	fall	2016.072	209.6	advanced	SHSU	210
+soil.hip.SHSU.2016.072.2016.11.14.day11	fall	2016.072	189.05	active	SHSU	189
+soil.hip.SHSU.2016.072.2016.11.12.day9	fall	2016.072	154	active	SHSU	154
+soil.hip.SHSU.2016.072.2016.11.13.day10	fall	2016.072	170.4	active	SHSU	170
+soil.hip.SHSU.2016.072.2016.11.11.day8	fall	2016.072	135.35	active	SHSU	135
+soil.hip.SHSU.2016.072.2016.11.10.day7	fall	2016.072	117.55	active	SHSU	118
+soil.hip.SHSU.2016.072.2016.11.08.day5	fall	2016.072	82	active	SHSU	82
+soil.hip.SHSU.2016.072.2016.11.09.day6	fall	2016.072	100.6	active	SHSU	101
+soil.hip.SHSU.2016.072.2016.11.07.day4	fall	2016.072	62.55	active	SHSU	63
+soil.hip.SHSU.2016.072.2016.11.06.day3	fall	2016.072	40.6	early	SHSU	41
+soil.hip.SHSU.2016.072.2016.11.04.day1	fall	2016.072	0	day0	SHSU	0
+soil.hip.SHSU.2016.072.2016.11.05.day2	fall	2016.072	19.45	early	SHSU	19
+soil.hip.SHSU.2016.073.2016.11.23.day20	fall	2016.073	342.45	advanced	SHSU	342
+soil.hip.SHSU.2016.073.2016.11.21.day18	fall	2016.073	305.2	advanced	SHSU	305
+soil.hip.SHSU.2016.073.2016.11.22.day19	fall	2016.073	326.9	advanced	SHSU	327
+soil.hip.SHSU.2016.073.2016.11.19.day16	fall	2016.073	281	advanced	SHSU	281
+soil.hip.SHSU.2016.073.2016.11.17.day14	fall	2016.073	252.9	advanced	SHSU	253
+soil.hip.SHSU.2016.073.2016.11.13.day10	fall	2016.073	170.4	active	SHSU	170
+soil.hip.SHSU.2016.073.2016.11.14.day11	fall	2016.073	189.05	active	SHSU	189
+soil.hip.SHSU.2016.073.2016.11.06.day3	fall	2016.073	40.6	early	SHSU	41
+soil.hip.CMU.17.10.2017.08.27.day19	summer	17-10	451.65	advanced	CMU	452
+soil.hip.CMU.17.10.2017.08.28.day20	summer	17-10	477.8	advanced	CMU	478
+soil.hip.CMU.17.10.2017.08.26.day18	summer	17-10	424.7	advanced	CMU	425
+soil.hip.CMU.17.10.2017.08.25.day17	summer	17-10	398.55	advanced	CMU	399
+soil.hip.CMU.17.10.2017.08.23.day15	summer	17-10	348.05	advanced	CMU	348
+soil.hip.CMU.17.10.2017.08.24.day16	summer	17-10	373.85	advanced	CMU	374
+soil.hip.CMU.17.10.2017.08.22.day14	summer	17-10	322.8	advanced	CMU	323
+soil.hip.CMU.17.10.2017.08.19.day11	summer	17-10	244.45	advanced	CMU	244
+soil.hip.CMU.17.10.2017.08.20.day12	summer	17-10	270.85	advanced	CMU	271
+soil.hip.CMU.17.10.2017.08.18.day10	summer	17-10	219.2	advanced	CMU	219
+soil.hip.CMU.17.10.2017.08.17.day9	summer	17-10	193.95	active	CMU	194
+soil.hip.CMU.17.10.2017.08.16.day8	summer	17-10	169.5	active	CMU	170
+soil.hip.CMU.17.10.2017.08.14.day6	summer	17-10	122.55	active	CMU	123
+soil.hip.CMU.17.10.2017.08.11.day3	summer	17-10	49.75	early	CMU	50
+soil.hip.CMU.17.10.2017.08.12.day4	summer	17-10	72	active	CMU	72
+soil.hip.CMU.17.10.2017.08.10.day2	summer	17-10	25.55	early	CMU	26
+soil.hip.CMU.17.10.2017.08.09.day1	summer	17-10	0	day0	CMU	0
+soil.hip.CMU.16.14.2016.12.day.day20	fall	16-14	19.4	early	CMU	19
+soil.hip.CMU.16.14.2016.12.day.day21	fall	16-14	19.4	early	CMU	19
+soil.hip.CMU.16.14.2016.12.day.day15	fall	16-14	6.95	early	CMU	7
+soil.hip.CMU.16.14.2016.12.day.day14	fall	16-14	6.95	early	CMU	7
+soil.hip.CMU.16.15.2016.12.day5	winter	Mr. 16-15	12.45	early	CMU	12
+soil.hip.CMU.16.15.2016.12.day4	winter	Mr. 16-15	5.8	early	CMU	6
+soil.hip.CMU.16.14.2016.12.day.day7	fall	16-14	1.4	early	CMU	1
+soil.hip.CMU.16.14.2016.12.day.day8	fall	16-14	1.4	early	CMU	1
+soil.hip.CMU.16.12.2016.11.day.day21	fall	16-12	31.1	early	CMU	31
+soil.hip.CMU.16.14.2016.11.day.day1	fall	16-14	0	day0	CMU	0
+soil.hip.CMU.16.12.2016.11.day.day18	fall	16-12	27.5	early	CMU	28
+soil.hip.CMU.16.12.2016.11.day.day14	fall	16-12	26.1	early	CMU	26
+soil.hip.CMU.16.12.2016.11.day.day11	fall	16-12	26.1	early	CMU	26
+soil.hip.CMU.16.12.2016.10.day.day9	fall	16-12	26.1	early	CMU	26
+soil.hip.CMU.16.12.2016.10.day.day8	fall	16-12	26.1	early	CMU	26
+soil.hip.CMU.16.12.2016.10.day.day7	fall	16-12	25.8	early	CMU	26
+soil.hip.CMU.16.12.2016.10.day.day3	fall	16-12	11.1	early	CMU	11
+soil.hip.SHSU.2016.067.2016.10.05.day20	summer	2016.067	486.1	advanced	SHSU	486
+soil.hip.SHSU2016.067.2016.10.03.day18	summer	2016.067	432.5	advanced	SHSU	433
+soil.hip.SHSU.2016.067.2016.09.29.day14	summer	2016.067	348.1	advanced	SHSU	348
+soil.hip.SHSU.2016.067.2016.09.25.day10	summer	2016.067	256.45	advanced	SHSU	256
+soil.hip.SHSU.2016.067.2016.09.26.day11	summer	2016.067	280.6	advanced	SHSU	281
+soil.hip.SHSU.2016.067.2016.09.24.day9	summer	2016.067	229.8	advanced	SHSU	230
+soil.hip.SHSU.2016.067.2016.09.23.day8	summer	2016.067	201.45	advanced	SHSU	201
+soil.hip.SHSU.2016.067.2016.09.21.day6	summer	2016.067	146.15	active	SHSU	146
+soil.hip.SHSU.2016.067.2016.09.22.day7	summer	2016.067	173.4	active	SHSU	173
+soil.hip.SHSU.2016.067.2016.09.20.day5	summer	2016.067	118.95	active	SHSU	119
+soil.hip.SHSU.2016.067.2016.09.17.day2	summer	2016.067	29.2	early	SHSU	29
+soil.hip.SHSU.2016.067.2016.09.18.day3	summer	2016.067	58.9	active	SHSU	59
+soil.hip.SHSU.2016.067.2016.09.16.day1	summer	2016.067	0	day0	SHSU	0
+soil.hip.SHSU.2016.064.2016.09.12.day19	summer	2016.064	503.3333333	advanced	SHSU	503
+soil.hip.SHSU.2016.064.2016.09.13.day20	summer	2016.064	530.8333333	advanced	SHSU	531
+soil.hip.SHSU.2016.064.2016.09.11.day18	summer	2016.064	476.1111111	advanced	SHSU	476
+soil.hip.SHSU.2016.064.2016.09.10.day17	summer	2016.064	449.4444444	advanced	SHSU	449
+soil.hip.SHSU.2016.064.2016.09.08.day15	summer	2016.064	393.6111111	advanced	SHSU	394
+soil.hip.SHSU.2016.064.2016.09.09.day16	summer	2016.064	422.2222222	advanced	SHSU	422
+soil.hip.SHSU.2016.064.2016.09.07.day14	summer	2016.064	364.1666667	advanced	SHSU	364
+soil.hip.SHSU.2016.064.2016.09.06.day13	summer	2016.064	335.5555556	advanced	SHSU	336
+soil.hip.SHSU.2016.064.2016.09.04.day11	summer	2016.064	278.0555556	advanced	SHSU	278
+soil.hip.SHSU.2016.064.2016.09.05.day12	summer	2016.064	306.9444444	advanced	SHSU	307
+soil.hip.SHSU.2016.064.2016.09.03.day10	summer	2016.064	250.2777778	advanced	SHSU	250
+soil.hip.SHSU.2016.064.2016.09.02.day9	summer	2016.064	223.0555556	advanced	SHSU	223
+soil.hip.SHSU.2016.064.2016.08.31.day7	summer	2016.064	166.3888889	active	SHSU	166
+soil.hip.SHSU.2016.064.2016.09.01.day8	summer	2016.064	195.5555556	active	SHSU	196
+soil.hip.SHSU.2016.064.2016.08.30.day6	summer	2016.064	137.5	active	SHSU	138
+soil.hip.SHSU.2016.064.2016.08.27.day3	summer	2016.064	55.27777778	active	SHSU	55
+soil.hip.SHSU.2016.064.2016.08.28.day4	summer	2016.064	82.22222222	active	SHSU	82
+soil.hip.SHSU.2016.064.2016.08.26.day2	summer	2016.064	27.5	early	SHSU	28
+soil.hip.SHSU.2016.064.2016.08.25.day1	summer	2016.064	0	day0	SHSU	0
+soil.hip.SHSU.2016.065.2016.09.14.day21	summer	2016.065	558.6111111	advanced	SHSU	559
+soil.hip.SHSU.2016.065.2016.09.12.day19	summer	2016.065	503.3333333	advanced	SHSU	503
+soil.hip.SHSU.2016.065.2016.09.11.day18	summer	2016.065	476.1111111	advanced	SHSU	476
+soil.hip.SHSU.2016.065.2016.09.10.day17	summer	2016.065	449.4444444	advanced	SHSU	449
+soil.hip.SHSU.2016.065.2016.09.07.day14	summer	2016.065	364.1666667	advanced	SHSU	364
+soil.hip.SHSU.2016.065.2016.09.04.day11	summer	2016.065	278.0555556	advanced	SHSU	278
+soil.hip.SHSU2016.065.2016.09.03.day10	summer	2016.065	250.2777778	advanced	SHSU	250
+soil.hip.SHSU.2016.065.2016.08.31.day7	summer	2016.065	166.3888889	active	SHSU	166
+soil.hip.SHSU.2016.065.2016.08.30.day6	summer	2016.065	137.5	active	SHSU	138
+soil.hip.SHSU.2016.065.2016.08.28.day4	summer	2016.065	82.22222222	active	SHSU	82
+soil.hip.SHSU.2016.065.2016.08.29.day5	summer	2016.065	109.4444444	active	SHSU	109
+soil.hip.SHSU.2016.065.2016.08.27.day3	summer	2016.065	55.27777778	active	SHSU	55
+soil.hip.UTK.K016.12.2017.06.14.day21	summer	UTK.K016.12	441.3	advanced	UTK	441
+soil.hip.SHSU.2016.065.2016.08.26.day2	summer	2016.065	27.5	early	SHSU	28
+soil.hip.UTK.K016.12.2017.06.12.day19	summer	UTK.K016.12	392.2	advanced	UTK	392
+soil.hip.UTK.K016.12.2017.06.10.day17	summer	UTK.K016.12	341.7	advanced	UTK	342
+soil.hip.UTK.K016.12.2017.06.11.day18	summer	UTK.K016.12	366.3	advanced	UTK	366
+soil.hip.UTK.K016.12.2017.06.09.day16	summer	UTK.K016.12	319.6	advanced	UTK	320
+soil.hip.UTK.K016.12.2017.06.08.day15	summer	UTK.K016.12	298.6	advanced	UTK	299
+soil.hip.UTK.K016.12.2017.06.06.day13	summer	UTK.K016.12	258.6	advanced	UTK	259
+soil.hip.UTK.K016.12.2017.06.07.day14	summer	UTK.K016.12	278.9	advanced	UTK	279
+soil.hip.UTK.K016.12.2017.06.05.day12	summer	UTK.K016.12	236.6	advanced	UTK	237
+soil.hip.UTK.K016.12.2017.06.04.day11	summer	UTK.K016.12	215.2	advanced	UTK	215
+soil.hip.UTK.K016.12.2017.06.02.day9	summer	UTK.K016.12	170.3	active	UTK	170
+soil.hip.UTK.K016.12.2017.06.03.day10	summer	UTK.K016.12	193.3	active	UTK	193
+soil.hip.UTK.K016.12.2017.06.01.day8	summer	UTK.K016.12	148.5	active	UTK	149
+soil.hip.UTK.K016.12.2017.05.29.day5	summer	UTK.K016.12	84.2	active	UTK	84
+soil.hip.UTK.K016.12.2017.05.30.day6	summer	UTK.K016.12	105.8	active	UTK	106
+soil.hip.UTK.K016.12.2017.05.27.day3	summer	UTK.K016.12	41.5	early	UTK	42
+soil.hip.UTK.K016.12.2017.05.25.day1	summer	UTK.K016.12	0	day0	UTK	0
+soil.hip.UTK.K016.12.2017.05.26.day2	summer	UTK.K016.12	18.3	early	UTK	18
+soil.hip.UTK.K016.11.2017.06.11.day18	summer	UTK.K016.11	366.3	advanced	UTK	366
+soil.hip.UTK.K016.11.2017.06.12.day19	summer	UTK.K016.11	392.2	advanced	UTK	392
+soil.hip.UTK.K016.11.2017.06.10.day17	summer	UTK.K016.11	341.7	advanced	UTK	342
+soil.hip.UTK.K016.11.2017.06.09.day16	summer	UTK.K016.11	319.6	advanced	UTK	320
+soil.hip.UTK.K016.11.2017.06.07.day14	summer	UTK.K016.11	278.9	advanced	UTK	279
+soil.hip.UTK.K016.11.2017.06.08.day15	summer	UTK.K016.11	298.6	advanced	UTK	299
+soil.hip.UTK.K016.11.2017.06.06.day13	summer	UTK.K016.11	258.6	advanced	UTK	259
+soil.hip.CMU.16.14.2016.12.day.day4	fall	16-14	0	early	CMU	0
+soil.hip.CMU.16.14.2016.12.day.day3	fall	16-14	0	early	CMU	0
+soil.hip.CMU.16.09.2016.08.10.day16	summer	Mrs. 16-09	397.75	advanced	CMU	398
+soil.hip.CMU.16.09.2016.08.08.day14	summer	Mrs. 16-09	343.3	advanced	CMU	343
+soil.hip.CMU.16.09.2016.08.07.day13	summer	Mrs. 16-09	317.75	advanced	CMU	318
+soil.hip.CMU.16.09.2016.08.05.day11	summer	Mrs. 16-09	269.7	advanced	CMU	270
+soil.hip.CMU.16.09.2016.08.02.day8	summer	Mrs. 16-09	196.65	active	CMU	197
+soil.hip.CMU.16.09.2016.07.29.day4	summer	Mrs. 16-09	86.6	active	CMU	87
+soil.hip.CMU.16.09.2016.07.27.day2	summer	Mrs. 16-09	28.3	early	CMU	28
+soil.hip.CMU.16.09.2016.07.28.day3	summer	Mrs. 16-09	57.45	active	CMU	57
+soil.hip.CMU.16.09.2016.07.26.day1	summer	Mrs. 16-09	0	day0	CMU	0
+soil.hip.CMU.17.12.2017.10.22.day13	fall	17-12	141.75	active	CMU	142
+soil.hip.CMU.17.12.2017.10.20.day11	fall	17-12	125.05	active	CMU	125
+soil.hip.CMU.17.12.2017.10.19.day10	fall	17-12	107.85	active	CMU	108
+soil.hip.CMU.17.12.2017.10.17.day8	fall	17-12	80.35	active	CMU	80
+soil.hip.CMU.17.12.2017.10.18.day9	fall	17-12	93.95	active	CMU	94
+soil.hip.CMU.17.12.2017.10.16.day7	fall	17-12	68.95	active	CMU	69
+soil.hip.CMU.17.12.2017.10.15.day6	fall	17-12	58.65	active	CMU	59
+soil.hip.CMU.17.12.2017.10.12.day3	fall	17-12	28.65	early	CMU	29
+soil.hip.CMU.17.12.2017.10.11.day2	fall	17-12	12.8	early	CMU	13
+soil.hip.CMU.16.10.2016.08.26.day21	summer	Mrs. 16-10	483.95	advanced	CMU	484
+soil.hip.CMU.17.12.2017.10.10.day1	fall	17-12	0	day0	CMU	0
+soil.hip.CMU.16.10.2016.08.24.day19	summer	Mrs. 16-10	443.9	advanced	CMU	444
+soil.hip.CMU.16.10.2016.08.22.day17	summer	Mrs. 16-10	400	advanced	CMU	400
+soil.hip.CMU.16.10.2016.08.23.day18	summer	Mrs. 16-10	421.7	advanced	CMU	422
+soil.hip.CMU.16.10.2016.08.21.day16	summer	Mrs. 16-10	376.1	advanced	CMU	376
+soil.hip.CMU.16.10.2016.08.18.day13	summer	Mrs. 16-10	303.9	advanced	CMU	304
+soil.hip.CMU.16.10.2016.08.12.day7	summer	Mrs. 16-10	153.05	active	CMU	153
+soil.hip.CMU.16.10.2016.08.10.day5	summer	Mrs. 16-10	104.45	active	CMU	104
+soil.hip.CMU.16.10.2016.08.09.day4	summer	Mrs. 16-10	78.05	active	CMU	78
+soil.hip.CMU.16.10.2016.08.07.day2	summer	Mrs. 16-10	24.45	early	CMU	24
+soil.hip.CMU.16.09.2016.08.15.day21	summer	Mrs. 16-09	521.95	advanced	CMU	522
+soil.hip.CMU.16.09.2016.08.11.day17	summer	Mrs. 16-09	422.75	advanced	CMU	423
+soil.hip.UTK.K016.11.2017.06.03.day10	summer	UTK.K016.11	193.3	active	UTK	193
+soil.hip.UTK.K016.11.2017.06.04.day11	summer	UTK.K016.11	215.2	advanced	UTK	215
+soil.hip.UTK.K016.11.2017.05.28.day4	summer	UTK.K016.11	62.3	active	UTK	62
+soil.hip.UTK.K016.11.2017.05.26.day2	summer	UTK.K016.11	18.3	early	UTK	18
+soil.hip.UTK.K016.11.2017.05.27.day3	summer	UTK.K016.11	41.5	early	UTK	42
+soil.hip.UTK.K016.11.2017.05.25.day1	summer	UTK.K016.11	0	day0	UTK	0
+soil.hip.UTK.K016.11.2017.05.30.day6	summer	UTK.K016.11	105.8	active	UTK	106
+soil.hip.UTK.K016.11.2017.05.29.day5	summer	UTK.K016.11	84.2	active	UTK	84
+soil.hip.UTK.K016.10.2017.06.14.day21	summer	UTK.K016.10	441.3	advanced	UTK	441
+soil.hip.UTK.K016.10.2017.06.12.day19	summer	UTK.K016.10	392.2	advanced	UTK	392
+soil.hip.UTK.K016.10.2017.06.10.day17	summer	UTK.K016.10	341.7	advanced	UTK	342
+soil.hip.UTK.K016.10.2017.06.08.day15	summer	UTK.K016.10	298.6	advanced	UTK	299
+soil.hip.UTK.K016.10.2017.06.09.day16	summer	UTK.K016.10	319.6	advanced	UTK	320
+soil.hip.UTK.K016.10.2017.06.07.day14	summer	UTK.K016.10	278.9	advanced	UTK	279
+soil.hip.UTK.K016.10.2017.06.06.day13	summer	UTK.K016.10	258.6	advanced	UTK	259
+soil.hip.UTK.K016.10.2017.06.05.day12	summer	UTK.K016.10	236.6	advanced	UTK	237
+soil.hip.UTK.K016.10.2017.06.03.day10	summer	UTK.K016.10	193.3	active	UTK	193
+soil.hip.UTK.K016.10.2017.06.02.day9	summer	UTK.K016.10	170.3	active	UTK	170
+soil.hip.UTK.K016.10.2017.05.31.day7	summer	UTK.K016.10	126.4	active	UTK	126
+soil.hip.UTK.K016.10.2017.06.01.day8	summer	UTK.K016.10	148.5	active	UTK	149
+soil.hip.UTK.K016.10.2017.05.30.day6	summer	UTK.K016.10	105.8	active	UTK	106
+soil.hip.UTK.K016.10.2017.05.29.day5	summer	UTK.K016.10	84.2	active	UTK	84
+soil.hip.UTK.K016.10.2017.05.27.day3	summer	UTK.K016.10	41.5	early	UTK	42
+soil.hip.UTK.K016.10.2017.05.28.day4	summer	UTK.K016.10	62.3	active	UTK	62
+soil.hip.UTK.K016.10.2017.05.25.day1	summer	UTK.K016.10	0	day0	UTK	0
+soil.hip.CMU.17.12.2017.10.30.day21	fall	17-12	232.9	advanced	CMU	233
+soil.hip.CMU.17.12.2017.10.27.day18	fall	17-12	200.4	advanced	CMU	200
+soil.hip.CMU.17.12.2017.10.25.day16	fall	17-12	179	active	CMU	179
+soil.hip.CMU.17.12.2017.10.26.day17	fall	17-12	190.95	active	CMU	191
+soil.hip.CMU.16.14.2016.12.day.day9	fall	16-14	1.4	early	CMU	1
+soil.hip.SHSU.2016.024.2016.05.03.day19	spring	shsu.2016.024	409.1666667	advanced	SHSU	409
+soil.hip.SHSU.2016.024.2016.05.04.day20	spring	shsu.2016.024	428.6111111	advanced	SHSU	429
+soil.hip.SHSU.2016.024.2016.05.02.day18	spring	shsu.2016.024	391.6666667	advanced	SHSU	392
+soil.hip.SHSU.2016.024.2016.05.01.day17	spring	shsu.2016.024	373.6111111	advanced	SHSU	374
+soil.hip.SHSU.2016.024.2016.04.29.day15	spring	shsu.2016.024	324.4444445	advanced	SHSU	324
+soil.hip.SHSU.2016.024.2016.04.30.day16	spring	shsu.2016.024	350	advanced	SHSU	350
+soil.hip.SHSU.2016.024.2016.04.28.day14	spring	shsu.2016.024	296.3888889	advanced	SHSU	296
+soil.hip.SHSU.2016.024.2016.04.27.day13	spring	shsu.2016.024	271.1111111	advanced	SHSU	271
+soil.hip.SHSU.2016.024.2016.04.25.day11	spring	shsu.2016.024	220.5555556	advanced	SHSU	221
+soil.hip.SHSU.2016.024.2016.04.26.day12	spring	shsu.2016.024	247.2222222	advanced	SHSU	247
+soil.hip.SHSU.2016.024.2016.04.24.day10	spring	shsu.2016.024	194.7222222	active	SHSU	195
+soil.hip.SHSU.2016.024.2016.04.23.day9	spring	shsu.2016.024	174.4444445	active	SHSU	174
+soil.hip.SHSU.2016.024.2016.04.21.day7	spring	shsu.2016.024	132.7777778	active	SHSU	133
+soil.hip.SHSU.2016.024.2016.04.22.day8	spring	shsu.2016.024	153.8888889	active	SHSU	154
+soil.hip.SHSU.2016.024.2016.04.20.day6	spring	shsu.2016.024	111.6666667	active	SHSU	112
+soil.hip.SHSU.2016.024.2016.04.19.day5	spring	shsu.2016.024	90.55555556	active	SHSU	91
+soil.hip.SHSU.2016.024.2016.04.17.day3	spring	shsu.2016.024	45.83333333	early	SHSU	46
+soil.hip.SHSU.2016.024.2016.04.18.day4	spring	shsu.2016.024	67.5	active	SHSU	68
+soil.hip.SHSU.2016.024.2016.04.15.day1	spring	shsu.2016.024	0	day0	SHSU	0
+soil.hip.SHSU.2016.011.2016.05.05.day21	spring	shsu.2016.011	449.1666667	advanced	SHSU	449
+soil.hip.SHSU.2016.011.2016.05.03.day19	spring	shsu.2016.011	409.1666667	advanced	SHSU	409
+soil.hip.SHSU.2016.011.2016.05.02.day18	spring	shsu.2016.011	391.6666667	advanced	SHSU	392
+soil.hip.SHSU.2016.011.2016.04.30.day16	spring	shsu.2016.011	350	advanced	SHSU	350
+soil.hip.SHSU.2016.011.2016.05.01.day17	spring	shsu.2016.011	373.6111111	advanced	SHSU	374
+soil.hip.SHSU.2016.011.2016.04.29.day15	spring	shsu.2016.011	324.4444445	advanced	SHSU	324
+soil.hip.SHSU.2016.011.2016.04.28.day14	spring	shsu.2016.011	296.3888889	advanced	SHSU	296
+soil.hip.SHSU.2016.011.2016.04.26.day12	spring	shsu.2016.011	247.2222222	advanced	SHSU	247
+soil.hip.SHSU.2016.011.2016.04.27.day13	spring	shsu.2016.011	271.1111111	advanced	SHSU	271
+soil.hip.SHSU.2016.011.2016.04.25.day11	spring	shsu.2016.011	220.5555556	advanced	SHSU	221
+soil.hip.SHSU.2016.011.2016.04.24.day10	spring	shsu.2016.011	194.7222222	active	SHSU	195
+soil.hip.SHSU.2016.011.2016.04.22.day8	spring	shsu.2016.011	153.8888889	active	SHSU	154
+soil.hip.SHSU.2016.011.2016.04.23.day9	spring	shsu.2016.011	174.4444445	active	SHSU	174
+soil.hip.SHSU.2016.011.2016.04.21.day7	spring	shsu.2016.011	132.7777778	active	SHSU	133
+soil.hip.SHSU.2016.011.2016.04.20.day6	spring	shsu.2016.011	111.6666667	active	SHSU	112
+soil.hip.SHSU.2016.011.2016.04.18.day4	spring	shsu.2016.011	67.5	active	SHSU	68
+soil.hip.SHSU.2016.011.2016.04.19.day5	spring	shsu.2016.011	90.55555556	active	SHSU	91
+soil.hip.SHSU.2016.011.2016.04.17.day3	spring	shsu.2016.011	45.83333333	early	SHSU	46
+soil.hip.SHSU.2016.007.2016.05.05.day21	spring	shsu.2016.007	449.1666667	advanced	SHSU	449
+soil.hip.SHSU.2016.011.2016.04.15.day1	spring	shsu.2016.011	0	day0	SHSU	0
+soil.hip.SHSU.2016.007.2016.05.04.day20	spring	shsu.2016.007	428.6111111	advanced	SHSU	429
+soil.hip.SHSU.2016.007.2016.05.03.day19	spring	shsu.2016.007	409.1666667	advanced	SHSU	409
+soil.hip.SHSU.2016.007.2016.05.01.day17	spring	shsu.2016.007	373.6111111	advanced	SHSU	374
+soil.hip.SHSU.2016.007.2016.05.02.day18	spring	shsu.2016.007	391.6666667	advanced	SHSU	392
+soil.hip.SHSU.2016.007.2016.04.30.day16	spring	shsu.2016.007	350	advanced	SHSU	350
+soil.hip.SHSU.2016.007.2016.04.27.day13	spring	shsu.2016.007	271.1111111	advanced	SHSU	271
+soil.ctrl.SHSU.2016.007.2016.04.28.day14	spring	shsu.2016.007	296.3888889	NA	SHSU	296
+soil.hip.SHSU.2016.007.2016.04.28.day14	spring	shsu.2016.007	296.3888889	advanced	SHSU	296
+soil.hip.SHSU.2016.007.2016.04.26.day12	spring	shsu.2016.007	247.2222222	advanced	SHSU	247
+soil.hip.SHSU.2016.007.2016.04.23.day9	spring	shsu.2016.007	174.4444445	active	SHSU	174
+soil.hip.SHSU.2016.007.2016.04.24.day10	spring	shsu.2016.007	194.7222222	active	SHSU	195
+soil.hip.SHSU.2016.007.2016.04.22.day8	spring	shsu.2016.007	153.8888889	active	SHSU	154
+soil.hip.SHSU.2016.007.2016.04.21.day7	spring	shsu.2016.007	132.7777778	active	SHSU	133
+soil.hip.SHSU.2016.007.2016.04.19.day5	spring	shsu.2016.007	90.55555556	active	SHSU	91
+soil.hip.SHSU.2016.007.2016.04.18.day4	spring	shsu.2016.007	67.5	active	SHSU	68
+soil.hip.SHSU.2016.007.2016.04.17.day3	spring	shsu.2016.007	45.83333333	early	SHSU	46
+soil.hip.SHSU.2016.007.2016.04.15.day1	spring	shsu.2016.007	0	day0	SHSU	0
+soil.hip.UTK.K016.03.2016.05.25.day20	spring	UTK.K016.03	366.9444445	advanced	UTK	367
+soil.hip.UTK.K016.03.2016.05.24.day19	spring	UTK.K016.03	345.2777778	advanced	UTK	345
+soil.hip.UTK.K016.03.2016.05.22.day17	spring	UTK.K016.03	308.0555556	advanced	UTK	308
+soil.hip.UTK.K016.03.2016.05.21.day16	spring	UTK.K016.03	289.1666667	advanced	UTK	289
+soil.hip.UTK.K016.03.2016.05.19.day14	spring	UTK.K016.03	250.8333333	advanced	UTK	251
+soil.hip.UTK.K016.03.2016.05.20.day15	spring	UTK.K016.03	268.8888889	advanced	UTK	269
+soil.hip.UTK.K016.03.2016.05.18.day13	spring	UTK.K016.03	231.3888889	advanced	UTK	231
+soil.hip.UTK.K016.03.2016.05.17.day12	spring	UTK.K016.03	213.0555556	advanced	UTK	213
+soil.hip.UTK.K016.03.2016.05.15.day10	spring	UTK.K016.03	180.5555556	active	UTK	181
+soil.hip.UTK.K016.03.2016.05.16.day11	spring	UTK.K016.03	193.8888889	active	UTK	194
+soil.hip.UTK.K016.03.2016.05.14.day9	spring	UTK.K016.03	168.6111111	active	UTK	169
+soil.hip.UTK.K016.03.2016.05.13.day8	spring	UTK.K016.03	152.5	active	UTK	153
+soil.hip.UTK.K016.03.2016.05.11.day6	spring	UTK.K016.03	109.7222222	active	UTK	110
+soil.hip.UTK.K016.03.2016.05.12.day7	spring	UTK.K016.03	133.3333333	active	UTK	133
+soil.hip.UTK.K016.03.2016.05.10.day5	spring	UTK.K016.03	86.11111111	active	UTK	86
+soil.hip.UTK.K016.03.2016.05.09.day4	spring	UTK.K016.03	63.33333333	active	UTK	63
+soil.hip.UTK.K016.03.2016.05.07.day2	spring	UTK.K016.03	18.61111111	early	UTK	19
+soil.hip.UTK.K016.03.2016.05.08.day3	spring	UTK.K016.03	41.38888889	early	UTK	41
+soil.hip.UTK.K016.03.2016.05.06.day1	spring	UTK.K016.03	0	day0	UTK	0
+soil.hip.UTK.K016.02.2016.05.02.day20	spring	UTK.K016.02	375.8333333	advanced	UTK	376
+soil.hip.UTK.K016.02.2016.04.30.day18	spring	UTK.K016.02	332.7777778	advanced	UTK	333
+soil.hip.UTK.K016.02.2016.05.01.day19	spring	UTK.K016.02	354.7222222	advanced	UTK	355
+soil.hip.UTK.K016.02.2016.04.29.day17	spring	UTK.K016.02	313.3333333	advanced	UTK	313
+soil.hip.UTK.K016.02.2016.04.28.day16	spring	UTK.K016.02	292.2222222	advanced	UTK	292
+soil.hip.UTK.K016.02.2016.04.26.day14	spring	UTK.K016.02	245.5555556	advanced	UTK	246
+soil.hip.UTK.K016.02.2016.04.27.day15	spring	UTK.K016.02	269.4444445	advanced	UTK	269
+soil.hip.UTK.K016.02.2016.04.25.day13	spring	UTK.K016.02	223.6111111	advanced	UTK	224
+soil.hip.UTK.K016.02.2016.04.24.day12	spring	UTK.K016.02	203.3333333	advanced	UTK	203
+soil.hip.UTK.K016.02.2016.04.22.day10	spring	UTK.K016.02	169.7222222	active	UTK	170
+soil.hip.UTK.K016.02.2016.04.23.day11	spring	UTK.K016.02	185.8333333	active	UTK	186
+soil.hip.UTK.K016.02.2016.04.21.day9	spring	UTK.K016.02	151.9444445	active	UTK	152
+soil.hip.UTK.K016.02.2016.04.20.day8	spring	UTK.K016.02	130.5555556	active	UTK	131
+soil.hip.UTK.K016.02.2016.04.18.day6	spring	UTK.K016.02	86.66666667	active	UTK	87
+soil.hip.UTK.K016.02.2016.04.19.day7	spring	UTK.K016.02	107.2222222	active	UTK	107
+soil.hip.UTK.K016.02.2016.04.16.day4	spring	UTK.K016.02	51.38888889	active	UTK	51
+soil.hip.UTK.K016.02.2016.04.14.day2	spring	UTK.K016.02	18.61111111	early	UTK	19
+soil.hip.UTK.K016.02.2016.04.15.day3	spring	UTK.K016.02	36.38888889	early	UTK	36
+soil.hip.UTK.K016.02.2016.04.13.day1	spring	UTK.K016.02	0	day0	UTK	0
+soil.hip.UTK.K016.01.2016.04.24.day20	spring	UTK.K016.01	293.6111111	advanced	UTK	294
+soil.hip.UTK.K016.01.2016.04.22.day18	spring	UTK.K016.01	260	advanced	UTK	260
+soil.hip.UTK.K016.01.2016.04.23.day19	spring	UTK.K016.01	276.1111111	advanced	UTK	276
+soil.hip.UTK.K016.01.2016.04.21.day17	spring	UTK.K016.01	242.2222222	advanced	UTK	242
+soil.hip.UTK.K016.01.2016.04.20.day16	spring	UTK.K016.01	220.8333333	advanced	UTK	221
+soil.hip.UTK.K016.01.2016.04.18.day14	spring	UTK.K016.01	176.9444445	active	UTK	177
+soil.ctrl.UTK.K016.01.2016.04.18.day14	spring	UTK.K016.01	176.9444445	NA	UTK	177
+soil.hip.UTK.K016.01.2016.04.17.day13	spring	UTK.K016.01	157.7777778	active	UTK	158
+soil.hip.UTK.K016.01.2016.04.16.day12	spring	UTK.K016.01	141.6666667	active	UTK	142
+soil.hip.UTK.K016.01.2016.04.14.day10	spring	UTK.K016.01	108.8888889	active	UTK	109
+soil.hip.UTK.K016.01.2016.04.15.day11	spring	UTK.K016.01	126.6666667	active	UTK	127
+soil.hip.UTK.K016.01.2016.04.13.day9	spring	UTK.K016.01	90.27777779	active	UTK	90
+soil.hip.UTK.K016.01.2016.04.12.day8	spring	UTK.K016.01	76.3888889	active	UTK	76
+soil.hip.UTK.K016.01.2016.04.10.day6	spring	UTK.K016.01	48.33333334	early	UTK	48
+soil.ctrl.UTK.K016.01.2016.04.11.day7	spring	UTK.K016.01	62.50000001	NA	UTK	63
+soil.hip.UTK.K016.01.2016.04.11.day7	spring	UTK.K016.01	62.50000001	active	UTK	63
+soil.hip.UTK.K016.01.2016.04.08.day4	spring	UTK.K016.01	33.05555556	early	UTK	33
+soil.hip.UTK.K016.01.2016.04.06.day2	spring	UTK.K016.01	10.55555556	early	UTK	11
+soil.hip.UTK.K016.01.2016.04.07.day3	spring	UTK.K016.01	23.05555556	early	UTK	23
+soil.hip.UTK.K016.01.2016.04.05.day1	spring	UTK.K016.01	0	day0	UTK	0
+soil.hip.CMU.16.05.2016.mo.day9	spring	CMU_Mrs._16_05	69.44444445	active	CMU	69
+soil.hip.CMU.16.05.2016.mo.day10	spring	CMU_Mrs._16_05	79.72222223	active	CMU	80
+soil.hip.CMU.16.05.2016.mo.day4	spring	CMU_Mrs._16_05	15.83333333	early	CMU	16
+soil.hip.CMU.16.05.2016.mo.day3	spring	CMU_Mrs._16_05	11.38888889	early	CMU	11
+soil.hip.CMU.16.05.2016.mo.day1	spring	CMU_Mrs._16_05	0	day0	CMU	0
+soil.hip.CMU.16.05.2016.mo.day2	spring	CMU_Mrs._16_05	7.5	early	CMU	8
+soil.hip.UTK.K016.02.2016.05.03.day21	spring	UTK.K016.02	394.4444444	advanced	UTK	394
+soil.hip.CMU.16.05.2016.mo.day21	spring	CMU_Mrs._16_05	214.1666667	advanced	CMU	214
+soil.ctrl.UTK.K016.01.2016.04.25.day21	spring	UTK.K016.01	313.8888889	NA	UTK	314
+soil.hip.UTK.K016.01.2016.04.25.day21	spring	UTK.K016.01	313.8888889	advanced	UTK	314
+soil.hip.CMU.16.05.2016.mo.day20	spring	CMU_Mrs._16_05	207.5	advanced	CMU	208
+soil.hip.CMU.16.05.2016.mo.day19	spring	CMU_Mrs._16_05	200.8333333	advanced	CMU	201
+soil.hip.CMU.16.05.2016.mo.day17	spring	CMU_Mrs._16_05	179.7222222	active	CMU	180
+soil.hip.CMU.16.05.2016.mo.day16	spring	CMU_Mrs._16_05	164.7222222	active	CMU	165
+soil.hip.CMU.16.05.2016.mo.day15	spring	CMU_Mrs._16_05	150	active	CMU	150
+soil.hip.CMU.16.05.2016.mo.day13	spring	CMU_Mrs._16_05	123.3333333	active	CMU	123
+soil.hip.CMU.16.05.2016.mo.day14	spring	CMU_Mrs._16_05	136.6666667	active	CMU	137
+soil.hip.CMU.16.05.2016.mo.day12	spring	CMU_Mrs._16_05	110.2777778	active	CMU	110
+soil.hip.CMU.16.04.2016.mo.day20	spring	CMU_Mr._16_04	160	active	CMU	160
+soil.hip.CMU.16.04.2016.mo.day18	spring	CMU_Mr._16_04	136.9444445	active	CMU	137
+soil.hip.CMU.16.04.2016.mo.day19	spring	CMU_Mr._16_04	149.7222222	active	CMU	150
+soil.hip.CMU.16.04.2016.mo.day17	spring	CMU_Mr._16_04	122.7777778	active	CMU	123
+soil.hip.CMU.16.04.2016.mo.day16	spring	CMU_Mr._16_04	111.3888889	active	CMU	111
+soil.hip.CMU.16.04.2016.mo.day14	spring	CMU_Mr._16_04	96.11111111	active	CMU	96
+soil.hip.CMU.16.04.2016.mo.day13	spring	CMU_Mr._16_04	91.66666667	active	CMU	92
+soil.hip.CMU.16.04.2016.mo.day12	spring	CMU_Mr._16_04	87.77777778	active	CMU	88
+soil.hip.CMU.16.04.2016.mo.day11	spring	CMU_Mr._16_04	80.27777778	active	CMU	80
+soil.hip.CMU.16.04.2016.mo.day9	spring	CMU_Mr._16_04	62.22222223	active	CMU	62
+soil.hip.CMU.16.04.2016.mo.day8	spring	CMU_Mr._16_04	57.77777778	active	CMU	58
+soil.hip.CMU.16.04.2016.mo.day6	spring	CMU_Mr._16_04	44.72222223	early	CMU	45
+soil.hip.CMU.16.04.2016.mo.day7	spring	CMU_Mr._16_04	50.83333334	active	CMU	51
+soil.hip.CMU.16.04.2016.mo.day5	spring	CMU_Mr._16_04	40.00000001	early	CMU	40
+soil.hip.CMU.16.04.2016.mo.day4	spring	CMU_Mr._16_04	29.72222223	early	CMU	30
+soil.hip.CMU.16.03.2016.3.day21	spring	CMU_Mrs._16_03	164.7222222	active	CMU	165
+soil.ctrl.CMU.16.03.2016.3.day21	spring	CMU_Mrs._16_03	164.7222222	NA	CMU	165
+soil.hip.CMU.16.03.2016.3.day20	spring	CMU_Mrs._16_03	160.8333333	active	CMU	161
+soil.hip.CMU.16.03.2016.3.day18	spring	CMU_Mrs._16_03	141.1111111	active	CMU	141
+soil.hip.CMU.16.03.2016.3.day17	spring	CMU_Mrs._16_03	135.2777778	active	CMU	135
+soil.hip.CMU.16.03.2016.3.day15	spring	CMU_Mrs._16_03	123.8888889	active	CMU	124
+soil.hip.CMU.16.03.2016.3.day16	spring	CMU_Mrs._16_03	130.8333333	active	CMU	131
+soil.hip.CMU.16.03.2016.3.day14	spring	CMU_Mrs._16_03	117.7777778	active	CMU	118
+soil.hip.CMU.16.03.2016.3.day13	spring	CMU_Mrs._16_03	113.0555556	active	CMU	113
+soil.hip.CMU.16.03.2016.3.day11	spring	CMU_Mrs._16_03	89.72222223	active	CMU	90
+soil.hip.CMU.16.03.2016.3.day12	spring	CMU_Mrs._16_03	102.7777778	active	CMU	103
+soil.hip.CMU.16.03.2016.3.day9	spring	CMU_Mrs._16_03	73.05555556	active	CMU	73
+soil.hip.CMU.16.03.2016.3.day7	spring	CMU_Mrs._16_03	57.22222223	active	CMU	57
+soil.hip.CMU.16.03.2016.3.day5	spring	CMU_Mrs._16_03	47.22222223	early	CMU	47
+soil.hip.CMU.16.03.2016.3.day3	spring	CMU_Mrs._16_03	25.83333334	early	CMU	26
+soil.hip.CMU.16.03.2016.3.day4	spring	CMU_Mrs._16_03	35.83333334	early	CMU	36
+soil.hip.CMU.16.03.2016.3.day2	spring	CMU_Mrs._16_03	13.05555556	early	CMU	13
+soil.hip.CMU.16.03.2016.3.day1	spring	CMU_Mrs._16_03	0	day0	CMU	0
