@@ -1,0 +1,1101 @@
+Omic,Fold,Accuracy,Report,Optimization
+18S_RPCA,traintest_0,0.42168674698795183,"              precision    recall  f1-score   support
+
+      active       0.36      0.52      0.42        31
+    advanced       0.53      0.50      0.51        38
+       early       0.00      0.00      0.00        10
+     initial       0.00      0.00      0.00         4
+
+    accuracy                           0.42        83
+   macro avg       0.22      0.25      0.23        83
+weighted avg       0.37      0.42      0.39        83
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200, 'best_score': 0.4283163265306122}"
+18S_RPCA,traintest_1,0.40229885057471265,"              precision    recall  f1-score   support
+
+      active       0.40      0.40      0.40        35
+    advanced       0.44      0.59      0.51        34
+       early       0.14      0.08      0.11        12
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.40        87
+   macro avg       0.25      0.27      0.25        87
+weighted avg       0.35      0.40      0.37        87
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 200, 'best_score': 0.47313829787234046}"
+18S_RPCA,traintest_2,0.44155844155844154,"              precision    recall  f1-score   support
+
+      active       0.42      0.48      0.45        29
+    advanced       0.45      0.58      0.51        33
+       early       0.50      0.11      0.18         9
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.44        77
+   macro avg       0.34      0.29      0.29        77
+weighted avg       0.41      0.44      0.41        77
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 100, 'best_score': 0.43387755102040815}"
+18S_RPCA,traintest_3,0.35294117647058826,"              precision    recall  f1-score   support
+
+      active       0.34      0.36      0.35        33
+    advanced       0.40      0.55      0.46        33
+       early       0.00      0.00      0.00        11
+     initial       0.00      0.00      0.00         8
+
+    accuracy                           0.35        85
+   macro avg       0.19      0.23      0.20        85
+weighted avg       0.29      0.35      0.32        85
+","{'bootstrap': False, 'max_depth': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 100, 'best_score': 0.43571428571428567}"
+18S_RPCA,traintest_4,0.4634146341463415,"              precision    recall  f1-score   support
+
+      active       0.42      0.66      0.51        29
+    advanced       0.63      0.47      0.54        40
+       early       0.00      0.00      0.00         9
+     initial       0.00      0.00      0.00         4
+
+    accuracy                           0.46        82
+   macro avg       0.26      0.28      0.26        82
+weighted avg       0.46      0.46      0.45        82
+","{'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.397874149659864}"
+18S_RPCA,traintest_5,0.42168674698795183,"              precision    recall  f1-score   support
+
+      active       0.38      0.58      0.45        26
+    advanced       0.51      0.57      0.54        35
+       early       0.00      0.00      0.00        16
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.42        83
+   macro avg       0.22      0.29      0.25        83
+weighted avg       0.33      0.42      0.37        83
+","{'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 100, 'best_score': 0.4737244897959184}"
+18S_RPCA,traintest_6,0.4117647058823529,"              precision    recall  f1-score   support
+
+      active       0.44      0.52      0.47        33
+    advanced       0.40      0.55      0.46        31
+       early       0.33      0.06      0.11        16
+     initial       0.00      0.00      0.00         5
+
+    accuracy                           0.41        85
+   macro avg       0.29      0.28      0.26        85
+weighted avg       0.38      0.41      0.37        85
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 300, 'best_score': 0.46071428571428574}"
+18S_RPCA,traintest_7,0.3953488372093023,"              precision    recall  f1-score   support
+
+      active       0.39      0.48      0.43        33
+    advanced       0.51      0.50      0.51        36
+       early       0.00      0.00      0.00        10
+     initial       0.00      0.00      0.00         7
+
+    accuracy                           0.40        86
+   macro avg       0.23      0.25      0.23        86
+weighted avg       0.37      0.40      0.38        86
+","{'bootstrap': False, 'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.4291666666666667}"
+18S_RPCA,traintest_8,0.43902439024390244,"              precision    recall  f1-score   support
+
+      active       0.42      0.37      0.39        30
+    advanced       0.47      0.69      0.56        35
+       early       0.20      0.11      0.14         9
+     initial       0.00      0.00      0.00         8
+
+    accuracy                           0.44        82
+   macro avg       0.27      0.29      0.27        82
+weighted avg       0.38      0.44      0.40        82
+","{'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 100, 'best_score': 0.434608843537415}"
+18S_RPCA,traintest_9,0.40476190476190477,"              precision    recall  f1-score   support
+
+      active       0.36      0.42      0.39        31
+    advanced       0.54      0.57      0.55        37
+       early       0.00      0.00      0.00         9
+     initial       0.00      0.00      0.00         7
+
+    accuracy                           0.40        84
+   macro avg       0.22      0.25      0.24        84
+weighted avg       0.37      0.40      0.39        84
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 100, 'best_score': 0.40926870748299315}"
+MAG_RPCA,traintest_0,0.425531914893617,"              precision    recall  f1-score   support
+
+      active       0.38      0.49      0.42        35
+    advanced       0.66      0.48      0.55        44
+       early       0.22      0.18      0.20        11
+     initial       0.00      0.00      0.00         4
+
+    accuracy                           0.43        94
+   macro avg       0.31      0.29      0.29        94
+weighted avg       0.47      0.43      0.44        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100, 'best_score': 0.4357142857142858}"
+MAG_RPCA,traintest_1,0.5638297872340425,"              precision    recall  f1-score   support
+
+      active       0.53      0.59      0.56        39
+    advanced       0.62      0.78      0.69        36
+       early       0.50      0.08      0.13        13
+     initial       0.25      0.17      0.20         6
+
+    accuracy                           0.56        94
+   macro avg       0.48      0.40      0.40        94
+weighted avg       0.55      0.56      0.53        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 300, 'best_score': 0.4892857142857142}"
+MAG_RPCA,traintest_2,0.5425531914893617,"              precision    recall  f1-score   support
+
+      active       0.53      0.57      0.55        40
+    advanced       0.57      0.76      0.65        37
+       early       0.00      0.00      0.00        11
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.54        94
+   macro avg       0.28      0.33      0.30        94
+weighted avg       0.45      0.54      0.49        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 200, 'best_score': 0.5214285714285715}"
+MAG_RPCA,traintest_3,0.4574468085106383,"              precision    recall  f1-score   support
+
+      active       0.50      0.37      0.42        38
+    advanced       0.52      0.67      0.59        36
+       early       0.31      0.42      0.36        12
+     initial       0.00      0.00      0.00         8
+
+    accuracy                           0.46        94
+   macro avg       0.33      0.36      0.34        94
+weighted avg       0.44      0.46      0.44        94
+","{'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 100, 'best_score': 0.5285714285714287}"
+MAG_RPCA,traintest_4,0.5638297872340425,"              precision    recall  f1-score   support
+
+      active       0.46      0.56      0.51        34
+    advanced       0.65      0.67      0.66        46
+       early       0.50      0.20      0.29        10
+     initial       1.00      0.25      0.40         4
+
+    accuracy                           0.56        94
+   macro avg       0.65      0.42      0.46        94
+weighted avg       0.58      0.56      0.55        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 200, 'best_score': 0.48571428571428565}"
+MAG_RPCA,traintest_5,0.5319148936170213,"              precision    recall  f1-score   support
+
+      active       0.43      0.62      0.51        29
+    advanced       0.64      0.67      0.65        42
+       early       0.43      0.18      0.25        17
+     initial       1.00      0.17      0.29         6
+
+    accuracy                           0.53        94
+   macro avg       0.62      0.41      0.42        94
+weighted avg       0.56      0.53      0.51        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.5392857142857143}"
+MAG_RPCA,traintest_6,0.5531914893617021,"              precision    recall  f1-score   support
+
+      active       0.51      0.53      0.52        38
+    advanced       0.62      0.85      0.72        34
+       early       0.43      0.18      0.25        17
+     initial       0.00      0.00      0.00         5
+
+    accuracy                           0.55        94
+   macro avg       0.39      0.39      0.37        94
+weighted avg       0.51      0.55      0.51        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.49642857142857144}"
+MAG_RPCA,traintest_7,0.48936170212765956,"              precision    recall  f1-score   support
+
+      active       0.49      0.47      0.48        38
+    advanced       0.59      0.68      0.63        38
+       early       0.14      0.09      0.11        11
+     initial       0.17      0.14      0.15         7
+
+    accuracy                           0.49        94
+   macro avg       0.35      0.35      0.34        94
+weighted avg       0.46      0.49      0.47        94
+","{'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100, 'best_score': 0.5}"
+MAG_RPCA,traintest_8,0.4787234042553192,"              precision    recall  f1-score   support
+
+      active       0.41      0.38      0.39        34
+    advanced       0.62      0.68      0.65        41
+       early       0.29      0.36      0.32        11
+     initial       0.00      0.00      0.00         8
+
+    accuracy                           0.48        94
+   macro avg       0.33      0.36      0.34        94
+weighted avg       0.45      0.48      0.46        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 200, 'best_score': 0.5107142857142858}"
+MAG_RPCA,traintest_9,0.5106382978723404,"              precision    recall  f1-score   support
+
+      active       0.42      0.45      0.43        33
+    advanced       0.64      0.62      0.63        45
+       early       0.30      0.33      0.32         9
+     initial       0.50      0.29      0.36         7
+
+    accuracy                           0.51        94
+   macro avg       0.46      0.42      0.44        94
+weighted avg       0.52      0.51      0.51        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.5178571428571429}"
+Gene_RPCA,traintest_0,0.46808510638297873,"              precision    recall  f1-score   support
+
+      active       0.40      0.40      0.40        35
+    advanced       0.56      0.64      0.60        44
+       early       0.22      0.18      0.20        11
+     initial       0.00      0.00      0.00         4
+
+    accuracy                           0.47        94
+   macro avg       0.30      0.30      0.30        94
+weighted avg       0.44      0.47      0.45        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.42142857142857143}"
+Gene_RPCA,traintest_1,0.44680851063829785,"              precision    recall  f1-score   support
+
+      active       0.49      0.46      0.47        39
+    advanced       0.45      0.64      0.53        36
+       early       0.17      0.08      0.11        13
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.45        94
+   macro avg       0.28      0.29      0.28        94
+weighted avg       0.40      0.45      0.41        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 200, 'best_score': 0.45}"
+Gene_RPCA,traintest_2,0.4787234042553192,"              precision    recall  f1-score   support
+
+      active       0.57      0.42      0.49        40
+    advanced       0.44      0.73      0.55        37
+       early       0.50      0.09      0.15        11
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.48        94
+   macro avg       0.38      0.31      0.30        94
+weighted avg       0.47      0.48      0.44        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.4821428571428571}"
+Gene_RPCA,traintest_3,0.4148936170212766,"              precision    recall  f1-score   support
+
+      active       0.50      0.45      0.47        38
+    advanced       0.39      0.56      0.46        36
+       early       0.25      0.17      0.20        12
+     initial       0.00      0.00      0.00         8
+
+    accuracy                           0.41        94
+   macro avg       0.29      0.29      0.28        94
+weighted avg       0.38      0.41      0.39        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 200, 'best_score': 0.4607142857142857}"
+Gene_RPCA,traintest_4,0.5638297872340425,"              precision    recall  f1-score   support
+
+      active       0.50      0.62      0.55        34
+    advanced       0.66      0.67      0.67        46
+       early       0.20      0.10      0.13        10
+     initial       0.00      0.00      0.00         4
+
+    accuracy                           0.56        94
+   macro avg       0.34      0.35      0.34        94
+weighted avg       0.52      0.56      0.54        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.43571428571428567}"
+Gene_RPCA,traintest_5,0.3617021276595745,"              precision    recall  f1-score   support
+
+      active       0.31      0.55      0.40        29
+    advanced       0.44      0.43      0.43        42
+       early       0.00      0.00      0.00        17
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.36        94
+   macro avg       0.19      0.25      0.21        94
+weighted avg       0.29      0.36      0.32        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 100, 'best_score': 0.5035714285714287}"
+Gene_RPCA,traintest_6,0.5,"              precision    recall  f1-score   support
+
+      active       0.56      0.50      0.53        38
+    advanced       0.47      0.79      0.59        34
+       early       0.33      0.06      0.10        17
+     initial       0.00      0.00      0.00         5
+
+    accuracy                           0.50        94
+   macro avg       0.34      0.34      0.31        94
+weighted avg       0.46      0.50      0.45        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 200, 'best_score': 0.43928571428571433}"
+Gene_RPCA,traintest_7,0.39361702127659576,"              precision    recall  f1-score   support
+
+      active       0.41      0.42      0.42        38
+    advanced       0.42      0.53      0.47        38
+       early       0.14      0.09      0.11        11
+     initial       0.00      0.00      0.00         7
+
+    accuracy                           0.39        94
+   macro avg       0.24      0.26      0.25        94
+weighted avg       0.35      0.39      0.37        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200, 'best_score': 0.49642857142857144}"
+Gene_RPCA,traintest_8,0.5425531914893617,"              precision    recall  f1-score   support
+
+      active       0.54      0.62      0.58        34
+    advanced       0.58      0.73      0.65        41
+       early       0.00      0.00      0.00        11
+     initial       0.00      0.00      0.00         8
+
+    accuracy                           0.54        94
+   macro avg       0.28      0.34      0.31        94
+weighted avg       0.45      0.54      0.49        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 300, 'best_score': 0.4428571428571429}"
+Gene_RPCA,traintest_9,0.5106382978723404,"              precision    recall  f1-score   support
+
+      active       0.41      0.58      0.48        33
+    advanced       0.60      0.62      0.61        45
+       early       1.00      0.11      0.20         9
+     initial       0.00      0.00      0.00         7
+
+    accuracy                           0.51        94
+   macro avg       0.50      0.33      0.32        94
+weighted avg       0.53      0.51      0.48        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 300, 'best_score': 0.42857142857142855}"
+Gene_Module_RPCA,traintest_0,0.4787234042553192,"              precision    recall  f1-score   support
+
+      active       0.45      0.57      0.51        35
+    advanced       0.57      0.57      0.57        44
+       early       0.00      0.00      0.00        11
+     initial       0.00      0.00      0.00         4
+
+    accuracy                           0.48        94
+   macro avg       0.26      0.28      0.27        94
+weighted avg       0.44      0.48      0.45        94
+","{'bootstrap': False, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.4571428571428572}"
+Gene_Module_RPCA,traintest_1,0.39361702127659576,"              precision    recall  f1-score   support
+
+      active       0.44      0.36      0.39        39
+    advanced       0.43      0.64      0.52        36
+       early       0.00      0.00      0.00        13
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.39        94
+   macro avg       0.22      0.25      0.23        94
+weighted avg       0.35      0.39      0.36        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200, 'best_score': 0.4714285714285714}"
+Gene_Module_RPCA,traintest_2,0.4787234042553192,"              precision    recall  f1-score   support
+
+      active       0.54      0.55      0.54        40
+    advanced       0.44      0.62      0.52        37
+       early       0.00      0.00      0.00        11
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.48        94
+   macro avg       0.24      0.29      0.27        94
+weighted avg       0.40      0.48      0.43        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 300, 'best_score': 0.4107142857142857}"
+Gene_Module_RPCA,traintest_3,0.44680851063829785,"              precision    recall  f1-score   support
+
+      active       0.48      0.71      0.57        38
+    advanced       0.42      0.36      0.39        36
+       early       0.50      0.17      0.25        12
+     initial       0.00      0.00      0.00         8
+
+    accuracy                           0.45        94
+   macro avg       0.35      0.31      0.30        94
+weighted avg       0.42      0.45      0.41        94
+","{'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 100, 'best_score': 0.45357142857142857}"
+Gene_Module_RPCA,traintest_4,0.425531914893617,"              precision    recall  f1-score   support
+
+      active       0.37      0.44      0.40        34
+    advanced       0.50      0.52      0.51        46
+       early       0.20      0.10      0.13        10
+     initial       0.00      0.00      0.00         4
+
+    accuracy                           0.43        94
+   macro avg       0.27      0.27      0.26        94
+weighted avg       0.40      0.43      0.41        94
+","{'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.42142857142857143}"
+Gene_Module_RPCA,traintest_5,0.3404255319148936,"              precision    recall  f1-score   support
+
+      active       0.25      0.34      0.29        29
+    advanced       0.43      0.50      0.46        42
+       early       0.20      0.06      0.09        17
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.34        94
+   macro avg       0.22      0.23      0.21        94
+weighted avg       0.30      0.34      0.31        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.5142857142857142}"
+Gene_Module_RPCA,traintest_6,0.3829787234042553,"              precision    recall  f1-score   support
+
+      active       0.47      0.47      0.47        38
+    advanced       0.38      0.53      0.44        34
+       early       0.00      0.00      0.00        17
+     initial       0.00      0.00      0.00         5
+
+    accuracy                           0.38        94
+   macro avg       0.21      0.25      0.23        94
+weighted avg       0.33      0.38      0.35        94
+","{'bootstrap': False, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.45}"
+Gene_Module_RPCA,traintest_7,0.40425531914893614,"              precision    recall  f1-score   support
+
+      active       0.45      0.53      0.49        38
+    advanced       0.47      0.47      0.47        38
+       early       0.00      0.00      0.00        11
+     initial       0.00      0.00      0.00         7
+
+    accuracy                           0.40        94
+   macro avg       0.23      0.25      0.24        94
+weighted avg       0.38      0.40      0.39        94
+","{'bootstrap': False, 'max_depth': 20, 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 100, 'best_score': 0.46428571428571425}"
+Gene_Module_RPCA,traintest_8,0.44680851063829785,"              precision    recall  f1-score   support
+
+      active       0.44      0.56      0.49        34
+    advanced       0.50      0.56      0.53        41
+       early       0.00      0.00      0.00        11
+     initial       0.00      0.00      0.00         8
+
+    accuracy                           0.45        94
+   macro avg       0.24      0.28      0.26        94
+weighted avg       0.38      0.45      0.41        94
+","{'bootstrap': False, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.45}"
+Gene_Module_RPCA,traintest_9,0.48936170212765956,"              precision    recall  f1-score   support
+
+      active       0.44      0.70      0.54        33
+    advanced       0.57      0.51      0.54        45
+       early       0.00      0.00      0.00         9
+     initial       0.00      0.00      0.00         7
+
+    accuracy                           0.49        94
+   macro avg       0.25      0.30      0.27        94
+weighted avg       0.43      0.49      0.45        94
+","{'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.4392857142857142}"
+Metabolite_RPCA,traintest_0,0.2872340425531915,"              precision    recall  f1-score   support
+
+      active       0.28      0.29      0.28        35
+    advanced       0.35      0.39      0.37        44
+       early       0.00      0.00      0.00        11
+     initial       0.00      0.00      0.00         4
+
+    accuracy                           0.29        94
+   macro avg       0.16      0.17      0.16        94
+weighted avg       0.27      0.29      0.28        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 300, 'best_score': 0.46785714285714286}"
+Metabolite_RPCA,traintest_1,0.40425531914893614,"              precision    recall  f1-score   support
+
+      active       0.41      0.44      0.42        39
+    advanced       0.39      0.56      0.46        36
+       early       0.50      0.08      0.13        13
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.40        94
+   macro avg       0.33      0.27      0.25        94
+weighted avg       0.39      0.40      0.37        94
+","{'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.42142857142857143}"
+Metabolite_RPCA,traintest_2,0.48936170212765956,"              precision    recall  f1-score   support
+
+      active       0.51      0.53      0.52        40
+    advanced       0.48      0.68      0.56        37
+       early       0.00      0.00      0.00        11
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.49        94
+   macro avg       0.25      0.30      0.27        94
+weighted avg       0.41      0.49      0.44        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 300, 'best_score': 0.4071428571428572}"
+Metabolite_RPCA,traintest_3,0.32978723404255317,"              precision    recall  f1-score   support
+
+      active       0.42      0.29      0.34        38
+    advanced       0.32      0.56      0.40        36
+       early       0.00      0.00      0.00        12
+     initial       0.00      0.00      0.00         8
+
+    accuracy                           0.33        94
+   macro avg       0.19      0.21      0.19        94
+weighted avg       0.29      0.33      0.29        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 200, 'best_score': 0.4607142857142857}"
+Metabolite_RPCA,traintest_4,0.40425531914893614,"              precision    recall  f1-score   support
+
+      active       0.36      0.44      0.39        34
+    advanced       0.48      0.50      0.49        46
+       early       0.00      0.00      0.00        10
+     initial       0.00      0.00      0.00         4
+
+    accuracy                           0.40        94
+   macro avg       0.21      0.24      0.22        94
+weighted avg       0.36      0.40      0.38        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.475}"
+Metabolite_RPCA,traintest_5,0.43617021276595747,"              precision    recall  f1-score   support
+
+      active       0.40      0.59      0.47        29
+    advanced       0.48      0.57      0.52        42
+       early       0.00      0.00      0.00        17
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.44        94
+   macro avg       0.22      0.29      0.25        94
+weighted avg       0.34      0.44      0.38        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 200, 'best_score': 0.4107142857142857}"
+Metabolite_RPCA,traintest_6,0.35106382978723405,"              precision    recall  f1-score   support
+
+      active       0.39      0.39      0.39        38
+    advanced       0.33      0.53      0.41        34
+       early       0.00      0.00      0.00        17
+     initial       0.00      0.00      0.00         5
+
+    accuracy                           0.35        94
+   macro avg       0.18      0.23      0.20        94
+weighted avg       0.28      0.35      0.31        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.4142857142857143}"
+Metabolite_RPCA,traintest_7,0.40425531914893614,"              precision    recall  f1-score   support
+
+      active       0.46      0.45      0.45        38
+    advanced       0.39      0.55      0.46        38
+       early       0.00      0.00      0.00        11
+     initial       0.00      0.00      0.00         7
+
+    accuracy                           0.40        94
+   macro avg       0.21      0.25      0.23        94
+weighted avg       0.34      0.40      0.37        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 300, 'best_score': 0.4}"
+Metabolite_RPCA,traintest_8,0.32978723404255317,"              precision    recall  f1-score   support
+
+      active       0.42      0.56      0.48        34
+    advanced       0.30      0.27      0.28        41
+       early       0.08      0.09      0.09        11
+     initial       0.00      0.00      0.00         8
+
+    accuracy                           0.33        94
+   macro avg       0.20      0.23      0.21        94
+weighted avg       0.29      0.33      0.31        94
+","{'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.4142857142857143}"
+Metabolite_RPCA,traintest_9,0.3617021276595745,"              precision    recall  f1-score   support
+
+      active       0.36      0.48      0.42        33
+    advanced       0.40      0.40      0.40        45
+       early       0.00      0.00      0.00         9
+     initial       0.00      0.00      0.00         7
+
+    accuracy                           0.36        94
+   macro avg       0.19      0.22      0.20        94
+weighted avg       0.32      0.36      0.34        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 100, 'best_score': 0.45}"
+18S_Joint-RPCA,traintest_0,0.4367816091954023,"              precision    recall  f1-score   support
+
+      active       0.42      0.50      0.46        34
+    advanced       0.60      0.46      0.52        39
+       early       0.18      0.30      0.22        10
+     initial       0.00      0.00      0.00         4
+
+    accuracy                           0.44        87
+   macro avg       0.30      0.32      0.30        87
+weighted avg       0.46      0.44      0.44        87
+","{'bootstrap': False, 'max_depth': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 100, 'best_score': 0.3916666666666667}"
+18S_Joint-RPCA,traintest_1,0.35294117647058826,"              precision    recall  f1-score   support
+
+      active       0.33      0.29      0.31        34
+    advanced       0.40      0.61      0.48        33
+       early       0.00      0.00      0.00        12
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.35        85
+   macro avg       0.18      0.23      0.20        85
+weighted avg       0.29      0.35      0.31        85
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 200, 'best_score': 0.4712585034013606}"
+18S_Joint-RPCA,traintest_2,0.46153846153846156,"              precision    recall  f1-score   support
+
+      active       0.43      0.53      0.48        30
+    advanced       0.51      0.58      0.54        33
+       early       0.25      0.11      0.15         9
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.46        78
+   macro avg       0.30      0.31      0.29        78
+weighted avg       0.41      0.46      0.43        78
+","{'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.46636734693877546}"
+18S_Joint-RPCA,traintest_3,0.36046511627906974,"              precision    recall  f1-score   support
+
+      active       0.38      0.44      0.41        34
+    advanced       0.40      0.50      0.44        32
+       early       0.00      0.00      0.00        12
+     initial       0.00      0.00      0.00         8
+
+    accuracy                           0.36        86
+   macro avg       0.20      0.24      0.21        86
+weighted avg       0.30      0.36      0.33        86
+","{'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 5, 'n_estimators': 100, 'best_score': 0.4351190476190476}"
+18S_Joint-RPCA,traintest_4,0.573170731707317,"              precision    recall  f1-score   support
+
+      active       0.47      0.62      0.54        29
+    advanced       0.66      0.64      0.65        39
+       early       0.67      0.40      0.50        10
+     initial       0.00      0.00      0.00         4
+
+    accuracy                           0.57        82
+   macro avg       0.45      0.42      0.42        82
+weighted avg       0.56      0.57      0.56        82
+","{'bootstrap': False, 'max_depth': None, 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.42857142857142855}"
+18S_Joint-RPCA,traintest_5,0.4,"              precision    recall  f1-score   support
+
+      active       0.33      0.46      0.39        26
+    advanced       0.47      0.56      0.51        36
+       early       0.40      0.12      0.18        17
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.40        85
+   macro avg       0.30      0.28      0.27        85
+weighted avg       0.38      0.40      0.37        85
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.5166666666666667}"
+18S_Joint-RPCA,traintest_6,0.3950617283950617,"              precision    recall  f1-score   support
+
+      active       0.39      0.45      0.42        33
+    advanced       0.40      0.61      0.48        28
+       early       0.00      0.00      0.00        15
+     initial       0.00      0.00      0.00         5
+
+    accuracy                           0.40        81
+   macro avg       0.20      0.27      0.23        81
+weighted avg       0.30      0.40      0.34        81
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.4879183673469387}"
+18S_Joint-RPCA,traintest_7,0.4186046511627907,"              precision    recall  f1-score   support
+
+      active       0.43      0.59      0.50        32
+    advanced       0.45      0.42      0.43        36
+       early       0.22      0.18      0.20        11
+     initial       0.00      0.00      0.00         7
+
+    accuracy                           0.42        86
+   macro avg       0.28      0.30      0.28        86
+weighted avg       0.38      0.42      0.39        86
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 2, 'min_samples_split': 5, 'n_estimators': 200, 'best_score': 0.4649659863945578}"
+18S_Joint-RPCA,traintest_8,0.35365853658536583,"              precision    recall  f1-score   support
+
+      active       0.35      0.48      0.41        31
+    advanced       0.47      0.42      0.44        33
+       early       0.00      0.00      0.00        10
+     initial       0.00      0.00      0.00         8
+
+    accuracy                           0.35        82
+   macro avg       0.20      0.23      0.21        82
+weighted avg       0.32      0.35      0.33        82
+","{'bootstrap': False, 'max_depth': None, 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 100, 'best_score': 0.47346938775510206}"
+18S_Joint-RPCA,traintest_9,0.5,"              precision    recall  f1-score   support
+
+      active       0.52      0.57      0.54        30
+    advanced       0.52      0.63      0.57        38
+       early       0.25      0.11      0.15         9
+     initial       0.00      0.00      0.00         7
+
+    accuracy                           0.50        84
+   macro avg       0.32      0.33      0.32        84
+weighted avg       0.45      0.50      0.47        84
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.42023809523809524}"
+MAG_Joint-RPCA,traintest_0,0.425531914893617,"              precision    recall  f1-score   support
+
+      active       0.35      0.40      0.37        35
+    advanced       0.55      0.55      0.55        44
+       early       0.22      0.18      0.20        11
+     initial       0.00      0.00      0.00         4
+
+    accuracy                           0.43        94
+   macro avg       0.28      0.28      0.28        94
+weighted avg       0.41      0.43      0.42        94
+","{'bootstrap': False, 'max_depth': None, 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.4178571428571428}"
+MAG_Joint-RPCA,traintest_1,0.5,"              precision    recall  f1-score   support
+
+      active       0.53      0.51      0.52        39
+    advanced       0.52      0.61      0.56        36
+       early       0.36      0.38      0.37        13
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.50        94
+   macro avg       0.35      0.38      0.36        94
+weighted avg       0.47      0.50      0.48        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 100, 'best_score': 0.44642857142857145}"
+MAG_Joint-RPCA,traintest_2,0.4148936170212766,"              precision    recall  f1-score   support
+
+      active       0.39      0.35      0.37        40
+    advanced       0.51      0.62      0.56        37
+       early       0.10      0.09      0.10        11
+     initial       0.33      0.17      0.22         6
+
+    accuracy                           0.41        94
+   macro avg       0.33      0.31      0.31        94
+weighted avg       0.40      0.41      0.40        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 200, 'best_score': 0.42142857142857154}"
+MAG_Joint-RPCA,traintest_3,0.43617021276595747,"              precision    recall  f1-score   support
+
+      active       0.42      0.47      0.44        38
+    advanced       0.47      0.56      0.51        36
+       early       0.33      0.17      0.22        12
+     initial       0.50      0.12      0.20         8
+
+    accuracy                           0.44        94
+   macro avg       0.43      0.33      0.34        94
+weighted avg       0.43      0.44      0.42        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 300, 'best_score': 0.45714285714285713}"
+MAG_Joint-RPCA,traintest_4,0.3617021276595745,"              precision    recall  f1-score   support
+
+      active       0.29      0.35      0.32        34
+    advanced       0.47      0.46      0.46        46
+       early       0.20      0.10      0.13        10
+     initial       0.00      0.00      0.00         4
+
+    accuracy                           0.36        94
+   macro avg       0.24      0.23      0.23        94
+weighted avg       0.35      0.36      0.35        94
+","{'bootstrap': False, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 100, 'best_score': 0.41785714285714287}"
+MAG_Joint-RPCA,traintest_5,0.4148936170212766,"              precision    recall  f1-score   support
+
+      active       0.24      0.38      0.30        29
+    advanced       0.57      0.62      0.59        42
+       early       0.67      0.12      0.20        17
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.41        94
+   macro avg       0.37      0.28      0.27        94
+weighted avg       0.45      0.41      0.39        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 100, 'best_score': 0.4535714285714286}"
+MAG_Joint-RPCA,traintest_6,0.39361702127659576,"              precision    recall  f1-score   support
+
+      active       0.40      0.53      0.45        38
+    advanced       0.39      0.44      0.42        34
+       early       0.40      0.12      0.18        17
+     initial       0.00      0.00      0.00         5
+
+    accuracy                           0.39        94
+   macro avg       0.30      0.27      0.26        94
+weighted avg       0.38      0.39      0.37        94
+","{'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 5, 'n_estimators': 100, 'best_score': 0.45}"
+MAG_Joint-RPCA,traintest_7,0.425531914893617,"              precision    recall  f1-score   support
+
+      active       0.38      0.34      0.36        38
+    advanced       0.47      0.63      0.54        38
+       early       0.38      0.27      0.32        11
+     initial       0.00      0.00      0.00         7
+
+    accuracy                           0.43        94
+   macro avg       0.31      0.31      0.30        94
+weighted avg       0.39      0.43      0.40        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 200, 'best_score': 0.4892857142857143}"
+MAG_Joint-RPCA,traintest_8,0.43617021276595747,"              precision    recall  f1-score   support
+
+      active       0.39      0.44      0.42        34
+    advanced       0.54      0.54      0.54        41
+       early       0.40      0.36      0.38        11
+     initial       0.00      0.00      0.00         8
+
+    accuracy                           0.44        94
+   macro avg       0.33      0.34      0.33        94
+weighted avg       0.42      0.44      0.43        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 2, 'n_estimators': 100, 'best_score': 0.43571428571428567}"
+MAG_Joint-RPCA,traintest_9,0.4574468085106383,"              precision    recall  f1-score   support
+
+      active       0.37      0.33      0.35        33
+    advanced       0.57      0.67      0.61        45
+       early       0.22      0.22      0.22         9
+     initial       0.00      0.00      0.00         7
+
+    accuracy                           0.46        94
+   macro avg       0.29      0.31      0.30        94
+weighted avg       0.42      0.46      0.44        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 200, 'best_score': 0.4428571428571429}"
+Gene_Joint-RPCA,traintest_0,0.425531914893617,"              precision    recall  f1-score   support
+
+      active       0.39      0.49      0.43        35
+    advanced       0.49      0.50      0.49        44
+       early       0.20      0.09      0.12        11
+     initial       0.00      0.00      0.00         4
+
+    accuracy                           0.43        94
+   macro avg       0.27      0.27      0.26        94
+weighted avg       0.40      0.43      0.41        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 200, 'best_score': 0.425}"
+Gene_Joint-RPCA,traintest_1,0.4148936170212766,"              precision    recall  f1-score   support
+
+      active       0.46      0.46      0.46        39
+    advanced       0.44      0.53      0.48        36
+       early       0.18      0.15      0.17        13
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.41        94
+   macro avg       0.27      0.29      0.28        94
+weighted avg       0.39      0.41      0.40        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 300, 'best_score': 0.4428571428571429}"
+Gene_Joint-RPCA,traintest_2,0.3829787234042553,"              precision    recall  f1-score   support
+
+      active       0.40      0.30      0.34        40
+    advanced       0.43      0.62      0.51        37
+       early       0.11      0.09      0.10        11
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.38        94
+   macro avg       0.23      0.25      0.24        94
+weighted avg       0.35      0.38      0.36        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 200, 'best_score': 0.4821428571428572}"
+Gene_Joint-RPCA,traintest_3,0.3723404255319149,"              precision    recall  f1-score   support
+
+      active       0.43      0.39      0.41        38
+    advanced       0.37      0.53      0.43        36
+       early       0.14      0.08      0.11        12
+     initial       0.00      0.00      0.00         8
+
+    accuracy                           0.37        94
+   macro avg       0.23      0.25      0.24        94
+weighted avg       0.33      0.37      0.34        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 100, 'best_score': 0.46785714285714286}"
+Gene_Joint-RPCA,traintest_4,0.5106382978723404,"              precision    recall  f1-score   support
+
+      active       0.47      0.53      0.50        34
+    advanced       0.56      0.65      0.60        46
+       early       0.00      0.00      0.00        10
+     initial       0.00      0.00      0.00         4
+
+    accuracy                           0.51        94
+   macro avg       0.26      0.30      0.28        94
+weighted avg       0.44      0.51      0.47        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.4107142857142857}"
+Gene_Joint-RPCA,traintest_5,0.43617021276595747,"              precision    recall  f1-score   support
+
+      active       0.32      0.41      0.36        29
+    advanced       0.51      0.67      0.58        42
+       early       0.50      0.06      0.11        17
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.44        94
+   macro avg       0.33      0.28      0.26        94
+weighted avg       0.42      0.44      0.39        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 100, 'best_score': 0.4}"
+Gene_Joint-RPCA,traintest_6,0.4574468085106383,"              precision    recall  f1-score   support
+
+      active       0.50      0.47      0.49        38
+    advanced       0.44      0.74      0.55        34
+       early       0.00      0.00      0.00        17
+     initial       0.00      0.00      0.00         5
+
+    accuracy                           0.46        94
+   macro avg       0.23      0.30      0.26        94
+weighted avg       0.36      0.46      0.40        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.41785714285714287}"
+Gene_Joint-RPCA,traintest_7,0.43617021276595747,"              precision    recall  f1-score   support
+
+      active       0.44      0.45      0.44        38
+    advanced       0.47      0.63      0.54        38
+       early       0.00      0.00      0.00        11
+     initial       0.00      0.00      0.00         7
+
+    accuracy                           0.44        94
+   macro avg       0.23      0.27      0.25        94
+weighted avg       0.37      0.44      0.40        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.4214285714285714}"
+Gene_Joint-RPCA,traintest_8,0.44680851063829785,"              precision    recall  f1-score   support
+
+      active       0.43      0.47      0.45        34
+    advanced       0.55      0.59      0.56        41
+       early       0.15      0.18      0.17        11
+     initial       0.00      0.00      0.00         8
+
+    accuracy                           0.45        94
+   macro avg       0.28      0.31      0.30        94
+weighted avg       0.41      0.45      0.43        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 300, 'best_score': 0.4392857142857142}"
+Gene_Joint-RPCA,traintest_9,0.425531914893617,"              precision    recall  f1-score   support
+
+      active       0.33      0.48      0.39        33
+    advanced       0.56      0.51      0.53        45
+       early       0.25      0.11      0.15         9
+     initial       0.00      0.00      0.00         7
+
+    accuracy                           0.43        94
+   macro avg       0.28      0.28      0.27        94
+weighted avg       0.41      0.43      0.41        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.44642857142857145}"
+Gene_Module_Joint-RPCA,traintest_0,0.40425531914893614,"              precision    recall  f1-score   support
+
+      active       0.35      0.37      0.36        35
+    advanced       0.55      0.52      0.53        44
+       early       0.00      0.00      0.00        11
+     initial       0.33      0.50      0.40         4
+
+    accuracy                           0.40        94
+   macro avg       0.31      0.35      0.32        94
+weighted avg       0.40      0.40      0.40        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 5, 'n_estimators': 200, 'best_score': 0.48571428571428577}"
+Gene_Module_Joint-RPCA,traintest_1,0.3829787234042553,"              precision    recall  f1-score   support
+
+      active       0.35      0.36      0.35        39
+    advanced       0.43      0.56      0.49        36
+       early       0.25      0.15      0.19        13
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.38        94
+   macro avg       0.26      0.27      0.26        94
+weighted avg       0.35      0.38      0.36        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 300, 'best_score': 0.46071428571428574}"
+Gene_Module_Joint-RPCA,traintest_2,0.5106382978723404,"              precision    recall  f1-score   support
+
+      active       0.55      0.45      0.49        40
+    advanced       0.53      0.78      0.63        37
+       early       0.20      0.09      0.12        11
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.51        94
+   macro avg       0.32      0.33      0.31        94
+weighted avg       0.46      0.51      0.47        94
+","{'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.4107142857142857}"
+Gene_Module_Joint-RPCA,traintest_3,0.44680851063829785,"              precision    recall  f1-score   support
+
+      active       0.50      0.47      0.49        38
+    advanced       0.47      0.61      0.53        36
+       early       0.12      0.08      0.10        12
+     initial       0.33      0.12      0.18         8
+
+    accuracy                           0.45        94
+   macro avg       0.36      0.32      0.32        94
+weighted avg       0.43      0.45      0.43        94
+","{'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.4821428571428571}"
+Gene_Module_Joint-RPCA,traintest_4,0.44680851063829785,"              precision    recall  f1-score   support
+
+      active       0.39      0.38      0.39        34
+    advanced       0.57      0.63      0.60        46
+       early       0.00      0.00      0.00        10
+     initial       0.00      0.00      0.00         4
+
+    accuracy                           0.45        94
+   macro avg       0.24      0.25      0.25        94
+weighted avg       0.42      0.45      0.43        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 5, 'n_estimators': 100, 'best_score': 0.4392857142857142}"
+Gene_Module_Joint-RPCA,traintest_5,0.4787234042553192,"              precision    recall  f1-score   support
+
+      active       0.38      0.45      0.41        29
+    advanced       0.53      0.76      0.63        42
+       early       0.00      0.00      0.00        17
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.48        94
+   macro avg       0.23      0.30      0.26        94
+weighted avg       0.36      0.48      0.41        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 300, 'best_score': 0.4607142857142857}"
+Gene_Module_Joint-RPCA,traintest_6,0.40425531914893614,"              precision    recall  f1-score   support
+
+      active       0.38      0.47      0.42        38
+    advanced       0.47      0.53      0.50        34
+       early       0.29      0.12      0.17        17
+     initial       0.00      0.00      0.00         5
+
+    accuracy                           0.40        94
+   macro avg       0.28      0.28      0.27        94
+weighted avg       0.37      0.40      0.38        94
+","{'bootstrap': False, 'max_depth': None, 'min_samples_leaf': 4, 'min_samples_split': 2, 'n_estimators': 100, 'best_score': 0.45}"
+Gene_Module_Joint-RPCA,traintest_7,0.5425531914893617,"              precision    recall  f1-score   support
+
+      active       0.55      0.55      0.55        38
+    advanced       0.59      0.79      0.67        38
+       early       0.00      0.00      0.00        11
+     initial       0.00      0.00      0.00         7
+
+    accuracy                           0.54        94
+   macro avg       0.29      0.34      0.31        94
+weighted avg       0.46      0.54      0.50        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 300, 'best_score': 0.45}"
+Gene_Module_Joint-RPCA,traintest_8,0.4787234042553192,"              precision    recall  f1-score   support
+
+      active       0.45      0.50      0.47        34
+    advanced       0.52      0.63      0.57        41
+       early       0.33      0.09      0.14        11
+     initial       0.33      0.12      0.18         8
+
+    accuracy                           0.48        94
+   macro avg       0.41      0.34      0.34        94
+weighted avg       0.46      0.48      0.45        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 300, 'best_score': 0.41071428571428575}"
+Gene_Module_Joint-RPCA,traintest_9,0.43617021276595747,"              precision    recall  f1-score   support
+
+      active       0.34      0.30      0.32        33
+    advanced       0.48      0.67      0.56        45
+       early       0.00      0.00      0.00         9
+     initial       0.50      0.14      0.22         7
+
+    accuracy                           0.44        94
+   macro avg       0.33      0.28      0.28        94
+weighted avg       0.39      0.44      0.40        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 2, 'min_samples_split': 5, 'n_estimators': 100, 'best_score': 0.4607142857142857}"
+Metabolite_Joint-RPCA,traintest_0,0.425531914893617,"              precision    recall  f1-score   support
+
+      active       0.39      0.49      0.43        35
+    advanced       0.53      0.48      0.50        44
+       early       0.20      0.18      0.19        11
+     initial       0.00      0.00      0.00         4
+
+    accuracy                           0.43        94
+   macro avg       0.28      0.29      0.28        94
+weighted avg       0.41      0.43      0.42        94
+","{'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.44642857142857145}"
+Metabolite_Joint-RPCA,traintest_1,0.3829787234042553,"              precision    recall  f1-score   support
+
+      active       0.38      0.26      0.31        39
+    advanced       0.40      0.72      0.51        36
+       early       0.00      0.00      0.00        13
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.38        94
+   macro avg       0.20      0.24      0.21        94
+weighted avg       0.31      0.38      0.32        94
+","{'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 100, 'best_score': 0.42142857142857143}"
+Metabolite_Joint-RPCA,traintest_2,0.3723404255319149,"              precision    recall  f1-score   support
+
+      active       0.34      0.30      0.32        40
+    advanced       0.43      0.62      0.51        37
+       early       0.00      0.00      0.00        11
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.37        94
+   macro avg       0.19      0.23      0.21        94
+weighted avg       0.31      0.37      0.34        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 300, 'best_score': 0.4000000000000001}"
+Metabolite_Joint-RPCA,traintest_3,0.44680851063829785,"              precision    recall  f1-score   support
+
+      active       0.52      0.45      0.48        38
+    advanced       0.44      0.67      0.53        36
+       early       0.17      0.08      0.11        12
+     initial       0.00      0.00      0.00         8
+
+    accuracy                           0.45        94
+   macro avg       0.28      0.30      0.28        94
+weighted avg       0.40      0.45      0.41        94
+","{'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 5, 'n_estimators': 100, 'best_score': 0.3857142857142858}"
+Metabolite_Joint-RPCA,traintest_4,0.4148936170212766,"              precision    recall  f1-score   support
+
+      active       0.33      0.35      0.34        34
+    advanced       0.51      0.57      0.54        46
+       early       0.14      0.10      0.12        10
+     initial       0.00      0.00      0.00         4
+
+    accuracy                           0.41        94
+   macro avg       0.25      0.25      0.25        94
+weighted avg       0.39      0.41      0.40        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 300, 'best_score': 0.42857142857142866}"
+Metabolite_Joint-RPCA,traintest_5,0.46808510638297873,"              precision    recall  f1-score   support
+
+      active       0.39      0.55      0.46        29
+    advanced       0.53      0.62      0.57        42
+       early       0.50      0.12      0.19        17
+     initial       0.00      0.00      0.00         6
+
+    accuracy                           0.47        94
+   macro avg       0.36      0.32      0.30        94
+weighted avg       0.45      0.47      0.43        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 1, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.42142857142857143}"
+Metabolite_Joint-RPCA,traintest_6,0.3617021276595745,"              precision    recall  f1-score   support
+
+      active       0.38      0.37      0.37        38
+    advanced       0.36      0.59      0.44        34
+       early       0.00      0.00      0.00        17
+     initial       0.00      0.00      0.00         5
+
+    accuracy                           0.36        94
+   macro avg       0.18      0.24      0.20        94
+weighted avg       0.28      0.36      0.31        94
+","{'bootstrap': True, 'max_depth': 10, 'min_samples_leaf': 4, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.475}"
+Metabolite_Joint-RPCA,traintest_7,0.3829787234042553,"              precision    recall  f1-score   support
+
+      active       0.39      0.39      0.39        38
+    advanced       0.40      0.55      0.47        38
+       early       0.00      0.00      0.00        11
+     initial       0.00      0.00      0.00         7
+
+    accuracy                           0.38        94
+   macro avg       0.20      0.24      0.22        94
+weighted avg       0.32      0.38      0.35        94
+","{'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 100, 'best_score': 0.42857142857142855}"
+Metabolite_Joint-RPCA,traintest_8,0.3617021276595745,"              precision    recall  f1-score   support
+
+      active       0.33      0.38      0.35        34
+    advanced       0.45      0.49      0.47        41
+       early       0.14      0.09      0.11        11
+     initial       0.00      0.00      0.00         8
+
+    accuracy                           0.36        94
+   macro avg       0.23      0.24      0.23        94
+weighted avg       0.33      0.36      0.35        94
+","{'bootstrap': True, 'max_depth': None, 'min_samples_leaf': 2, 'min_samples_split': 10, 'n_estimators': 200, 'best_score': 0.43571428571428567}"
+Metabolite_Joint-RPCA,traintest_9,0.39361702127659576,"              precision    recall  f1-score   support
+
+      active       0.29      0.30      0.30        33
+    advanced       0.48      0.53      0.51        45
+       early       0.30      0.33      0.32         9
+     initial       0.00      0.00      0.00         7
+
+    accuracy                           0.39        94
+   macro avg       0.27      0.29      0.28        94
+weighted avg       0.36      0.39      0.38        94
+","{'bootstrap': False, 'max_depth': 10, 'min_samples_leaf': 2, 'min_samples_split': 2, 'n_estimators': 100, 'best_score': 0.44642857142857134}"
