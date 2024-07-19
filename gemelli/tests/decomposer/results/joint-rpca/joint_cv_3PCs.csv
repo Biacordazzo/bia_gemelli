@@ -1,0 +1,16 @@
+sampleid,mean_CV,std_CV,run,iteration
+0,1710.47230117873,1799.313579841361,tables_5.n_components_3.max_iterations_15.n_test_94,0
+1,569.0269176678692,578.3838684286866,tables_5.n_components_3.max_iterations_15.n_test_94,1
+2,193.04386357469974,164.2701117175373,tables_5.n_components_3.max_iterations_15.n_test_94,2
+3,195.78415661915133,274.3053790124039,tables_5.n_components_3.max_iterations_15.n_test_94,3
+4,96.24572443122494,114.95210206344377,tables_5.n_components_3.max_iterations_15.n_test_94,4
+5,85.70608157024091,115.4640923323213,tables_5.n_components_3.max_iterations_15.n_test_94,5
+6,120.55706678570664,140.01989431691592,tables_5.n_components_3.max_iterations_15.n_test_94,6
+7,107.41620957370351,133.87342643125587,tables_5.n_components_3.max_iterations_15.n_test_94,7
+8,262.21705186350954,354.828629434193,tables_5.n_components_3.max_iterations_15.n_test_94,8
+9,192.23930768756594,180.09154233913017,tables_5.n_components_3.max_iterations_15.n_test_94,9
+10,229.51271937685425,197.7741995130191,tables_5.n_components_3.max_iterations_15.n_test_94,10
+11,295.01138111079047,306.14632685983753,tables_5.n_components_3.max_iterations_15.n_test_94,11
+12,211.4306681748141,186.9401234381792,tables_5.n_components_3.max_iterations_15.n_test_94,12
+13,228.00927725380492,210.0764808256753,tables_5.n_components_3.max_iterations_15.n_test_94,13
+14,300.83634752625187,302.6856204159815,tables_5.n_components_3.max_iterations_15.n_test_94,14
