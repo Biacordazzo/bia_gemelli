@@ -1,0 +1,1101 @@
+	Omic	Fold	Accuracy	Report
+0	18S_RPCA	traintest_0	0.4	"              precision    recall  f1-score   support
+
+        fall       0.37      0.68      0.48        19
+      spring       0.35      0.37      0.36        19
+      summer       0.54      0.42      0.47        31
+      winter       0.17      0.06      0.09        16
+
+    accuracy                           0.40        85
+   macro avg       0.36      0.38      0.35        85
+weighted avg       0.39      0.40      0.38        85
+"
+1	18S_RPCA	traintest_1	0.32558139534883723	"              precision    recall  f1-score   support
+
+        fall       0.42      0.46      0.44        24
+      spring       0.25      0.18      0.21        17
+      summer       0.32      0.42      0.37        26
+      winter       0.21      0.16      0.18        19
+
+    accuracy                           0.33        86
+   macro avg       0.30      0.30      0.30        86
+weighted avg       0.31      0.33      0.31        86
+"
+2	18S_RPCA	traintest_2	0.36363636363636365	"              precision    recall  f1-score   support
+
+        fall       0.39      0.55      0.46        20
+      spring       0.55      0.30      0.39        20
+      summer       0.33      0.44      0.38        25
+      winter       0.00      0.00      0.00        12
+
+    accuracy                           0.36        77
+   macro avg       0.32      0.32      0.31        77
+weighted avg       0.35      0.36      0.34        77
+"
+3	18S_RPCA	traintest_3	0.36904761904761907	"              precision    recall  f1-score   support
+
+        fall       0.37      0.59      0.46        22
+      spring       0.18      0.25      0.21        12
+      summer       0.48      0.38      0.43        34
+      winter       0.40      0.12      0.19        16
+
+    accuracy                           0.37        84
+   macro avg       0.36      0.34      0.32        84
+weighted avg       0.39      0.37      0.36        84
+"
+4	18S_RPCA	traintest_4	0.345679012345679	"              precision    recall  f1-score   support
+
+        fall       0.36      0.35      0.36        23
+      spring       0.29      0.22      0.25        18
+      summer       0.37      0.54      0.44        26
+      winter       0.29      0.14      0.19        14
+
+    accuracy                           0.35        81
+   macro avg       0.33      0.31      0.31        81
+weighted avg       0.33      0.35      0.33        81
+"
+5	18S_RPCA	traintest_5	0.36470588235294116	"              precision    recall  f1-score   support
+
+        fall       0.36      0.38      0.37        26
+      spring       0.40      0.25      0.31        16
+      summer       0.39      0.54      0.45        26
+      winter       0.27      0.18      0.21        17
+
+    accuracy                           0.36        85
+   macro avg       0.35      0.34      0.34        85
+weighted avg       0.36      0.36      0.35        85
+"
+6	18S_RPCA	traintest_6	0.35714285714285715	"              precision    recall  f1-score   support
+
+        fall       0.42      0.58      0.49        24
+      spring       0.38      0.18      0.24        17
+      summer       0.35      0.40      0.38        30
+      winter       0.11      0.08      0.09        13
+
+    accuracy                           0.36        84
+   macro avg       0.32      0.31      0.30        84
+weighted avg       0.34      0.36      0.34        84
+"
+7	18S_RPCA	traintest_7	0.2235294117647059	"              precision    recall  f1-score   support
+
+        fall       0.22      0.38      0.28        21
+      spring       0.14      0.11      0.12        19
+      summer       0.31      0.33      0.32        27
+      winter       0.00      0.00      0.00        18
+
+    accuracy                           0.22        85
+   macro avg       0.17      0.20      0.18        85
+weighted avg       0.18      0.22      0.20        85
+"
+8	18S_RPCA	traintest_8	0.32926829268292684	"              precision    recall  f1-score   support
+
+        fall       0.37      0.52      0.43        21
+      spring       0.21      0.21      0.21        19
+      summer       0.37      0.42      0.39        24
+      winter       0.33      0.11      0.17        18
+
+    accuracy                           0.33        82
+   macro avg       0.32      0.32      0.30        82
+weighted avg       0.32      0.33      0.31        82
+"
+9	18S_RPCA	traintest_9	0.36470588235294116	"              precision    recall  f1-score   support
+
+        fall       0.48      0.42      0.44        24
+      spring       0.12      0.15      0.13        13
+      summer       0.47      0.53      0.50        34
+      winter       0.11      0.07      0.09        14
+
+    accuracy                           0.36        85
+   macro avg       0.29      0.29      0.29        85
+weighted avg       0.36      0.36      0.36        85
+"
+10	MAG_RPCA	traintest_0	0.425531914893617	"              precision    recall  f1-score   support
+
+        fall       0.48      0.63      0.55        19
+      spring       0.43      0.71      0.54        28
+      summer       0.50      0.26      0.34        31
+      winter       0.00      0.00      0.00        16
+
+    accuracy                           0.43        94
+   macro avg       0.35      0.40      0.36        94
+weighted avg       0.39      0.43      0.38        94
+"
+11	MAG_RPCA	traintest_1	0.43617021276595747	"              precision    recall  f1-score   support
+
+        fall       0.49      0.71      0.58        24
+      spring       0.49      0.72      0.58        25
+      summer       0.22      0.15      0.18        26
+      winter       0.50      0.11      0.17        19
+
+    accuracy                           0.44        94
+   macro avg       0.42      0.42      0.38        94
+weighted avg       0.42      0.44      0.39        94
+"
+12	MAG_RPCA	traintest_2	0.44680851063829785	"              precision    recall  f1-score   support
+
+        fall       0.52      0.55      0.54        20
+      spring       0.59      0.59      0.59        37
+      summer       0.28      0.32      0.30        25
+      winter       0.14      0.08      0.11        12
+
+    accuracy                           0.45        94
+   macro avg       0.38      0.39      0.38        94
+weighted avg       0.44      0.45      0.44        94
+"
+13	MAG_RPCA	traintest_3	0.40425531914893614	"              precision    recall  f1-score   support
+
+        fall       0.38      0.50      0.43        22
+      spring       0.53      0.73      0.62        22
+      summer       0.35      0.26      0.30        34
+      winter       0.22      0.12      0.16        16
+
+    accuracy                           0.40        94
+   macro avg       0.37      0.40      0.38        94
+weighted avg       0.38      0.40      0.38        94
+"
+14	MAG_RPCA	traintest_4	0.4574468085106383	"              precision    recall  f1-score   support
+
+        fall       0.41      0.57      0.47        23
+      spring       0.56      0.61      0.58        31
+      summer       0.40      0.38      0.39        26
+      winter       0.33      0.07      0.12        14
+
+    accuracy                           0.46        94
+   macro avg       0.42      0.41      0.39        94
+weighted avg       0.44      0.46      0.43        94
+"
+15	MAG_RPCA	traintest_5	0.40425531914893614	"              precision    recall  f1-score   support
+
+        fall       0.58      0.58      0.58        26
+      spring       0.45      0.72      0.55        25
+      summer       0.23      0.19      0.21        26
+      winter       0.00      0.00      0.00        17
+
+    accuracy                           0.40        94
+   macro avg       0.31      0.37      0.33        94
+weighted avg       0.34      0.40      0.36        94
+"
+16	MAG_RPCA	traintest_6	0.40425531914893614	"              precision    recall  f1-score   support
+
+        fall       0.52      0.58      0.55        24
+      spring       0.40      0.67      0.50        27
+      summer       0.26      0.17      0.20        30
+      winter       0.33      0.08      0.12        13
+
+    accuracy                           0.40        94
+   macro avg       0.38      0.37      0.34        94
+weighted avg       0.38      0.40      0.37        94
+"
+17	MAG_RPCA	traintest_7	0.40425531914893614	"              precision    recall  f1-score   support
+
+        fall       0.46      0.57      0.51        21
+      spring       0.47      0.54      0.50        28
+      summer       0.36      0.30      0.33        27
+      winter       0.21      0.17      0.19        18
+
+    accuracy                           0.40        94
+   macro avg       0.38      0.39      0.38        94
+weighted avg       0.39      0.40      0.39        94
+"
+18	MAG_RPCA	traintest_8	0.4574468085106383	"              precision    recall  f1-score   support
+
+        fall       0.47      0.76      0.58        21
+      spring       0.56      0.58      0.57        31
+      summer       0.32      0.33      0.33        24
+      winter       0.33      0.06      0.10        18
+
+    accuracy                           0.46        94
+   macro avg       0.42      0.43      0.39        94
+weighted avg       0.44      0.46      0.42        94
+"
+19	MAG_RPCA	traintest_9	0.425531914893617	"              precision    recall  f1-score   support
+
+        fall       0.57      0.71      0.63        24
+      spring       0.39      0.64      0.48        22
+      summer       0.33      0.18      0.23        34
+      winter       0.30      0.21      0.25        14
+
+    accuracy                           0.43        94
+   macro avg       0.40      0.43      0.40        94
+weighted avg       0.40      0.43      0.39        94
+"
+20	Gene_RPCA	traintest_0	0.40425531914893614	"              precision    recall  f1-score   support
+
+        fall       0.40      0.63      0.49        19
+      spring       0.46      0.46      0.46        28
+      summer       0.41      0.23      0.29        31
+      winter       0.32      0.38      0.34        16
+
+    accuracy                           0.40        94
+   macro avg       0.40      0.42      0.40        94
+weighted avg       0.41      0.40      0.39        94
+"
+21	Gene_RPCA	traintest_1	0.2872340425531915	"              precision    recall  f1-score   support
+
+        fall       0.32      0.42      0.36        24
+      spring       0.29      0.40      0.33        25
+      summer       0.24      0.19      0.21        26
+      winter       0.29      0.11      0.15        19
+
+    accuracy                           0.29        94
+   macro avg       0.28      0.28      0.27        94
+weighted avg       0.28      0.29      0.27        94
+"
+22	Gene_RPCA	traintest_2	0.43617021276595747	"              precision    recall  f1-score   support
+
+        fall       0.41      0.60      0.49        20
+      spring       0.50      0.38      0.43        37
+      summer       0.38      0.40      0.39        25
+      winter       0.45      0.42      0.43        12
+
+    accuracy                           0.44        94
+   macro avg       0.44      0.45      0.44        94
+weighted avg       0.45      0.44      0.43        94
+"
+23	Gene_RPCA	traintest_3	0.3191489361702128	"              precision    recall  f1-score   support
+
+        fall       0.26      0.32      0.29        22
+      spring       0.34      0.59      0.43        22
+      summer       0.40      0.24      0.30        34
+      winter       0.22      0.12      0.16        16
+
+    accuracy                           0.32        94
+   macro avg       0.31      0.32      0.29        94
+weighted avg       0.32      0.32      0.30        94
+"
+24	Gene_RPCA	traintest_4	0.35106382978723405	"              precision    recall  f1-score   support
+
+        fall       0.37      0.57      0.45        23
+      spring       0.39      0.39      0.39        31
+      summer       0.29      0.23      0.26        26
+      winter       0.29      0.14      0.19        14
+
+    accuracy                           0.35        94
+   macro avg       0.33      0.33      0.32        94
+weighted avg       0.34      0.35      0.34        94
+"
+25	Gene_RPCA	traintest_5	0.3829787234042553	"              precision    recall  f1-score   support
+
+        fall       0.44      0.54      0.48        26
+      spring       0.31      0.44      0.37        25
+      summer       0.32      0.23      0.27        26
+      winter       0.62      0.29      0.40        17
+
+    accuracy                           0.38        94
+   macro avg       0.42      0.38      0.38        94
+weighted avg       0.40      0.38      0.38        94
+"
+26	Gene_RPCA	traintest_6	0.32978723404255317	"              precision    recall  f1-score   support
+
+        fall       0.41      0.54      0.46        24
+      spring       0.35      0.30      0.32        27
+      summer       0.27      0.27      0.27        30
+      winter       0.22      0.15      0.18        13
+
+    accuracy                           0.33        94
+   macro avg       0.31      0.31      0.31        94
+weighted avg       0.32      0.33      0.32        94
+"
+27	Gene_RPCA	traintest_7	0.3191489361702128	"              precision    recall  f1-score   support
+
+        fall       0.35      0.57      0.44        21
+      spring       0.32      0.43      0.37        28
+      summer       0.23      0.11      0.15        27
+      winter       0.30      0.17      0.21        18
+
+    accuracy                           0.32        94
+   macro avg       0.30      0.32      0.29        94
+weighted avg       0.30      0.32      0.29        94
+"
+28	Gene_RPCA	traintest_8	0.44680851063829785	"              precision    recall  f1-score   support
+
+        fall       0.45      0.67      0.54        21
+      spring       0.46      0.42      0.44        31
+      summer       0.37      0.42      0.39        24
+      winter       0.62      0.28      0.38        18
+
+    accuracy                           0.45        94
+   macro avg       0.48      0.45      0.44        94
+weighted avg       0.47      0.45      0.44        94
+"
+29	Gene_RPCA	traintest_9	0.3404255319148936	"              precision    recall  f1-score   support
+
+        fall       0.39      0.54      0.46        24
+      spring       0.28      0.45      0.34        22
+      summer       0.29      0.18      0.22        34
+      winter       0.75      0.21      0.33        14
+
+    accuracy                           0.34        94
+   macro avg       0.43      0.35      0.34        94
+weighted avg       0.38      0.34      0.33        94
+"
+30	Gene_Module_RPCA	traintest_0	0.4148936170212766	"              precision    recall  f1-score   support
+
+        fall       0.63      0.63      0.63        19
+      spring       0.35      0.46      0.40        28
+      summer       0.44      0.35      0.39        31
+      winter       0.23      0.19      0.21        16
+
+    accuracy                           0.41        94
+   macro avg       0.41      0.41      0.41        94
+weighted avg       0.42      0.41      0.41        94
+"
+31	Gene_Module_RPCA	traintest_1	0.425531914893617	"              precision    recall  f1-score   support
+
+        fall       0.73      0.67      0.70        24
+      spring       0.35      0.56      0.43        25
+      summer       0.33      0.35      0.34        26
+      winter       0.20      0.05      0.08        19
+
+    accuracy                           0.43        94
+   macro avg       0.40      0.41      0.39        94
+weighted avg       0.41      0.43      0.40        94
+"
+32	Gene_Module_RPCA	traintest_2	0.44680851063829785	"              precision    recall  f1-score   support
+
+        fall       0.71      0.50      0.59        20
+      spring       0.51      0.49      0.50        37
+      summer       0.35      0.48      0.41        25
+      winter       0.18      0.17      0.17        12
+
+    accuracy                           0.45        94
+   macro avg       0.44      0.41      0.42        94
+weighted avg       0.47      0.45      0.45        94
+"
+33	Gene_Module_RPCA	traintest_3	0.40425531914893614	"              precision    recall  f1-score   support
+
+        fall       0.59      0.45      0.51        22
+      spring       0.31      0.59      0.41        22
+      summer       0.50      0.35      0.41        34
+      winter       0.27      0.19      0.22        16
+
+    accuracy                           0.40        94
+   macro avg       0.42      0.40      0.39        94
+weighted avg       0.44      0.40      0.40        94
+"
+34	Gene_Module_RPCA	traintest_4	0.43617021276595747	"              precision    recall  f1-score   support
+
+        fall       0.70      0.70      0.70        23
+      spring       0.36      0.42      0.39        31
+      summer       0.35      0.35      0.35        26
+      winter       0.33      0.21      0.26        14
+
+    accuracy                           0.44        94
+   macro avg       0.43      0.42      0.42        94
+weighted avg       0.43      0.44      0.43        94
+"
+35	Gene_Module_RPCA	traintest_5	0.4787234042553192	"              precision    recall  f1-score   support
+
+        fall       0.71      0.65      0.68        26
+      spring       0.37      0.52      0.43        25
+      summer       0.44      0.46      0.45        26
+      winter       0.38      0.18      0.24        17
+
+    accuracy                           0.48        94
+   macro avg       0.47      0.45      0.45        94
+weighted avg       0.49      0.48      0.47        94
+"
+36	Gene_Module_RPCA	traintest_6	0.4148936170212766	"              precision    recall  f1-score   support
+
+        fall       0.62      0.54      0.58        24
+      spring       0.35      0.48      0.41        27
+      summer       0.39      0.30      0.34        30
+      winter       0.31      0.31      0.31        13
+
+    accuracy                           0.41        94
+   macro avg       0.42      0.41      0.41        94
+weighted avg       0.43      0.41      0.42        94
+"
+37	Gene_Module_RPCA	traintest_7	0.39361702127659576	"              precision    recall  f1-score   support
+
+        fall       0.71      0.71      0.71        21
+      spring       0.32      0.39      0.35        28
+      summer       0.27      0.30      0.28        27
+      winter       0.33      0.17      0.22        18
+
+    accuracy                           0.39        94
+   macro avg       0.41      0.39      0.39        94
+weighted avg       0.40      0.39      0.39        94
+"
+38	Gene_Module_RPCA	traintest_8	0.4574468085106383	"              precision    recall  f1-score   support
+
+        fall       0.68      0.71      0.70        21
+      spring       0.39      0.52      0.44        31
+      summer       0.40      0.42      0.41        24
+      winter       0.33      0.11      0.17        18
+
+    accuracy                           0.46        94
+   macro avg       0.45      0.44      0.43        94
+weighted avg       0.45      0.46      0.44        94
+"
+39	Gene_Module_RPCA	traintest_9	0.5531914893617021	"              precision    recall  f1-score   support
+
+        fall       0.75      0.75      0.75        24
+      spring       0.46      0.73      0.56        22
+      summer       0.64      0.41      0.50        34
+      winter       0.31      0.29      0.30        14
+
+    accuracy                           0.55        94
+   macro avg       0.54      0.54      0.53        94
+weighted avg       0.57      0.55      0.55        94
+"
+40	Metabolite_RPCA	traintest_0	0.43617021276595747	"              precision    recall  f1-score   support
+
+        fall       0.43      0.68      0.53        19
+      spring       0.43      0.43      0.43        28
+      summer       0.50      0.42      0.46        31
+      winter       0.30      0.19      0.23        16
+
+    accuracy                           0.44        94
+   macro avg       0.42      0.43      0.41        94
+weighted avg       0.43      0.44      0.42        94
+"
+41	Metabolite_RPCA	traintest_1	0.35106382978723405	"              precision    recall  f1-score   support
+
+        fall       0.38      0.50      0.43        24
+      spring       0.29      0.28      0.29        25
+      summer       0.38      0.42      0.40        26
+      winter       0.33      0.16      0.21        19
+
+    accuracy                           0.35        94
+   macro avg       0.34      0.34      0.33        94
+weighted avg       0.35      0.35      0.34        94
+"
+42	Metabolite_RPCA	traintest_2	0.3829787234042553	"              precision    recall  f1-score   support
+
+        fall       0.35      0.65      0.46        20
+      spring       0.54      0.38      0.44        37
+      summer       0.33      0.36      0.35        25
+      winter       0.00      0.00      0.00        12
+
+    accuracy                           0.38        94
+   macro avg       0.31      0.35      0.31        94
+weighted avg       0.38      0.38      0.36        94
+"
+43	Metabolite_RPCA	traintest_3	0.40425531914893614	"              precision    recall  f1-score   support
+
+        fall       0.42      0.68      0.52        22
+      spring       0.31      0.50      0.39        22
+      summer       0.55      0.32      0.41        34
+      winter       0.33      0.06      0.11        16
+
+    accuracy                           0.40        94
+   macro avg       0.40      0.39      0.35        94
+weighted avg       0.43      0.40      0.38        94
+"
+44	Metabolite_RPCA	traintest_4	0.3829787234042553	"              precision    recall  f1-score   support
+
+        fall       0.36      0.35      0.36        23
+      spring       0.43      0.42      0.43        31
+      summer       0.37      0.50      0.43        26
+      winter       0.29      0.14      0.19        14
+
+    accuracy                           0.38        94
+   macro avg       0.36      0.35      0.35        94
+weighted avg       0.38      0.38      0.37        94
+"
+45	Metabolite_RPCA	traintest_5	0.3404255319148936	"              precision    recall  f1-score   support
+
+        fall       0.32      0.35      0.33        26
+      spring       0.35      0.48      0.41        25
+      summer       0.38      0.35      0.36        26
+      winter       0.25      0.12      0.16        17
+
+    accuracy                           0.34        94
+   macro avg       0.32      0.32      0.32        94
+weighted avg       0.33      0.34      0.33        94
+"
+46	Metabolite_RPCA	traintest_6	0.3191489361702128	"              precision    recall  f1-score   support
+
+        fall       0.32      0.33      0.33        24
+      spring       0.31      0.44      0.36        27
+      summer       0.33      0.23      0.27        30
+      winter       0.33      0.23      0.27        13
+
+    accuracy                           0.32        94
+   macro avg       0.32      0.31      0.31        94
+weighted avg       0.32      0.32      0.31        94
+"
+47	Metabolite_RPCA	traintest_7	0.39361702127659576	"              precision    recall  f1-score   support
+
+        fall       0.31      0.48      0.38        21
+      spring       0.52      0.61      0.56        28
+      summer       0.41      0.26      0.32        27
+      winter       0.25      0.17      0.20        18
+
+    accuracy                           0.39        94
+   macro avg       0.37      0.38      0.36        94
+weighted avg       0.39      0.39      0.38        94
+"
+48	Metabolite_RPCA	traintest_8	0.3723404255319149	"              precision    recall  f1-score   support
+
+        fall       0.42      0.52      0.47        21
+      spring       0.44      0.39      0.41        31
+      summer       0.25      0.33      0.29        24
+      winter       0.44      0.22      0.30        18
+
+    accuracy                           0.37        94
+   macro avg       0.39      0.37      0.37        94
+weighted avg       0.39      0.37      0.37        94
+"
+49	Metabolite_RPCA	traintest_9	0.425531914893617	"              precision    recall  f1-score   support
+
+        fall       0.39      0.54      0.46        24
+      spring       0.41      0.59      0.48        22
+      summer       0.60      0.35      0.44        34
+      winter       0.22      0.14      0.17        14
+
+    accuracy                           0.43        94
+   macro avg       0.41      0.41      0.39        94
+weighted avg       0.45      0.43      0.42        94
+"
+50	18S_Joint-RPCA	traintest_0	0.3855421686746988	"              precision    recall  f1-score   support
+
+        fall       0.32      0.53      0.40        19
+      spring       0.40      0.35      0.38        17
+      summer       0.42      0.26      0.32        31
+      winter       0.44      0.50      0.47        16
+
+    accuracy                           0.39        83
+   macro avg       0.40      0.41      0.39        83
+weighted avg       0.40      0.39      0.38        83
+"
+51	18S_Joint-RPCA	traintest_1	0.367816091954023	"              precision    recall  f1-score   support
+
+        fall       0.40      0.42      0.41        24
+      spring       0.28      0.28      0.28        18
+      summer       0.33      0.42      0.37        26
+      winter       0.55      0.32      0.40        19
+
+    accuracy                           0.37        87
+   macro avg       0.39      0.36      0.36        87
+weighted avg       0.39      0.37      0.37        87
+"
+52	18S_Joint-RPCA	traintest_2	0.3333333333333333	"              precision    recall  f1-score   support
+
+        fall       0.26      0.45      0.33        20
+      spring       0.41      0.33      0.37        21
+      summer       0.37      0.28      0.32        25
+      winter       0.43      0.25      0.32        12
+
+    accuracy                           0.33        78
+   macro avg       0.37      0.33      0.33        78
+weighted avg       0.36      0.33      0.33        78
+"
+53	18S_Joint-RPCA	traintest_3	0.36470588235294116	"              precision    recall  f1-score   support
+
+        fall       0.29      0.36      0.32        22
+      spring       0.23      0.46      0.31        13
+      summer       0.50      0.26      0.35        34
+      winter       0.62      0.50      0.55        16
+
+    accuracy                           0.36        85
+   macro avg       0.41      0.40      0.38        85
+weighted avg       0.43      0.36      0.37        85
+"
+54	18S_Joint-RPCA	traintest_4	0.4146341463414634	"              precision    recall  f1-score   support
+
+        fall       0.29      0.30      0.30        23
+      spring       0.35      0.42      0.38        19
+      summer       0.50      0.42      0.46        26
+      winter       0.62      0.57      0.59        14
+
+    accuracy                           0.41        82
+   macro avg       0.44      0.43      0.43        82
+weighted avg       0.43      0.41      0.42        82
+"
+55	18S_Joint-RPCA	traintest_5	0.3855421686746988	"              precision    recall  f1-score   support
+
+        fall       0.39      0.46      0.42        26
+      spring       0.21      0.29      0.24        14
+      summer       0.39      0.27      0.32        26
+      winter       0.60      0.53      0.56        17
+
+    accuracy                           0.39        83
+   macro avg       0.40      0.39      0.39        83
+weighted avg       0.40      0.39      0.39        83
+"
+56	18S_Joint-RPCA	traintest_6	0.3411764705882353	"              precision    recall  f1-score   support
+
+        fall       0.31      0.46      0.37        24
+      spring       0.50      0.33      0.40        18
+      summer       0.33      0.23      0.27        30
+      winter       0.29      0.38      0.33        13
+
+    accuracy                           0.34        85
+   macro avg       0.36      0.35      0.35        85
+weighted avg       0.36      0.34      0.34        85
+"
+57	18S_Joint-RPCA	traintest_7	0.32558139534883723	"              precision    recall  f1-score   support
+
+        fall       0.21      0.33      0.25        21
+      spring       0.25      0.20      0.22        20
+      summer       0.41      0.33      0.37        27
+      winter       0.57      0.44      0.50        18
+
+    accuracy                           0.33        86
+   macro avg       0.36      0.33      0.34        86
+weighted avg       0.36      0.33      0.33        86
+"
+58	18S_Joint-RPCA	traintest_8	0.23170731707317074	"              precision    recall  f1-score   support
+
+        fall       0.21      0.29      0.24        21
+      spring       0.23      0.32      0.27        19
+      summer       0.16      0.12      0.14        24
+      winter       0.44      0.22      0.30        18
+
+    accuracy                           0.23        82
+   macro avg       0.26      0.24      0.24        82
+weighted avg       0.25      0.23      0.23        82
+"
+59	18S_Joint-RPCA	traintest_9	0.29411764705882354	"              precision    recall  f1-score   support
+
+        fall       0.38      0.42      0.40        24
+      spring       0.17      0.23      0.19        13
+      summer       0.21      0.12      0.15        34
+      winter       0.36      0.57      0.44        14
+
+    accuracy                           0.29        85
+   macro avg       0.28      0.33      0.30        85
+weighted avg       0.28      0.29      0.28        85
+"
+60	MAG_Joint-RPCA	traintest_0	0.5212765957446809	"              precision    recall  f1-score   support
+
+        fall       0.70      0.74      0.72        19
+      spring       0.38      0.36      0.37        28
+      summer       0.55      0.55      0.55        31
+      winter       0.47      0.50      0.48        16
+
+    accuracy                           0.52        94
+   macro avg       0.53      0.54      0.53        94
+weighted avg       0.52      0.52      0.52        94
+"
+61	MAG_Joint-RPCA	traintest_1	0.44680851063829785	"              precision    recall  f1-score   support
+
+        fall       0.58      0.62      0.60        24
+      spring       0.25      0.32      0.28        25
+      summer       0.50      0.50      0.50        26
+      winter       0.60      0.32      0.41        19
+
+    accuracy                           0.45        94
+   macro avg       0.48      0.44      0.45        94
+weighted avg       0.47      0.45      0.45        94
+"
+62	MAG_Joint-RPCA	traintest_2	0.3723404255319149	"              precision    recall  f1-score   support
+
+        fall       0.37      0.35      0.36        20
+      spring       0.40      0.27      0.32        37
+      summer       0.39      0.52      0.45        25
+      winter       0.29      0.42      0.34        12
+
+    accuracy                           0.37        94
+   macro avg       0.36      0.39      0.37        94
+weighted avg       0.38      0.37      0.37        94
+"
+63	MAG_Joint-RPCA	traintest_3	0.3617021276595745	"              precision    recall  f1-score   support
+
+        fall       0.38      0.27      0.32        22
+      spring       0.24      0.36      0.29        22
+      summer       0.50      0.44      0.47        34
+      winter       0.33      0.31      0.32        16
+
+    accuracy                           0.36        94
+   macro avg       0.36      0.35      0.35        94
+weighted avg       0.38      0.36      0.37        94
+"
+64	MAG_Joint-RPCA	traintest_4	0.43617021276595747	"              precision    recall  f1-score   support
+
+        fall       0.57      0.52      0.55        23
+      spring       0.37      0.35      0.36        31
+      summer       0.45      0.54      0.49        26
+      winter       0.33      0.29      0.31        14
+
+    accuracy                           0.44        94
+   macro avg       0.43      0.43      0.43        94
+weighted avg       0.44      0.44      0.43        94
+"
+65	MAG_Joint-RPCA	traintest_5	0.44680851063829785	"              precision    recall  f1-score   support
+
+        fall       0.59      0.50      0.54        26
+      spring       0.36      0.56      0.44        25
+      summer       0.50      0.38      0.43        26
+      winter       0.38      0.29      0.33        17
+
+    accuracy                           0.45        94
+   macro avg       0.46      0.43      0.44        94
+weighted avg       0.47      0.45      0.45        94
+"
+66	MAG_Joint-RPCA	traintest_6	0.44680851063829785	"              precision    recall  f1-score   support
+
+        fall       0.71      0.42      0.53        24
+      spring       0.39      0.59      0.47        27
+      summer       0.55      0.40      0.46        30
+      winter       0.24      0.31      0.27        13
+
+    accuracy                           0.45        94
+   macro avg       0.47      0.43      0.43        94
+weighted avg       0.50      0.45      0.45        94
+"
+67	MAG_Joint-RPCA	traintest_7	0.3829787234042553	"              precision    recall  f1-score   support
+
+        fall       0.56      0.67      0.61        21
+      spring       0.31      0.36      0.33        28
+      summer       0.33      0.30      0.31        27
+      winter       0.31      0.22      0.26        18
+
+    accuracy                           0.38        94
+   macro avg       0.38      0.39      0.38        94
+weighted avg       0.37      0.38      0.37        94
+"
+68	MAG_Joint-RPCA	traintest_8	0.43617021276595747	"              precision    recall  f1-score   support
+
+        fall       0.46      0.76      0.57        21
+      spring       0.35      0.26      0.30        31
+      summer       0.44      0.46      0.45        24
+      winter       0.55      0.33      0.41        18
+
+    accuracy                           0.44        94
+   macro avg       0.45      0.45      0.43        94
+weighted avg       0.43      0.44      0.42        94
+"
+69	MAG_Joint-RPCA	traintest_9	0.4148936170212766	"              precision    recall  f1-score   support
+
+        fall       0.60      0.50      0.55        24
+      spring       0.26      0.55      0.35        22
+      summer       0.55      0.35      0.43        34
+      winter       0.50      0.21      0.30        14
+
+    accuracy                           0.41        94
+   macro avg       0.48      0.40      0.41        94
+weighted avg       0.49      0.41      0.42        94
+"
+70	Gene_Joint-RPCA	traintest_0	0.32978723404255317	"              precision    recall  f1-score   support
+
+        fall       0.37      0.37      0.37        19
+      spring       0.33      0.43      0.38        28
+      summer       0.36      0.29      0.32        31
+      winter       0.21      0.19      0.20        16
+
+    accuracy                           0.33        94
+   macro avg       0.32      0.32      0.32        94
+weighted avg       0.33      0.33      0.33        94
+"
+71	Gene_Joint-RPCA	traintest_1	0.3723404255319149	"              precision    recall  f1-score   support
+
+        fall       0.45      0.62      0.53        24
+      spring       0.34      0.40      0.37        25
+      summer       0.29      0.27      0.28        26
+      winter       0.38      0.16      0.22        19
+
+    accuracy                           0.37        94
+   macro avg       0.37      0.36      0.35        94
+weighted avg       0.36      0.37      0.36        94
+"
+72	Gene_Joint-RPCA	traintest_2	0.3829787234042553	"              precision    recall  f1-score   support
+
+        fall       0.33      0.30      0.32        20
+      spring       0.45      0.54      0.49        37
+      summer       0.39      0.36      0.38        25
+      winter       0.11      0.08      0.10        12
+
+    accuracy                           0.38        94
+   macro avg       0.32      0.32      0.32        94
+weighted avg       0.37      0.38      0.37        94
+"
+73	Gene_Joint-RPCA	traintest_3	0.3617021276595745	"              precision    recall  f1-score   support
+
+        fall       0.43      0.45      0.44        22
+      spring       0.31      0.59      0.41        22
+      summer       0.48      0.29      0.36        34
+      winter       0.12      0.06      0.08        16
+
+    accuracy                           0.36        94
+   macro avg       0.34      0.35      0.32        94
+weighted avg       0.37      0.36      0.34        94
+"
+74	Gene_Joint-RPCA	traintest_4	0.3723404255319149	"              precision    recall  f1-score   support
+
+        fall       0.38      0.52      0.44        23
+      spring       0.32      0.29      0.31        31
+      summer       0.41      0.46      0.44        26
+      winter       0.40      0.14      0.21        14
+
+    accuracy                           0.37        94
+   macro avg       0.38      0.35      0.35        94
+weighted avg       0.37      0.37      0.36        94
+"
+75	Gene_Joint-RPCA	traintest_5	0.3829787234042553	"              precision    recall  f1-score   support
+
+        fall       0.47      0.58      0.52        26
+      spring       0.31      0.44      0.37        25
+      summer       0.33      0.23      0.27        26
+      winter       0.44      0.24      0.31        17
+
+    accuracy                           0.38        94
+   macro avg       0.39      0.37      0.37        94
+weighted avg       0.39      0.38      0.37        94
+"
+76	Gene_Joint-RPCA	traintest_6	0.3617021276595745	"              precision    recall  f1-score   support
+
+        fall       0.44      0.33      0.38        24
+      spring       0.33      0.56      0.42        27
+      summer       0.43      0.33      0.38        30
+      winter       0.12      0.08      0.10        13
+
+    accuracy                           0.36        94
+   macro avg       0.33      0.32      0.32        94
+weighted avg       0.37      0.36      0.35        94
+"
+77	Gene_Joint-RPCA	traintest_7	0.35106382978723405	"              precision    recall  f1-score   support
+
+        fall       0.43      0.48      0.45        21
+      spring       0.37      0.50      0.42        28
+      summer       0.28      0.30      0.29        27
+      winter       0.25      0.06      0.09        18
+
+    accuracy                           0.35        94
+   macro avg       0.33      0.33      0.31        94
+weighted avg       0.33      0.35      0.33        94
+"
+78	Gene_Joint-RPCA	traintest_8	0.4148936170212766	"              precision    recall  f1-score   support
+
+        fall       0.46      0.62      0.53        21
+      spring       0.43      0.48      0.45        31
+      summer       0.38      0.38      0.38        24
+      winter       0.29      0.11      0.16        18
+
+    accuracy                           0.41        94
+   macro avg       0.39      0.40      0.38        94
+weighted avg       0.40      0.41      0.39        94
+"
+79	Gene_Joint-RPCA	traintest_9	0.43617021276595747	"              precision    recall  f1-score   support
+
+        fall       0.58      0.62      0.60        24
+      spring       0.37      0.64      0.47        22
+      summer       0.45      0.29      0.36        34
+      winter       0.25      0.14      0.18        14
+
+    accuracy                           0.44        94
+   macro avg       0.41      0.42      0.40        94
+weighted avg       0.44      0.44      0.42        94
+"
+80	Gene_Module_Joint-RPCA	traintest_0	0.425531914893617	"              precision    recall  f1-score   support
+
+        fall       0.43      0.63      0.51        19
+      spring       0.44      0.64      0.52        28
+      summer       0.44      0.23      0.30        31
+      winter       0.33      0.19      0.24        16
+
+    accuracy                           0.43        94
+   macro avg       0.41      0.42      0.39        94
+weighted avg       0.42      0.43      0.40        94
+"
+81	Gene_Module_Joint-RPCA	traintest_1	0.44680851063829785	"              precision    recall  f1-score   support
+
+        fall       0.55      0.71      0.62        24
+      spring       0.39      0.56      0.46        25
+      summer       0.39      0.35      0.37        26
+      winter       0.50      0.11      0.17        19
+
+    accuracy                           0.45        94
+   macro avg       0.46      0.43      0.40        94
+weighted avg       0.45      0.45      0.42        94
+"
+82	Gene_Module_Joint-RPCA	traintest_2	0.40425531914893614	"              precision    recall  f1-score   support
+
+        fall       0.43      0.65      0.52        20
+      spring       0.48      0.38      0.42        37
+      summer       0.29      0.28      0.29        25
+      winter       0.36      0.33      0.35        12
+
+    accuracy                           0.40        94
+   macro avg       0.39      0.41      0.39        94
+weighted avg       0.41      0.40      0.40        94
+"
+83	Gene_Module_Joint-RPCA	traintest_3	0.35106382978723405	"              precision    recall  f1-score   support
+
+        fall       0.47      0.64      0.54        22
+      spring       0.30      0.50      0.37        22
+      summer       0.27      0.18      0.21        34
+      winter       0.40      0.12      0.19        16
+
+    accuracy                           0.35        94
+   macro avg       0.36      0.36      0.33        94
+weighted avg       0.35      0.35      0.32        94
+"
+84	Gene_Module_Joint-RPCA	traintest_4	0.4148936170212766	"              precision    recall  f1-score   support
+
+        fall       0.50      0.57      0.53        23
+      spring       0.43      0.48      0.45        31
+      summer       0.31      0.38      0.34        26
+      winter       1.00      0.07      0.13        14
+
+    accuracy                           0.41        94
+   macro avg       0.56      0.38      0.37        94
+weighted avg       0.50      0.41      0.39        94
+"
+85	Gene_Module_Joint-RPCA	traintest_5	0.425531914893617	"              precision    recall  f1-score   support
+
+        fall       0.50      0.54      0.52        26
+      spring       0.42      0.44      0.43        25
+      summer       0.38      0.46      0.41        26
+      winter       0.38      0.18      0.24        17
+
+    accuracy                           0.43        94
+   macro avg       0.42      0.40      0.40        94
+weighted avg       0.42      0.43      0.42        94
+"
+86	Gene_Module_Joint-RPCA	traintest_6	0.4574468085106383	"              precision    recall  f1-score   support
+
+        fall       0.52      0.67      0.58        24
+      spring       0.52      0.59      0.55        27
+      summer       0.39      0.30      0.34        30
+      winter       0.22      0.15      0.18        13
+
+    accuracy                           0.46        94
+   macro avg       0.41      0.43      0.41        94
+weighted avg       0.44      0.46      0.44        94
+"
+87	Gene_Module_Joint-RPCA	traintest_7	0.3723404255319149	"              precision    recall  f1-score   support
+
+        fall       0.41      0.62      0.49        21
+      spring       0.40      0.50      0.44        28
+      summer       0.23      0.19      0.20        27
+      winter       0.60      0.17      0.26        18
+
+    accuracy                           0.37        94
+   macro avg       0.41      0.37      0.35        94
+weighted avg       0.39      0.37      0.35        94
+"
+88	Gene_Module_Joint-RPCA	traintest_8	0.44680851063829785	"              precision    recall  f1-score   support
+
+        fall       0.45      0.90      0.60        21
+      spring       0.50      0.48      0.49        31
+      summer       0.29      0.21      0.24        24
+      winter       0.60      0.17      0.26        18
+
+    accuracy                           0.45        94
+   macro avg       0.46      0.44      0.40        94
+weighted avg       0.46      0.45      0.41        94
+"
+89	Gene_Module_Joint-RPCA	traintest_9	0.425531914893617	"              precision    recall  f1-score   support
+
+        fall       0.56      0.83      0.67        24
+      spring       0.31      0.50      0.38        22
+      summer       0.46      0.18      0.26        34
+      winter       0.33      0.21      0.26        14
+
+    accuracy                           0.43        94
+   macro avg       0.41      0.43      0.39        94
+weighted avg       0.43      0.43      0.39        94
+"
+90	Metabolite_Joint-RPCA	traintest_0	0.2765957446808511	"              precision    recall  f1-score   support
+
+        fall       0.06      0.11      0.08        19
+      spring       0.57      0.46      0.51        28
+      summer       0.35      0.29      0.32        31
+      winter       0.15      0.12      0.14        16
+
+    accuracy                           0.28        94
+   macro avg       0.28      0.25      0.26        94
+weighted avg       0.32      0.28      0.30        94
+"
+91	Metabolite_Joint-RPCA	traintest_1	0.2872340425531915	"              precision    recall  f1-score   support
+
+        fall       0.26      0.33      0.29        24
+      spring       0.35      0.52      0.42        25
+      summer       0.29      0.19      0.23        26
+      winter       0.11      0.05      0.07        19
+
+    accuracy                           0.29        94
+   macro avg       0.25      0.27      0.25        94
+weighted avg       0.26      0.29      0.26        94
+"
+92	Metabolite_Joint-RPCA	traintest_2	0.3723404255319149	"              precision    recall  f1-score   support
+
+        fall       0.19      0.35      0.25        20
+      spring       0.59      0.46      0.52        37
+      summer       0.45      0.40      0.43        25
+      winter       0.17      0.08      0.11        12
+
+    accuracy                           0.37        94
+   macro avg       0.35      0.32      0.32        94
+weighted avg       0.41      0.37      0.38        94
+"
+93	Metabolite_Joint-RPCA	traintest_3	0.3617021276595745	"              precision    recall  f1-score   support
+
+        fall       0.30      0.36      0.33        22
+      spring       0.36      0.59      0.45        22
+      summer       0.48      0.35      0.41        34
+      winter       0.17      0.06      0.09        16
+
+    accuracy                           0.36        94
+   macro avg       0.33      0.34      0.32        94
+weighted avg       0.36      0.36      0.34        94
+"
+94	Metabolite_Joint-RPCA	traintest_4	0.26595744680851063	"              precision    recall  f1-score   support
+
+        fall       0.15      0.17      0.16        23
+      spring       0.46      0.42      0.44        31
+      summer       0.27      0.27      0.27        26
+      winter       0.07      0.07      0.07        14
+
+    accuracy                           0.27        94
+   macro avg       0.24      0.23      0.24        94
+weighted avg       0.28      0.27      0.27        94
+"
+95	Metabolite_Joint-RPCA	traintest_5	0.30851063829787234	"              precision    recall  f1-score   support
+
+        fall       0.22      0.23      0.23        26
+      spring       0.38      0.60      0.47        25
+      summer       0.35      0.27      0.30        26
+      winter       0.12      0.06      0.08        17
+
+    accuracy                           0.31        94
+   macro avg       0.27      0.29      0.27        94
+weighted avg       0.28      0.31      0.29        94
+"
+96	Metabolite_Joint-RPCA	traintest_6	0.32978723404255317	"              precision    recall  f1-score   support
+
+        fall       0.28      0.42      0.33        24
+      spring       0.37      0.41      0.39        27
+      summer       0.38      0.30      0.33        30
+      winter       0.25      0.08      0.12        13
+
+    accuracy                           0.33        94
+   macro avg       0.32      0.30      0.29        94
+weighted avg       0.33      0.33      0.32        94
+"
+97	Metabolite_Joint-RPCA	traintest_7	0.3617021276595745	"              precision    recall  f1-score   support
+
+        fall       0.21      0.29      0.24        21
+      spring       0.46      0.64      0.54        28
+      summer       0.43      0.33      0.38        27
+      winter       0.20      0.06      0.09        18
+
+    accuracy                           0.36        94
+   macro avg       0.32      0.33      0.31        94
+weighted avg       0.35      0.36      0.34        94
+"
+98	Metabolite_Joint-RPCA	traintest_8	0.2553191489361702	"              precision    recall  f1-score   support
+
+        fall       0.17      0.29      0.21        21
+      spring       0.36      0.32      0.34        31
+      summer       0.32      0.25      0.28        24
+      winter       0.17      0.11      0.13        18
+
+    accuracy                           0.26        94
+   macro avg       0.25      0.24      0.24        94
+weighted avg       0.27      0.26      0.26        94
+"
+99	Metabolite_Joint-RPCA	traintest_9	0.3191489361702128	"              precision    recall  f1-score   support
+
+        fall       0.29      0.42      0.34        24
+      spring       0.40      0.64      0.49        22
+      summer       0.29      0.15      0.20        34
+      winter       0.12      0.07      0.09        14
+
+    accuracy                           0.32        94
+   macro avg       0.28      0.32      0.28        94
+weighted avg       0.29      0.32      0.29        94
+"
