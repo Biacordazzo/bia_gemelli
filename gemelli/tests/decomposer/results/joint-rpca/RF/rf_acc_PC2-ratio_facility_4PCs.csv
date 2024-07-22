@@ -1,0 +1,1001 @@
+Omic,Fold,Accuracy,Report,Optimization
+18S_RPCA,traintest_0,0.4186046511627907,"              precision    recall  f1-score   support
+
+         ARF       0.50      0.50      0.50        46
+        FIRS       0.31      0.33      0.32        15
+       STAFS       0.33      0.32      0.33        25
+
+    accuracy                           0.42        86
+   macro avg       0.38      0.38      0.38        86
+weighted avg       0.42      0.42      0.42        86
+",None
+18S_RPCA,traintest_1,0.47674418604651164,"              precision    recall  f1-score   support
+
+         ARF       0.55      0.59      0.57        44
+        FIRS       0.20      0.21      0.21        14
+       STAFS       0.50      0.43      0.46        28
+
+    accuracy                           0.48        86
+   macro avg       0.42      0.41      0.41        86
+weighted avg       0.48      0.48      0.48        86
+",None
+18S_RPCA,traintest_2,0.46835443037974683,"              precision    recall  f1-score   support
+
+         ARF       0.52      0.59      0.55        41
+        FIRS       0.33      0.21      0.26        14
+       STAFS       0.42      0.42      0.42        24
+
+    accuracy                           0.47        79
+   macro avg       0.42      0.41      0.41        79
+weighted avg       0.46      0.47      0.46        79
+",None
+18S_RPCA,traintest_3,0.4117647058823529,"              precision    recall  f1-score   support
+
+         ARF       0.49      0.44      0.47        45
+        FIRS       0.19      0.21      0.20        14
+       STAFS       0.43      0.46      0.44        26
+
+    accuracy                           0.41        85
+   macro avg       0.37      0.37      0.37        85
+weighted avg       0.42      0.41      0.42        85
+",None
+18S_RPCA,traintest_4,0.48148148148148145,"              precision    recall  f1-score   support
+
+         ARF       0.56      0.57      0.56        44
+        FIRS       0.23      0.21      0.22        14
+       STAFS       0.48      0.48      0.48        23
+
+    accuracy                           0.48        81
+   macro avg       0.42      0.42      0.42        81
+weighted avg       0.48      0.48      0.48        81
+",None
+18S_RPCA,traintest_5,0.49411764705882355,"              precision    recall  f1-score   support
+
+         ARF       0.55      0.59      0.57        46
+        FIRS       0.46      0.40      0.43        15
+       STAFS       0.39      0.38      0.38        24
+
+    accuracy                           0.49        85
+   macro avg       0.47      0.45      0.46        85
+weighted avg       0.49      0.49      0.49        85
+",None
+18S_RPCA,traintest_6,0.36904761904761907,"              precision    recall  f1-score   support
+
+         ARF       0.45      0.51      0.48        43
+        FIRS       0.25      0.27      0.26        15
+       STAFS       0.26      0.19      0.22        26
+
+    accuracy                           0.37        84
+   macro avg       0.32      0.32      0.32        84
+weighted avg       0.36      0.37      0.36        84
+",None
+18S_RPCA,traintest_7,0.4588235294117647,"              precision    recall  f1-score   support
+
+         ARF       0.51      0.60      0.55        45
+        FIRS       0.38      0.36      0.37        14
+       STAFS       0.37      0.27      0.31        26
+
+    accuracy                           0.46        85
+   macro avg       0.42      0.41      0.41        85
+weighted avg       0.45      0.46      0.45        85
+",None
+18S_RPCA,traintest_8,0.4074074074074074,"              precision    recall  f1-score   support
+
+         ARF       0.48      0.44      0.46        45
+        FIRS       0.44      0.27      0.33        15
+       STAFS       0.30      0.43      0.35        21
+
+    accuracy                           0.41        81
+   macro avg       0.41      0.38      0.38        81
+weighted avg       0.42      0.41      0.41        81
+",None
+18S_RPCA,traintest_9,0.4588235294117647,"              precision    recall  f1-score   support
+
+         ARF       0.50      0.61      0.55        44
+        FIRS       0.27      0.20      0.23        15
+       STAFS       0.45      0.35      0.39        26
+
+    accuracy                           0.46        85
+   macro avg       0.41      0.39      0.39        85
+weighted avg       0.44      0.46      0.45        85
+",None
+MAG_RPCA,traintest_0,0.8829787234042553,"              precision    recall  f1-score   support
+
+         ARF       0.91      0.85      0.88        48
+        FIRS       0.80      0.80      0.80        15
+       STAFS       0.88      0.97      0.92        31
+
+    accuracy                           0.88        94
+   macro avg       0.86      0.87      0.87        94
+weighted avg       0.88      0.88      0.88        94
+",None
+MAG_RPCA,traintest_1,0.8936170212765957,"              precision    recall  f1-score   support
+
+         ARF       0.87      0.94      0.90        48
+        FIRS       0.86      0.80      0.83        15
+       STAFS       0.96      0.87      0.92        31
+
+    accuracy                           0.89        94
+   macro avg       0.90      0.87      0.88        94
+weighted avg       0.90      0.89      0.89        94
+",None
+MAG_RPCA,traintest_2,0.8617021276595744,"              precision    recall  f1-score   support
+
+         ARF       0.91      0.81      0.86        48
+        FIRS       0.81      0.87      0.84        15
+       STAFS       0.83      0.94      0.88        31
+
+    accuracy                           0.86        94
+   macro avg       0.85      0.87      0.86        94
+weighted avg       0.87      0.86      0.86        94
+",None
+MAG_RPCA,traintest_3,0.851063829787234,"              precision    recall  f1-score   support
+
+         ARF       0.85      0.85      0.85        48
+        FIRS       0.64      0.60      0.62        15
+       STAFS       0.94      0.97      0.95        31
+
+    accuracy                           0.85        94
+   macro avg       0.81      0.81      0.81        94
+weighted avg       0.85      0.85      0.85        94
+",None
+MAG_RPCA,traintest_4,0.925531914893617,"              precision    recall  f1-score   support
+
+         ARF       0.96      0.90      0.92        48
+        FIRS       0.93      0.87      0.90        15
+       STAFS       0.89      1.00      0.94        31
+
+    accuracy                           0.93        94
+   macro avg       0.92      0.92      0.92        94
+weighted avg       0.93      0.93      0.93        94
+",None
+MAG_RPCA,traintest_5,0.8617021276595744,"              precision    recall  f1-score   support
+
+         ARF       0.91      0.81      0.86        48
+        FIRS       0.81      0.87      0.84        15
+       STAFS       0.83      0.94      0.88        31
+
+    accuracy                           0.86        94
+   macro avg       0.85      0.87      0.86        94
+weighted avg       0.87      0.86      0.86        94
+",None
+MAG_RPCA,traintest_6,0.8617021276595744,"              precision    recall  f1-score   support
+
+         ARF       0.87      0.85      0.86        48
+        FIRS       0.67      0.67      0.67        15
+       STAFS       0.94      0.97      0.95        31
+
+    accuracy                           0.86        94
+   macro avg       0.83      0.83      0.83        94
+weighted avg       0.86      0.86      0.86        94
+",None
+MAG_RPCA,traintest_7,0.8723404255319149,"              precision    recall  f1-score   support
+
+         ARF       0.85      0.92      0.88        48
+        FIRS       0.83      0.67      0.74        15
+       STAFS       0.93      0.90      0.92        31
+
+    accuracy                           0.87        94
+   macro avg       0.87      0.83      0.85        94
+weighted avg       0.87      0.87      0.87        94
+",None
+MAG_RPCA,traintest_8,0.851063829787234,"              precision    recall  f1-score   support
+
+         ARF       0.89      0.81      0.85        48
+        FIRS       0.85      0.73      0.79        15
+       STAFS       0.81      0.97      0.88        31
+
+    accuracy                           0.85        94
+   macro avg       0.85      0.84      0.84        94
+weighted avg       0.86      0.85      0.85        94
+",None
+MAG_RPCA,traintest_9,0.8829787234042553,"              precision    recall  f1-score   support
+
+         ARF       0.91      0.85      0.88        48
+        FIRS       0.72      0.87      0.79        15
+       STAFS       0.94      0.94      0.94        31
+
+    accuracy                           0.88        94
+   macro avg       0.86      0.89      0.87        94
+weighted avg       0.89      0.88      0.88        94
+",None
+Gene_RPCA,traintest_0,0.43617021276595747,"              precision    recall  f1-score   support
+
+         ARF       0.50      0.48      0.49        48
+        FIRS       0.33      0.33      0.33        15
+       STAFS       0.39      0.42      0.41        31
+
+    accuracy                           0.44        94
+   macro avg       0.41      0.41      0.41        94
+weighted avg       0.44      0.44      0.44        94
+",None
+Gene_RPCA,traintest_1,0.48936170212765956,"              precision    recall  f1-score   support
+
+         ARF       0.58      0.65      0.61        48
+        FIRS       0.29      0.27      0.28        15
+       STAFS       0.41      0.35      0.38        31
+
+    accuracy                           0.49        94
+   macro avg       0.43      0.42      0.42        94
+weighted avg       0.48      0.49      0.48        94
+",None
+Gene_RPCA,traintest_2,0.5,"              precision    recall  f1-score   support
+
+         ARF       0.59      0.56      0.57        48
+        FIRS       0.29      0.33      0.31        15
+       STAFS       0.48      0.48      0.48        31
+
+    accuracy                           0.50        94
+   macro avg       0.45      0.46      0.46        94
+weighted avg       0.51      0.50      0.50        94
+",None
+Gene_RPCA,traintest_3,0.46808510638297873,"              precision    recall  f1-score   support
+
+         ARF       0.53      0.52      0.53        48
+        FIRS       0.29      0.33      0.31        15
+       STAFS       0.47      0.45      0.46        31
+
+    accuracy                           0.47        94
+   macro avg       0.43      0.44      0.43        94
+weighted avg       0.47      0.47      0.47        94
+",None
+Gene_RPCA,traintest_4,0.4148936170212766,"              precision    recall  f1-score   support
+
+         ARF       0.47      0.48      0.47        48
+        FIRS       0.50      0.20      0.29        15
+       STAFS       0.33      0.42      0.37        31
+
+    accuracy                           0.41        94
+   macro avg       0.43      0.37      0.38        94
+weighted avg       0.43      0.41      0.41        94
+",None
+Gene_RPCA,traintest_5,0.44680851063829785,"              precision    recall  f1-score   support
+
+         ARF       0.50      0.46      0.48        48
+        FIRS       0.29      0.33      0.31        15
+       STAFS       0.45      0.48      0.47        31
+
+    accuracy                           0.45        94
+   macro avg       0.42      0.43      0.42        94
+weighted avg       0.45      0.45      0.45        94
+",None
+Gene_RPCA,traintest_6,0.35106382978723405,"              precision    recall  f1-score   support
+
+         ARF       0.41      0.40      0.40        48
+        FIRS       0.16      0.20      0.18        15
+       STAFS       0.38      0.35      0.37        31
+
+    accuracy                           0.35        94
+   macro avg       0.32      0.32      0.32        94
+weighted avg       0.36      0.35      0.36        94
+",None
+Gene_RPCA,traintest_7,0.5212765957446809,"              precision    recall  f1-score   support
+
+         ARF       0.57      0.65      0.61        48
+        FIRS       0.31      0.27      0.29        15
+       STAFS       0.52      0.45      0.48        31
+
+    accuracy                           0.52        94
+   macro avg       0.47      0.45      0.46        94
+weighted avg       0.51      0.52      0.52        94
+",None
+Gene_RPCA,traintest_8,0.48936170212765956,"              precision    recall  f1-score   support
+
+         ARF       0.57      0.50      0.53        48
+        FIRS       0.38      0.40      0.39        15
+       STAFS       0.44      0.52      0.48        31
+
+    accuracy                           0.49        94
+   macro avg       0.46      0.47      0.47        94
+weighted avg       0.50      0.49      0.49        94
+",None
+Gene_RPCA,traintest_9,0.4787234042553192,"              precision    recall  f1-score   support
+
+         ARF       0.54      0.52      0.53        48
+        FIRS       0.40      0.40      0.40        15
+       STAFS       0.42      0.45      0.44        31
+
+    accuracy                           0.48        94
+   macro avg       0.46      0.46      0.46        94
+weighted avg       0.48      0.48      0.48        94
+",None
+Gene_Module_RPCA,traintest_0,0.4787234042553192,"              precision    recall  f1-score   support
+
+         ARF       0.59      0.60      0.60        48
+        FIRS       0.23      0.20      0.21        15
+       STAFS       0.41      0.42      0.41        31
+
+    accuracy                           0.48        94
+   macro avg       0.41      0.41      0.41        94
+weighted avg       0.47      0.48      0.48        94
+",None
+Gene_Module_RPCA,traintest_1,0.5319148936170213,"              precision    recall  f1-score   support
+
+         ARF       0.68      0.62      0.65        48
+        FIRS       0.29      0.33      0.31        15
+       STAFS       0.45      0.48      0.47        31
+
+    accuracy                           0.53        94
+   macro avg       0.48      0.48      0.48        94
+weighted avg       0.54      0.53      0.54        94
+",None
+Gene_Module_RPCA,traintest_2,0.5319148936170213,"              precision    recall  f1-score   support
+
+         ARF       0.60      0.67      0.63        48
+        FIRS       0.38      0.40      0.39        15
+       STAFS       0.48      0.39      0.43        31
+
+    accuracy                           0.53        94
+   macro avg       0.49      0.48      0.48        94
+weighted avg       0.53      0.53      0.53        94
+",None
+Gene_Module_RPCA,traintest_3,0.5638297872340425,"              precision    recall  f1-score   support
+
+         ARF       0.71      0.71      0.71        48
+        FIRS       0.33      0.40      0.36        15
+       STAFS       0.46      0.42      0.44        31
+
+    accuracy                           0.56        94
+   macro avg       0.50      0.51      0.50        94
+weighted avg       0.57      0.56      0.57        94
+",None
+Gene_Module_RPCA,traintest_4,0.5319148936170213,"              precision    recall  f1-score   support
+
+         ARF       0.68      0.58      0.63        48
+        FIRS       0.35      0.40      0.38        15
+       STAFS       0.44      0.52      0.48        31
+
+    accuracy                           0.53        94
+   macro avg       0.49      0.50      0.49        94
+weighted avg       0.55      0.53      0.54        94
+",None
+Gene_Module_RPCA,traintest_5,0.5212765957446809,"              precision    recall  f1-score   support
+
+         ARF       0.65      0.58      0.62        48
+        FIRS       0.33      0.40      0.36        15
+       STAFS       0.45      0.48      0.47        31
+
+    accuracy                           0.52        94
+   macro avg       0.48      0.49      0.48        94
+weighted avg       0.54      0.52      0.53        94
+",None
+Gene_Module_RPCA,traintest_6,0.5425531914893617,"              precision    recall  f1-score   support
+
+         ARF       0.61      0.71      0.65        48
+        FIRS       0.41      0.47      0.44        15
+       STAFS       0.48      0.32      0.38        31
+
+    accuracy                           0.54        94
+   macro avg       0.50      0.50      0.49        94
+weighted avg       0.53      0.54      0.53        94
+",None
+Gene_Module_RPCA,traintest_7,0.5106382978723404,"              precision    recall  f1-score   support
+
+         ARF       0.68      0.62      0.65        48
+        FIRS       0.24      0.33      0.28        15
+       STAFS       0.45      0.42      0.43        31
+
+    accuracy                           0.51        94
+   macro avg       0.46      0.46      0.45        94
+weighted avg       0.53      0.51      0.52        94
+",None
+Gene_Module_RPCA,traintest_8,0.5531914893617021,"              precision    recall  f1-score   support
+
+         ARF       0.67      0.71      0.69        48
+        FIRS       0.32      0.40      0.35        15
+       STAFS       0.50      0.39      0.44        31
+
+    accuracy                           0.55        94
+   macro avg       0.49      0.50      0.49        94
+weighted avg       0.56      0.55      0.55        94
+",None
+Gene_Module_RPCA,traintest_9,0.5212765957446809,"              precision    recall  f1-score   support
+
+         ARF       0.70      0.58      0.64        48
+        FIRS       0.30      0.40      0.34        15
+       STAFS       0.44      0.48      0.46        31
+
+    accuracy                           0.52        94
+   macro avg       0.48      0.49      0.48        94
+weighted avg       0.55      0.52      0.53        94
+",None
+Metabolite_RPCA,traintest_0,0.44680851063829785,"              precision    recall  f1-score   support
+
+         ARF       0.50      0.54      0.52        48
+        FIRS       0.25      0.27      0.26        15
+       STAFS       0.46      0.39      0.42        31
+
+    accuracy                           0.45        94
+   macro avg       0.40      0.40      0.40        94
+weighted avg       0.45      0.45      0.45        94
+",None
+Metabolite_RPCA,traintest_1,0.3617021276595745,"              precision    recall  f1-score   support
+
+         ARF       0.45      0.46      0.45        48
+        FIRS       0.22      0.13      0.17        15
+       STAFS       0.28      0.32      0.30        31
+
+    accuracy                           0.36        94
+   macro avg       0.32      0.30      0.31        94
+weighted avg       0.36      0.36      0.36        94
+",None
+Metabolite_RPCA,traintest_2,0.32978723404255317,"              precision    recall  f1-score   support
+
+         ARF       0.42      0.40      0.41        48
+        FIRS       0.14      0.13      0.14        15
+       STAFS       0.29      0.32      0.30        31
+
+    accuracy                           0.33        94
+   macro avg       0.28      0.28      0.28        94
+weighted avg       0.33      0.33      0.33        94
+",None
+Metabolite_RPCA,traintest_3,0.44680851063829785,"              precision    recall  f1-score   support
+
+         ARF       0.49      0.48      0.48        48
+        FIRS       0.25      0.27      0.26        15
+       STAFS       0.48      0.48      0.48        31
+
+    accuracy                           0.45        94
+   macro avg       0.41      0.41      0.41        94
+weighted avg       0.45      0.45      0.45        94
+",None
+Metabolite_RPCA,traintest_4,0.425531914893617,"              precision    recall  f1-score   support
+
+         ARF       0.51      0.46      0.48        48
+        FIRS       0.22      0.27      0.24        15
+       STAFS       0.42      0.45      0.44        31
+
+    accuracy                           0.43        94
+   macro avg       0.39      0.39      0.39        94
+weighted avg       0.44      0.43      0.43        94
+",None
+Metabolite_RPCA,traintest_5,0.3829787234042553,"              precision    recall  f1-score   support
+
+         ARF       0.50      0.54      0.52        48
+        FIRS       0.00      0.00      0.00        15
+       STAFS       0.31      0.32      0.32        31
+
+    accuracy                           0.38        94
+   macro avg       0.27      0.29      0.28        94
+weighted avg       0.36      0.38      0.37        94
+",None
+Metabolite_RPCA,traintest_6,0.43617021276595747,"              precision    recall  f1-score   support
+
+         ARF       0.55      0.54      0.55        48
+        FIRS       0.28      0.33      0.30        15
+       STAFS       0.34      0.32      0.33        31
+
+    accuracy                           0.44        94
+   macro avg       0.39      0.40      0.39        94
+weighted avg       0.44      0.44      0.44        94
+",None
+Metabolite_RPCA,traintest_7,0.39361702127659576,"              precision    recall  f1-score   support
+
+         ARF       0.51      0.50      0.51        48
+        FIRS       0.17      0.13      0.15        15
+       STAFS       0.31      0.35      0.33        31
+
+    accuracy                           0.39        94
+   macro avg       0.33      0.33      0.33        94
+weighted avg       0.39      0.39      0.39        94
+",None
+Metabolite_RPCA,traintest_8,0.44680851063829785,"              precision    recall  f1-score   support
+
+         ARF       0.53      0.48      0.51        48
+        FIRS       0.21      0.20      0.21        15
+       STAFS       0.43      0.52      0.47        31
+
+    accuracy                           0.45        94
+   macro avg       0.39      0.40      0.39        94
+weighted avg       0.45      0.45      0.45        94
+",None
+Metabolite_RPCA,traintest_9,0.4574468085106383,"              precision    recall  f1-score   support
+
+         ARF       0.55      0.56      0.56        48
+        FIRS       0.18      0.13      0.15        15
+       STAFS       0.41      0.45      0.43        31
+
+    accuracy                           0.46        94
+   macro avg       0.38      0.38      0.38        94
+weighted avg       0.45      0.46      0.45        94
+",None
+18S_Joint-RPCA,traintest_0,0.5,"              precision    recall  f1-score   support
+
+         ARF       0.57      0.61      0.59        46
+        FIRS       0.33      0.27      0.30        15
+       STAFS       0.44      0.44      0.44        25
+
+    accuracy                           0.50        86
+   macro avg       0.45      0.44      0.44        86
+weighted avg       0.49      0.50      0.49        86
+",None
+18S_Joint-RPCA,traintest_1,0.5227272727272727,"              precision    recall  f1-score   support
+
+         ARF       0.58      0.54      0.56        46
+        FIRS       0.47      0.62      0.53        13
+       STAFS       0.46      0.45      0.46        29
+
+    accuracy                           0.52        88
+   macro avg       0.51      0.54      0.52        88
+weighted avg       0.53      0.52      0.52        88
+",None
+18S_Joint-RPCA,traintest_2,0.49382716049382713,"              precision    recall  f1-score   support
+
+         ARF       0.62      0.55      0.58        44
+        FIRS       0.24      0.33      0.28        12
+       STAFS       0.48      0.48      0.48        25
+
+    accuracy                           0.49        81
+   macro avg       0.44      0.45      0.44        81
+weighted avg       0.52      0.49      0.50        81
+",None
+18S_Joint-RPCA,traintest_3,0.5411764705882353,"              precision    recall  f1-score   support
+
+         ARF       0.58      0.58      0.58        45
+        FIRS       0.50      0.54      0.52        13
+       STAFS       0.50      0.48      0.49        27
+
+    accuracy                           0.54        85
+   macro avg       0.53      0.53      0.53        85
+weighted avg       0.54      0.54      0.54        85
+",None
+18S_Joint-RPCA,traintest_4,0.5,"              precision    recall  f1-score   support
+
+         ARF       0.57      0.52      0.55        44
+        FIRS       0.50      0.43      0.46        14
+       STAFS       0.40      0.50      0.44        24
+
+    accuracy                           0.50        82
+   macro avg       0.49      0.48      0.48        82
+weighted avg       0.51      0.50      0.50        82
+",None
+18S_Joint-RPCA,traintest_5,0.5476190476190477,"              precision    recall  f1-score   support
+
+         ARF       0.65      0.55      0.60        47
+        FIRS       0.47      0.54      0.50        13
+       STAFS       0.45      0.54      0.49        24
+
+    accuracy                           0.55        84
+   macro avg       0.52      0.54      0.53        84
+weighted avg       0.56      0.55      0.55        84
+",None
+18S_Joint-RPCA,traintest_6,0.4578313253012048,"              precision    recall  f1-score   support
+
+         ARF       0.50      0.59      0.54        41
+        FIRS       0.36      0.27      0.31        15
+       STAFS       0.42      0.37      0.39        27
+
+    accuracy                           0.46        83
+   macro avg       0.43      0.41      0.41        83
+weighted avg       0.45      0.46      0.45        83
+",None
+18S_Joint-RPCA,traintest_7,0.4418604651162791,"              precision    recall  f1-score   support
+
+         ARF       0.51      0.53      0.52        45
+        FIRS       0.10      0.08      0.09        13
+       STAFS       0.45      0.46      0.46        28
+
+    accuracy                           0.44        86
+   macro avg       0.35      0.36      0.35        86
+weighted avg       0.43      0.44      0.43        86
+",None
+18S_Joint-RPCA,traintest_8,0.5,"              precision    recall  f1-score   support
+
+         ARF       0.58      0.59      0.58        44
+        FIRS       0.50      0.40      0.44        15
+       STAFS       0.36      0.39      0.38        23
+
+    accuracy                           0.50        82
+   macro avg       0.48      0.46      0.47        82
+weighted avg       0.50      0.50      0.50        82
+",None
+18S_Joint-RPCA,traintest_9,0.5465116279069767,"              precision    recall  f1-score   support
+
+         ARF       0.61      0.56      0.58        45
+        FIRS       0.64      0.60      0.62        15
+       STAFS       0.42      0.50      0.46        26
+
+    accuracy                           0.55        86
+   macro avg       0.56      0.55      0.55        86
+weighted avg       0.56      0.55      0.55        86
+",None
+MAG_Joint-RPCA,traintest_0,0.5384615384615384,"              precision    recall  f1-score   support
+
+         ARF       0.61      0.61      0.61        46
+        FIRS       0.10      0.07      0.08        14
+       STAFS       0.57      0.65      0.61        31
+
+    accuracy                           0.54        91
+   macro avg       0.43      0.44      0.43        91
+weighted avg       0.52      0.54      0.53        91
+",None
+MAG_Joint-RPCA,traintest_1,0.4725274725274725,"              precision    recall  f1-score   support
+
+         ARF       0.54      0.63      0.58        46
+        FIRS       0.19      0.20      0.19        15
+       STAFS       0.52      0.37      0.43        30
+
+    accuracy                           0.47        91
+   macro avg       0.42      0.40      0.40        91
+weighted avg       0.48      0.47      0.47        91
+",None
+MAG_Joint-RPCA,traintest_2,0.5806451612903226,"              precision    recall  f1-score   support
+
+         ARF       0.60      0.60      0.60        48
+        FIRS       0.42      0.53      0.47        15
+       STAFS       0.65      0.57      0.61        30
+
+    accuracy                           0.58        93
+   macro avg       0.56      0.57      0.56        93
+weighted avg       0.59      0.58      0.58        93
+",None
+MAG_Joint-RPCA,traintest_3,0.5543478260869565,"              precision    recall  f1-score   support
+
+         ARF       0.61      0.60      0.60        47
+        FIRS       0.43      0.40      0.41        15
+       STAFS       0.53      0.57      0.55        30
+
+    accuracy                           0.55        92
+   macro avg       0.52      0.52      0.52        92
+weighted avg       0.55      0.55      0.55        92
+",None
+MAG_Joint-RPCA,traintest_4,0.5806451612903226,"              precision    recall  f1-score   support
+
+         ARF       0.61      0.64      0.62        47
+        FIRS       0.33      0.27      0.30        15
+       STAFS       0.62      0.65      0.63        31
+
+    accuracy                           0.58        93
+   macro avg       0.52      0.52      0.52        93
+weighted avg       0.57      0.58      0.58        93
+",None
+MAG_Joint-RPCA,traintest_5,0.5108695652173914,"              precision    recall  f1-score   support
+
+         ARF       0.55      0.55      0.55        47
+        FIRS       0.23      0.21      0.22        14
+       STAFS       0.56      0.58      0.57        31
+
+    accuracy                           0.51        92
+   macro avg       0.45      0.45      0.45        92
+weighted avg       0.51      0.51      0.51        92
+",None
+MAG_Joint-RPCA,traintest_6,0.4782608695652174,"              precision    recall  f1-score   support
+
+         ARF       0.52      0.59      0.55        46
+        FIRS       0.21      0.20      0.21        15
+       STAFS       0.54      0.45      0.49        31
+
+    accuracy                           0.48        92
+   macro avg       0.42      0.41      0.42        92
+weighted avg       0.48      0.48      0.47        92
+",None
+MAG_Joint-RPCA,traintest_7,0.5978260869565217,"              precision    recall  f1-score   support
+
+         ARF       0.63      0.69      0.66        48
+        FIRS       0.27      0.21      0.24        14
+       STAFS       0.66      0.63      0.64        30
+
+    accuracy                           0.60        92
+   macro avg       0.52      0.51      0.51        92
+weighted avg       0.59      0.60      0.59        92
+",None
+MAG_Joint-RPCA,traintest_8,0.46236559139784944,"              precision    recall  f1-score   support
+
+         ARF       0.55      0.48      0.51        48
+        FIRS       0.11      0.13      0.12        15
+       STAFS       0.55      0.60      0.57        30
+
+    accuracy                           0.46        93
+   macro avg       0.40      0.40      0.40        93
+weighted avg       0.48      0.46      0.47        93
+",None
+MAG_Joint-RPCA,traintest_9,0.5376344086021505,"              precision    recall  f1-score   support
+
+         ARF       0.57      0.67      0.62        48
+        FIRS       0.17      0.14      0.15        14
+       STAFS       0.64      0.52      0.57        31
+
+    accuracy                           0.54        93
+   macro avg       0.46      0.44      0.45        93
+weighted avg       0.53      0.54      0.53        93
+",None
+Gene_Joint-RPCA,traintest_0,0.4574468085106383,"              precision    recall  f1-score   support
+
+         ARF       0.56      0.56      0.56        48
+        FIRS       0.29      0.33      0.31        15
+       STAFS       0.38      0.35      0.37        31
+
+    accuracy                           0.46        94
+   macro avg       0.41      0.42      0.41        94
+weighted avg       0.46      0.46      0.46        94
+",None
+Gene_Joint-RPCA,traintest_1,0.46808510638297873,"              precision    recall  f1-score   support
+
+         ARF       0.58      0.60      0.59        48
+        FIRS       0.33      0.33      0.33        15
+       STAFS       0.34      0.32      0.33        31
+
+    accuracy                           0.47        94
+   macro avg       0.42      0.42      0.42        94
+weighted avg       0.46      0.47      0.47        94
+",None
+Gene_Joint-RPCA,traintest_2,0.46808510638297873,"              precision    recall  f1-score   support
+
+         ARF       0.55      0.60      0.57        48
+        FIRS       0.44      0.27      0.33        15
+       STAFS       0.34      0.35      0.35        31
+
+    accuracy                           0.47        94
+   macro avg       0.45      0.41      0.42        94
+weighted avg       0.46      0.47      0.46        94
+",None
+Gene_Joint-RPCA,traintest_3,0.425531914893617,"              precision    recall  f1-score   support
+
+         ARF       0.55      0.46      0.50        48
+        FIRS       0.32      0.47      0.38        15
+       STAFS       0.34      0.35      0.35        31
+
+    accuracy                           0.43        94
+   macro avg       0.40      0.43      0.41        94
+weighted avg       0.44      0.43      0.43        94
+",None
+Gene_Joint-RPCA,traintest_4,0.44680851063829785,"              precision    recall  f1-score   support
+
+         ARF       0.58      0.54      0.56        48
+        FIRS       0.24      0.27      0.25        15
+       STAFS       0.38      0.39      0.38        31
+
+    accuracy                           0.45        94
+   macro avg       0.40      0.40      0.40        94
+weighted avg       0.46      0.45      0.45        94
+",None
+Gene_Joint-RPCA,traintest_5,0.5106382978723404,"              precision    recall  f1-score   support
+
+         ARF       0.58      0.67      0.62        48
+        FIRS       0.50      0.47      0.48        15
+       STAFS       0.36      0.29      0.32        31
+
+    accuracy                           0.51        94
+   macro avg       0.48      0.47      0.48        94
+weighted avg       0.50      0.51      0.50        94
+",None
+Gene_Joint-RPCA,traintest_6,0.46808510638297873,"              precision    recall  f1-score   support
+
+         ARF       0.56      0.62      0.59        48
+        FIRS       0.31      0.27      0.29        15
+       STAFS       0.37      0.32      0.34        31
+
+    accuracy                           0.47        94
+   macro avg       0.41      0.40      0.41        94
+weighted avg       0.45      0.47      0.46        94
+",None
+Gene_Joint-RPCA,traintest_7,0.43617021276595747,"              precision    recall  f1-score   support
+
+         ARF       0.60      0.56      0.58        48
+        FIRS       0.25      0.33      0.29        15
+       STAFS       0.31      0.29      0.30        31
+
+    accuracy                           0.44        94
+   macro avg       0.39      0.40      0.39        94
+weighted avg       0.45      0.44      0.44        94
+",None
+Gene_Joint-RPCA,traintest_8,0.5425531914893617,"              precision    recall  f1-score   support
+
+         ARF       0.60      0.67      0.63        48
+        FIRS       0.44      0.27      0.33        15
+       STAFS       0.47      0.48      0.48        31
+
+    accuracy                           0.54        94
+   macro avg       0.51      0.47      0.48        94
+weighted avg       0.53      0.54      0.53        94
+",None
+Gene_Joint-RPCA,traintest_9,0.5531914893617021,"              precision    recall  f1-score   support
+
+         ARF       0.62      0.75      0.68        48
+        FIRS       0.40      0.40      0.40        15
+       STAFS       0.48      0.32      0.38        31
+
+    accuracy                           0.55        94
+   macro avg       0.50      0.49      0.49        94
+weighted avg       0.54      0.55      0.54        94
+",None
+Gene_Module_Joint-RPCA,traintest_0,0.5106382978723404,"              precision    recall  f1-score   support
+
+         ARF       0.63      0.67      0.65        48
+        FIRS       0.24      0.27      0.25        15
+       STAFS       0.46      0.39      0.42        31
+
+    accuracy                           0.51        94
+   macro avg       0.44      0.44      0.44        94
+weighted avg       0.51      0.51      0.51        94
+",None
+Gene_Module_Joint-RPCA,traintest_1,0.5425531914893617,"              precision    recall  f1-score   support
+
+         ARF       0.69      0.73      0.71        48
+        FIRS       0.31      0.27      0.29        15
+       STAFS       0.40      0.39      0.39        31
+
+    accuracy                           0.54        94
+   macro avg       0.46      0.46      0.46        94
+weighted avg       0.53      0.54      0.54        94
+",None
+Gene_Module_Joint-RPCA,traintest_2,0.5638297872340425,"              precision    recall  f1-score   support
+
+         ARF       0.66      0.65      0.65        48
+        FIRS       0.38      0.33      0.36        15
+       STAFS       0.50      0.55      0.52        31
+
+    accuracy                           0.56        94
+   macro avg       0.51      0.51      0.51        94
+weighted avg       0.56      0.56      0.56        94
+",None
+Gene_Module_Joint-RPCA,traintest_3,0.5531914893617021,"              precision    recall  f1-score   support
+
+         ARF       0.71      0.67      0.69        48
+        FIRS       0.27      0.27      0.27        15
+       STAFS       0.47      0.52      0.49        31
+
+    accuracy                           0.55        94
+   macro avg       0.48      0.48      0.48        94
+weighted avg       0.56      0.55      0.56        94
+",None
+Gene_Module_Joint-RPCA,traintest_4,0.46808510638297873,"              precision    recall  f1-score   support
+
+         ARF       0.57      0.56      0.57        48
+        FIRS       0.21      0.27      0.24        15
+       STAFS       0.46      0.42      0.44        31
+
+    accuracy                           0.47        94
+   macro avg       0.42      0.42      0.41        94
+weighted avg       0.48      0.47      0.47        94
+",None
+Gene_Module_Joint-RPCA,traintest_5,0.4787234042553192,"              precision    recall  f1-score   support
+
+         ARF       0.67      0.58      0.62        48
+        FIRS       0.21      0.20      0.21        15
+       STAFS       0.37      0.45      0.41        31
+
+    accuracy                           0.48        94
+   macro avg       0.42      0.41      0.41        94
+weighted avg       0.50      0.48      0.48        94
+",None
+Gene_Module_Joint-RPCA,traintest_6,0.5531914893617021,"              precision    recall  f1-score   support
+
+         ARF       0.73      0.69      0.71        48
+        FIRS       0.26      0.40      0.32        15
+       STAFS       0.50      0.42      0.46        31
+
+    accuracy                           0.55        94
+   macro avg       0.50      0.50      0.49        94
+weighted avg       0.58      0.55      0.56        94
+",None
+Gene_Module_Joint-RPCA,traintest_7,0.5106382978723404,"              precision    recall  f1-score   support
+
+         ARF       0.62      0.67      0.64        48
+        FIRS       0.31      0.33      0.32        15
+       STAFS       0.42      0.35      0.39        31
+
+    accuracy                           0.51        94
+   macro avg       0.45      0.45      0.45        94
+weighted avg       0.50      0.51      0.51        94
+",None
+Gene_Module_Joint-RPCA,traintest_8,0.5851063829787234,"              precision    recall  f1-score   support
+
+         ARF       0.71      0.71      0.71        48
+        FIRS       0.27      0.27      0.27        15
+       STAFS       0.55      0.55      0.55        31
+
+    accuracy                           0.59        94
+   macro avg       0.51      0.51      0.51        94
+weighted avg       0.59      0.59      0.59        94
+",None
+Gene_Module_Joint-RPCA,traintest_9,0.5106382978723404,"              precision    recall  f1-score   support
+
+         ARF       0.67      0.60      0.64        48
+        FIRS       0.19      0.27      0.22        15
+       STAFS       0.50      0.48      0.49        31
+
+    accuracy                           0.51        94
+   macro avg       0.45      0.45      0.45        94
+weighted avg       0.54      0.51      0.52        94
+",None
+Metabolite_Joint-RPCA,traintest_0,0.40425531914893614,"              precision    recall  f1-score   support
+
+         ARF       0.51      0.48      0.49        48
+        FIRS       0.21      0.20      0.21        15
+       STAFS       0.34      0.39      0.36        31
+
+    accuracy                           0.40        94
+   macro avg       0.36      0.36      0.36        94
+weighted avg       0.41      0.40      0.41        94
+",None
+Metabolite_Joint-RPCA,traintest_1,0.4148936170212766,"              precision    recall  f1-score   support
+
+         ARF       0.57      0.62      0.59        48
+        FIRS       0.20      0.20      0.20        15
+       STAFS       0.23      0.19      0.21        31
+
+    accuracy                           0.41        94
+   macro avg       0.33      0.34      0.33        94
+weighted avg       0.40      0.41      0.40        94
+",None
+Metabolite_Joint-RPCA,traintest_2,0.40425531914893614,"              precision    recall  f1-score   support
+
+         ARF       0.57      0.56      0.57        48
+        FIRS       0.10      0.07      0.08        15
+       STAFS       0.27      0.32      0.29        31
+
+    accuracy                           0.40        94
+   macro avg       0.31      0.32      0.31        94
+weighted avg       0.40      0.40      0.40        94
+",None
+Metabolite_Joint-RPCA,traintest_3,0.44680851063829785,"              precision    recall  f1-score   support
+
+         ARF       0.60      0.60      0.60        48
+        FIRS       0.12      0.13      0.13        15
+       STAFS       0.37      0.35      0.36        31
+
+    accuracy                           0.45        94
+   macro avg       0.37      0.36      0.36        94
+weighted avg       0.45      0.45      0.45        94
+",None
+Metabolite_Joint-RPCA,traintest_4,0.425531914893617,"              precision    recall  f1-score   support
+
+         ARF       0.57      0.58      0.58        48
+        FIRS       0.12      0.13      0.12        15
+       STAFS       0.36      0.32      0.34        31
+
+    accuracy                           0.43        94
+   macro avg       0.35      0.35      0.35        94
+weighted avg       0.43      0.43      0.43        94
+",None
+Metabolite_Joint-RPCA,traintest_5,0.48936170212765956,"              precision    recall  f1-score   support
+
+         ARF       0.57      0.56      0.57        48
+        FIRS       0.36      0.33      0.34        15
+       STAFS       0.42      0.45      0.44        31
+
+    accuracy                           0.49        94
+   macro avg       0.45      0.45      0.45        94
+weighted avg       0.49      0.49      0.49        94
+",None
+Metabolite_Joint-RPCA,traintest_6,0.46808510638297873,"              precision    recall  f1-score   support
+
+         ARF       0.58      0.58      0.58        48
+        FIRS       0.23      0.20      0.21        15
+       STAFS       0.39      0.42      0.41        31
+
+    accuracy                           0.47        94
+   macro avg       0.40      0.40      0.40        94
+weighted avg       0.46      0.47      0.47        94
+",None
+Metabolite_Joint-RPCA,traintest_7,0.44680851063829785,"              precision    recall  f1-score   support
+
+         ARF       0.59      0.54      0.57        48
+        FIRS       0.20      0.20      0.20        15
+       STAFS       0.37      0.42      0.39        31
+
+    accuracy                           0.45        94
+   macro avg       0.39      0.39      0.39        94
+weighted avg       0.46      0.45      0.45        94
+",None
+Metabolite_Joint-RPCA,traintest_8,0.4574468085106383,"              precision    recall  f1-score   support
+
+         ARF       0.57      0.60      0.59        48
+        FIRS       0.09      0.07      0.08        15
+       STAFS       0.41      0.42      0.41        31
+
+    accuracy                           0.46        94
+   macro avg       0.36      0.36      0.36        94
+weighted avg       0.44      0.46      0.45        94
+",None
+Metabolite_Joint-RPCA,traintest_9,0.43617021276595747,"              precision    recall  f1-score   support
+
+         ARF       0.52      0.69      0.59        48
+        FIRS       0.15      0.13      0.14        15
+       STAFS       0.33      0.19      0.24        31
+
+    accuracy                           0.44        94
+   macro avg       0.34      0.34      0.33        94
+weighted avg       0.40      0.44      0.41        94
+",None
