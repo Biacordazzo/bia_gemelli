@@ -1,0 +1,77 @@
+Feature_ID,Label,Modality,Network
+metab_150,Fatty amides,metabolite,Shared
+metab_2750,Long-chain fatty acids,metabolite,Shared
+metab_215,Fatty acid esters,metabolite,Joint-RPCA
+metab_1098,Lineolic acids and derivatives,metabolite,Joint-RPCA
+metab_1008,Lineolic acids and derivatives,metabolite,Joint-RPCA
+metab_1884,Carboxylic acids,metabolite,Joint-RPCA
+metab_487,Fatty Acyls,metabolite,Joint-RPCA
+metab_907,Long-chain fatty acids,metabolite,Joint-RPCA
+metab_656,Medium-chain fatty acids,metabolite,Joint-RPCA
+metab_685,Lineolic acids and derivatives,metabolite,Joint-RPCA
+metab_669,Monosaccharides,metabolite,Joint-RPCA
+metab_443,Carbamate esters,metabolite,Shared
+metab_350,Fatty acids and conjugates,metabolite,Joint-RPCA
+metab_560,Curcuminoids,metabolite,Joint-RPCA
+metab_512,Fatty acid esters,metabolite,Joint-RPCA
+metab_2325,Benzene and substituted derivatives,metabolite,Joint-RPCA
+metab_2874,Medium-chain fatty acids,metabolite,Joint-RPCA
+metab_464,Lineolic acids and derivatives,metabolite,Joint-RPCA
+metab_476,Lineolic acids and derivatives,metabolite,Joint-RPCA
+UTK_active.final.18,Oblitimonas alkaliphila (s),mag,Joint-RPCA
+UTK_active.final.26,Savagea sp009740415 (s),mag,Shared
+UTK.bins.71,Savagea sp009740415 (s),mag,Shared
+UTK.bins.50,Peptoniphilaceae (f),mag,Shared
+CMU_advanced.final.11,Wohlfahrtiimonas chitiniclastica (s),mag,Shared
+SHSU.bins.175,Ignatzschineria cameli (s),mag,Shared
+SHSU_advanced.final.35,Vagococcus A lutrae (s),mag,Shared
+SHSU.bins.195,Ignatzschineria (g),mag,Joint-RPCA
+SHSU_active.final.81,Bacteroides E (g),mag,Joint-RPCA
+SHSU.bins.42,Planococcaceae (f),mag,Shared
+SHSU.bins.319,Catellicoccaceae (f),mag,Shared
+CMU.bins.224,Tissierellales (o),mag,Shared
+UTK.bins.19,Bacteroides E (g),mag,Shared
+UTK.bins.107,Acinetobacter rudis (s),mag,Joint-RPCA
+CMU.bins.248,Ignatzschineria larvae (s),mag,Shared
+SHSU.bins.450,Acinetobacter baumannii B (s),mag,Joint-RPCA
+SHSU.bins.123,Morganella morganii (s),mag,Joint-RPCA
+SHSU.bins.50,Klebsiella pneumoniae (s),mag,Joint-RPCA
+SHSU.bins.354,Wohlfahrtiimonadaceae (f),mag,Joint-RPCA
+e8605d8efcc8261776f20005daa5b06f,Yarrowia ( g),18S,Joint-RPCA
+a5ee0d17d497426a83c7bce938a264f4,Yarrowia ( g),18S,Joint-RPCA
+1bf1f0a861f411b0851c7cfefff7d931,Candida ( g),18S,Joint-RPCA
+1fccaf33a96b52f2af8f5bf91acc8a1f,Apiotrichum ( g),18S,Joint-RPCA
+6188e3bdd766dfe2a5998f9206afe127,Trichosporonaceae ( fs),18S,Joint-RPCA
+32794c9125af0f00b2f95ce56025c220,Apiotrichum ( g),18S,Joint-RPCA
+4ba629958d8066a41ed7d8d3af839653,Geotrichum ( g),18S,Joint-RPCA
+b7493926527a25494179aa6f25f088b5,Animalia ( k),18S,Joint-RPCA
+39a273fa9daebbe860042c798642aa77,Apiotrichum ( g),18S,Joint-RPCA
+cb007d7071ba8180be246bfa8f745397,Debaryomycetaceae ( fs),18S,Joint-RPCA
+a2d8dab575b4a07593c4e87bc6fdb5ed,Yarrowia ( g),18S,Joint-RPCA
+ab95739d586d342a13bd529de41082f5,Animalia ( k),18S,Joint-RPCA
+c9b278c1820ada81e04b8438a3772692,Yarrowia ( g),18S,Joint-RPCA
+21403936c8146cb545ac3a3854ceec31,Yarrowia ( g),18S,Joint-RPCA
+5762fbdafca096037872f442ab771c93,Rhabditida ( g),18S,Joint-RPCA
+7d41d94d8409a2fb21d04e19b8141333,Eurotiales ( os),18S,Joint-RPCA
+609325b35c075dc6f90b67e705e9ce95,Yarrowia ( g),18S,Joint-RPCA
+023d794c3779b0cd1b0245b408fe7618,Yarrowia ( g),18S,Joint-RPCA
+fed846c55d7d619c6d5ef6b499bb5c69,Animalia ( k),18S,Joint-RPCA
+D-Methionine_transport_system,D-Methionine transport system,gene_module,Shared
+RNF_complex,RNF complex,gene_module,Shared
+0DH:ubiquinone_oxidoreductase_mitochondria,0DH:ubiquinone oxidoreductase mitochondria,gene_module,Shared
+Na_-transporting_0DH:ubiquinone_oxidoreductase-,Na -transporting 0DH:ubiquinone oxidoreductase-,gene_module,Shared
+Arginine/lysine/histidine/glutamine_transport_system,Arginine/lysine/histidine/glutamine transport system,gene_module,Shared
+Arginine/ornithine_transport_system,Arginine/ornithine transport system,gene_module,Shared
+Type_I_signiture_cas_proteins,Type I signiture cas proteins,gene_module,Shared
+Trehalose_transport_system,Trehalose transport system,gene_module,Shared
+Adhesin_protein_transport_system,Adhesin protein transport system,gene_module,Shared
+Fluoroquinolone_transport_system,Fluoroquinolone transport system,gene_module,Joint-RPCA
+D0_polymerase_II_complex_archaea,D0 polymerase II complex archaea,gene_module,Shared
+Universal_Cas_proteins,Universal Cas proteins,gene_module,Shared
+Carbazole_degradation_carbazole_to_2-oxopent-4-enoate___anthranilate,Carbazole degradation carbazole to 2-oxopent-4-enoate   anthranilate,gene_module,Joint-RPCA
+Taurine_transport_system,Taurine transport system,gene_module,Shared
+R0_polymerase_archaea,R0 polymerase archaea,gene_module,Joint-RPCA
+Ornithine_biosynthesis_mediated_by_LysW_glutamate_to_ornithine,Ornithine biosynthesis mediated by LysW glutamate to ornithine,gene_module,Joint-RPCA
+Putrescine_transport_system,Putrescine transport system,gene_module,Shared
+Tyrosine_biosynthesis_prephanate_to_pretyrosine_to_tyrosine,Tyrosine biosynthesis prephanate to pretyrosine to tyrosine,gene_module,Shared
+Cytochrome_o_ubiquinol_oxidase,Cytochrome o ubiquinol oxidase,gene_module,Shared
