@@ -1,4 +1,29 @@
 
+v0.0.12 (2024-10-01)
+
+### Bug fixes
+
+* Joint-RPCA re-centering bug.
+    * see issue #97
+* Updated for the newest version of Pandas.
+    * see issue #96
+* Reduce unecessary numpy warnings regarding log on unseen data.
+    * see issue #78
+* Fix filter and ordering with TEMPTED
+    * see issue #92 and issue #93
+
+v0.0.11 (2024-06-24)
+
+### Bug fixes
+
+* Passes non-centered tables if non-centered flag is passed.
+    * see issue #82
+* setup.py packages html files so visualization commands works from pip install.
+    * see issue #83
+    * see issue #87
+* Passes no filtering to the QIIME2/API TEMPTED command since filtering and transformation should already be done.
+    * see issue #90
+
 v0.0.10 (2023-12-01)
 
 ### Bug fixes
