@@ -4,7 +4,7 @@ os: linux
 dist: xenial
 language: python
 env:
-  - PYVERSION=3.5 USE_CYTHON=TRUE MAKE_DOC=TRUE
+  - PYVERSION=3.9 USE_CYTHON=TRUE MAKE_DOC=TRUE
 before_install:
   - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
   - chmod +x miniconda.sh
