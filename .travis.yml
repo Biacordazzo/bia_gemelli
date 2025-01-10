@@ -3,6 +3,8 @@
 os: linux
 dist: xenial
 language: python
+python:
+  - "3.9"
 env:
   - PYVERSION=3.9 USE_CYTHON=TRUE MAKE_DOC=TRUE
 before_install:
