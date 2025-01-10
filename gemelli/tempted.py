@@ -507,7 +507,7 @@ def tempted(table: biom.Table,
      prop_explained) = tempted_res
     # re-order TEMPTED results by prop_explained
     print("Prop explained:", prop_explained)
-    new_order = np.argsort(-prop_explained)
+    new_order = new_order = np.argsort(prop_explained)[::-1]
     print("Prop explained argsort:", new_order)
     print("Eigenvalues pre-sorting:", eigenvalues)
     individual_loadings = individual_loadings.iloc[:, new_order]
