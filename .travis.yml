@@ -19,14 +19,14 @@ install:
   - conda env create -q -n test-env --file qiime2-latest-py38-linux-conda.yml
   - conda install --yes -n test-env --file ci/conda_requirements.txt -c biocore
   - conda install --yes -n test-env cython
-  - conda activate test-env  
+  - source activate test-env  
   - pip install -r ci/pip_requirements.txt
   - pip install -e .
   - sudo pip install flake8
   - sudo pip install nose
   - sudo pip install coveralls
 script:
-  - conda activate test-env
+  - source activate test-env
   - flake8 gemelli setup.py  
   - nosetests -v gemelli --with-coverage --cover-package=gemelli
 after_success:
