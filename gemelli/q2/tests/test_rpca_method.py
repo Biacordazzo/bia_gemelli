@@ -13,7 +13,7 @@ from gemelli.scripts.__init__ import cli as sdc
 from gemelli.simulations import (build_block_model,
                                  block_diagonal_gaus,
                                  Subsample)
-from qiime2.plugins import gemelli as q2gemelli
+from qiime2.plugins.gemelli import actions as q2gemelli
 from skbio import OrdinationResults, TreeNode
 from skbio.stats.distance import DistanceMatrix
 from numpy.testing import assert_array_almost_equal
@@ -24,15 +24,15 @@ from qiime2.plugins.feature_table.methods import rarefy
 
 @nottest
 def create_test_table(feature_prefix=''):
-    _, test_table = build_block_model(rank=2,
-                                      hoced=20,
-                                      hsced=20,
-                                      spar=2e3,
-                                      C_=2e3,
-                                      num_samples=50,
-                                      num_features=500,
-                                      num_timepoints=1,
-                                      mapping_on=False)
+    _, test_table, _ = build_block_model(rank=2,
+                                         hoced=20,
+                                         hsced=20,
+                                         spar=2e3,
+                                         C_=2e3,
+                                         num_samples=50,
+                                         num_features=500,
+                                         num_timepoints=1,
+                                         mapping_on=False)
 
     feat_ids = ['%sF%d' % (feature_prefix, i)
                 for i in range(test_table.shape[0])]
@@ -94,15 +94,16 @@ class Testqc(unittest.TestCase):
         """Tests the validity of qc_rarefaction() on neg. control."""
         rare_depth = 500
         table = self.btneg
-        _, rarefied_distance = q2gemelli.actions.rpca(table,
-                                                      min_sample_count=rare_depth)
-        _, unrarefied_distance = q2gemelli.actions.rpca(rarefy(table,
-                                                               rare_depth).rarefied_table)
-        table = table.view(Table).filter(rarefied_distance.view(DistanceMatrix).ids)
+        _, rarefied_distance = q2gemelli.rpca(table,
+                                              min_sample_count=rare_depth)
+        _, unrarefied_distance = q2gemelli.rpca(rarefy(
+            table, rare_depth).rarefied_table)
+        rarefied_distance_ids = rarefied_distance.view(DistanceMatrix).ids
+        table = table.view(Table).filter(rarefied_distance_ids)
         table = Artifact.import_data('FeatureTable[Frequency]', table)
         # just test thta it runs, maybe add more tests later
-        q2gemelli.actions.qc_rarefy(table, rarefied_distance,
-                                    unrarefied_distance).visualization
+        q2gemelli.qc_rarefy(table, rarefied_distance,
+                            unrarefied_distance).visualization
         # test fucntion itself
         _, p_ = qc_rarefaction(table.view(Table),
                                rarefied_distance.view(DistanceMatrix),
@@ -113,15 +114,16 @@ class Testqc(unittest.TestCase):
         """Tests the validity of qc_rarefaction() on pos. control."""
         rare_depth = 500
         table = self.btpos
-        _, rarefied_distance = q2gemelli.actions.rpca(table,
-                                                      min_sample_count=rare_depth)
-        _, unrarefied_distance = q2gemelli.actions.rpca(rarefy(table,
-                                                               rare_depth).rarefied_table)
-        table = table.view(Table).filter(rarefied_distance.view(DistanceMatrix).ids)
+        _, rarefied_distance = q2gemelli.rpca(table,
+                                              min_sample_count=rare_depth)
+        _, unrarefied_distance = q2gemelli.rpca(rarefy(
+            table, rare_depth).rarefied_table)
+        rarefied_distance_ids = rarefied_distance.view(DistanceMatrix).ids
+        table = table.view(Table).filter(rarefied_distance_ids)
         table = Artifact.import_data('FeatureTable[Frequency]', table)
         # just test thta it runs, maybe add more tests later
-        q2gemelli.actions.qc_rarefy(table, rarefied_distance,
-                                    unrarefied_distance).visualization
+        q2gemelli.qc_rarefy(table, rarefied_distance,
+                            unrarefied_distance).visualization
         # test fucntion itself
         _, p_ = qc_rarefaction(table.view(Table),
                                rarefied_distance.view(DistanceMatrix),
@@ -172,15 +174,15 @@ class Test_qiime2_rpca(unittest.TestCase):
         bt_tmp = self.q2table_two.view(Table).copy()
         new_ids = {i: 't' + str(i) for i in bt_tmp.ids()}
         bt_tmp = bt_tmp.update_ids(new_ids)
-        self.q2table_two_rename = Artifact.import_data("FeatureTable[Frequency]",
-                                                       bt_tmp)
+        self.q2table_two_rename = Artifact.import_data(
+            "FeatureTable[Frequency]", bt_tmp)
 
     def test_qiime2_rpca(self):
         """Tests that the Q2 and standalone RPCA results match."""
 
         tstdir = "test_output"
         # Run gemelli through QIIME 2 (specifically, the Artifact API)
-        ordination_qza, distmatrix_qza = q2gemelli.actions.rpca(self.q2table)
+        ordination_qza, distmatrix_qza = q2gemelli.rpca(self.q2table)
         # Get the underlying data from these artifacts
         # q2ordination = ordination_qza.view(OrdinationResults)
         q2distmatrix = distmatrix_qza.view(DistanceMatrix)
@@ -249,10 +251,10 @@ class Test_qiime2_rpca(unittest.TestCase):
 
         tstdir = "test_output"
         # Run gemelli through QIIME 2 (specifically, the Artifact API)
-        ordination_qza, distmatrix_qza = q2gemelli.actions.rpca(self.q2table)
+        ordination_qza, distmatrix_qza = q2gemelli.rpca(self.q2table)
         # Run transformer on same data through QIIME 2
-        t_ordination_qza = q2gemelli.actions.rpca_transform(ordination_qza,
-                                                            self.q2table_rename)
+        t_ordination_qza = q2gemelli.rpca_transform(ordination_qza,
+                                                    self.q2table_rename)
         t_ordination_qza = t_ordination_qza.projected_biplot
         # Next, run gemelli outside of QIIME 2. We're gonna check that
         # everything matches up.
@@ -268,7 +270,7 @@ class Test_qiime2_rpca(unittest.TestCase):
         result = CliRunner().invoke(sdc.commands['rpca'],
                                     ['--in-biom', q2table_loc,
                                      '--output-dir', tstdir_absolute])
-        ordination = OrdinationResults.read(tstdir_absolute + '/ordination.txt')
+        ordination = OrdinationResults.read(tstdir_absolute+'/ordination.txt')
         try:
             self.assertEqual(0, result.exit_code)
         except AssertionError:
@@ -288,8 +290,10 @@ class Test_qiime2_rpca(unittest.TestCase):
             ex = result.exception
             error = Exception('Command failed with non-zero exit code')
             raise error.with_traceback(ex.__traceback__)
-        t_ordination = OrdinationResults.read(tstdir_absolute + '/projected-ordination.txt')
-        # now heck the projected ordination(s) match the origonals [standalone]
+        t_ordination = OrdinationResults.read(
+            tstdir_absolute + '/projected-ordination.txt')
+        # now check the projected ordination(s) match the originals
+        # [standalone]
         exp_res = ordination.samples.copy()
         res_ord = t_ordination.samples.copy()
         res_ord = res_ord.drop(exp_res.index)
@@ -298,7 +302,7 @@ class Test_qiime2_rpca(unittest.TestCase):
         np.testing.assert_allclose(exp_res.values,
                                    res_ord.values,
                                    atol=0.8)
-        # now heck the projected ordination(s) match the origonals [QIIME2]
+        # now check the projected ordination(s) match the originals [QIIME2]
         exp_res = ordination_qza.view(OrdinationResults).samples.copy()
         res_ord = t_ordination_qza.view(OrdinationResults).samples.copy()
         res_ord = res_ord.drop(exp_res.index)
@@ -313,9 +317,9 @@ class Test_qiime2_rpca(unittest.TestCase):
 
         tstdir = "test_output"
         # Run gemelli through QIIME 2 (specifically, the Artifact API)
-        res_tmp = q2gemelli.actions.joint_rpca([self.q2table, self.q2table_two],
-                                               sample_metadata=self.sample_metadata,
-                                               train_test_column='train_test')
+        res_tmp = q2gemelli.joint_rpca([self.q2table, self.q2table_two],
+                                       sample_metadata=self.sample_metadata,
+                                       train_test_column='train_test')
         # Get the underlying data from these artifacts
         # q2ordination = ordination_qza.view(OrdinationResults)
         ordination_qza, distmatrix_qza, cv_qza = res_tmp
@@ -327,7 +331,8 @@ class Test_qiime2_rpca(unittest.TestCase):
         # BIOM file, so gemelli can understand it.
         self.q2table.export_data(get_data_path("", tstdir))
         self.q2table_two.export_data(get_data_path("two", tstdir))
-        self.sample_metadata.save(get_data_path("", tstdir) + 'sample_metadata.tsv')
+        self.sample_metadata.save(
+            get_data_path("", tstdir) + 'sample_metadata.tsv')
         q2table_loc = get_data_path('feature-table.biom', tstdir)
         q2table_loc_two = get_data_path('two/feature-table.biom', tstdir)
         q2sm_loc = get_data_path('sample_metadata.tsv', tstdir)
@@ -356,8 +361,8 @@ class Test_qiime2_rpca(unittest.TestCase):
         # with the other _values numpy arrays we've created from the other
         # distance matrices)
         q2distmatrix_values = q2distmatrix.to_data_frame()
-        q2distmatrix_values = q2distmatrix_values.loc[stdistmatrix_values.index,
-                                                      stdistmatrix_values.columns]
+        q2distmatrix_values = q2distmatrix_values.loc[
+            stdistmatrix_values.index, stdistmatrix_values.columns]
         stdistmatrix_values = stdistmatrix_values.values
         q2distmatrix_values = q2distmatrix_values.values
 
@@ -392,14 +397,16 @@ class Test_qiime2_rpca(unittest.TestCase):
         #                                      exdistmatrix_values)
 
     def test_qiime2_jointrpca_no_transform(self):
-        """Tests that the Q2 and standalone Joint-RPCA results match (no RCLR)."""
+        """
+        Tests that the Q2 and standalone Joint-RPCA results match (no RCLR).
+        """
 
         tstdir = "test_output"
         # Run gemelli through QIIME 2 (specifically, the Artifact API)
-        res_tmp = q2gemelli.actions.joint_rpca([self.q2table, self.q2table_two],
-                                               sample_metadata=self.sample_metadata,
-                                               train_test_column='train_test',
-                                               rclr_transform_tables=False)
+        res_tmp = q2gemelli.joint_rpca([self.q2table, self.q2table_two],
+                                       sample_metadata=self.sample_metadata,
+                                       train_test_column='train_test',
+                                       rclr_transform_tables=False)
         # Get the underlying data from these artifacts
         # q2ordination = ordination_qza.view(OrdinationResults)
         ordination_qza, distmatrix_qza, cv_qza = res_tmp
@@ -411,7 +418,8 @@ class Test_qiime2_rpca(unittest.TestCase):
         # BIOM file, so gemelli can understand it.
         self.q2table.export_data(get_data_path("", tstdir))
         self.q2table_two.export_data(get_data_path("two", tstdir))
-        self.sample_metadata.save(get_data_path("", tstdir) + 'sample_metadata.tsv')
+        self.sample_metadata.save(
+            get_data_path("", tstdir) + 'sample_metadata.tsv')
         q2table_loc = get_data_path('feature-table.biom', tstdir)
         q2table_loc_two = get_data_path('two/feature-table.biom', tstdir)
         q2sm_loc = get_data_path('sample_metadata.tsv', tstdir)
@@ -441,8 +449,8 @@ class Test_qiime2_rpca(unittest.TestCase):
         # with the other _values numpy arrays we've created from the other
         # distance matrices)
         q2distmatrix_values = q2distmatrix.to_data_frame()
-        q2distmatrix_values = q2distmatrix_values.loc[stdistmatrix_values.index,
-                                                      stdistmatrix_values.columns]
+        q2distmatrix_values = q2distmatrix_values.loc[
+            stdistmatrix_values.index, stdistmatrix_values.columns]
         stdistmatrix_values = stdistmatrix_values.values
         q2distmatrix_values = q2distmatrix_values.values
 
@@ -477,20 +485,22 @@ class Test_qiime2_rpca(unittest.TestCase):
         #                                      exdistmatrix_values)
 
     def test_qiime2_transform_jointrpca(self):
-        """Tests that the Q2 and standalone Joint-RPCA transformer results match."""
+        """
+        Tests that the Q2 and standalone Joint-RPCA transformer results match.
+        """
 
         tstdir = "test_output"
         # Run gemelli through QIIME 2 (specifically, the Artifact API)
-        res_tmp = q2gemelli.actions.joint_rpca([self.q2table, self.q2table_two],
-                                               sample_metadata=self.sample_metadata,
-                                               train_test_column='train_test')
+        res_tmp = q2gemelli.joint_rpca([self.q2table, self.q2table_two],
+                                       sample_metadata=self.sample_metadata,
+                                       train_test_column='train_test')
         # Get the underlying data from these artifacts
         # q2ordination = ordination_qza.view(OrdinationResults)
         ordination_qza, distmatrix_qza, cv_qza = res_tmp
         # Run transformer on same data through QIIME 2
-        t_ordination_qza = q2gemelli.actions.transform(ordination_qza,
-                                                       [self.q2table_rename,
-                                                        self.q2table_two_rename])
+        t_ordination_qza = q2gemelli.transform(ordination_qza,
+                                               [self.q2table_rename,
+                                                self.q2table_two_rename])
         t_ordination_qza = t_ordination_qza.projected_biplot
         # Next, run gemelli outside of QIIME 2. We're gonna check that
         # everything matches up.
@@ -499,14 +509,17 @@ class Test_qiime2_rpca(unittest.TestCase):
         self.q2table.export_data(get_data_path("", tstdir))
         q2table_loc = get_data_path('feature-table.biom', tstdir)
         self.q2table_two.export_data(get_data_path("two", tstdir))
-        self.sample_metadata.save(get_data_path("", tstdir) + 'sample_metadata.tsv')
+        self.sample_metadata.save(
+            get_data_path("", tstdir) + 'sample_metadata.tsv')
         q2table_loc_two = get_data_path('two/feature-table.biom', tstdir)
         q2sm_loc = get_data_path('sample_metadata.tsv', tstdir)
         # and renames
         self.q2table_rename.export_data(get_data_path("rename", tstdir))
         q2table_rename_loc = get_data_path('rename/feature-table.biom', tstdir)
-        self.q2table_two_rename.export_data(get_data_path("rename_two", tstdir))
-        q2table_two_rename_loc = get_data_path('rename_two/feature-table.biom', tstdir)
+        self.q2table_two_rename.export_data(get_data_path("rename_two",
+                                                          tstdir))
+        q2table_two_rename_loc = get_data_path('rename_two/feature-table.biom',
+                                               tstdir)
         # Derived from a line in test_standalone_rpca()
         tstdir_absolute = os_path_sep.join(q2table_loc.split(os_path_sep)[:-1])
         # Run gemelli outside of QIIME 2...
@@ -516,7 +529,7 @@ class Test_qiime2_rpca(unittest.TestCase):
                                      '--sample-metadata-file', q2sm_loc,
                                      '--train-test-column', 'train_test',
                                      '--output-dir', tstdir_absolute])
-        ordination = OrdinationResults.read(tstdir_absolute + '/ordination.txt')
+        ordination = OrdinationResults.read(tstdir_absolute+'/ordination.txt')
         try:
             self.assertEqual(0, result.exit_code)
         except AssertionError:
@@ -538,8 +551,10 @@ class Test_qiime2_rpca(unittest.TestCase):
             ex = result.exception
             error = Exception('Command failed with non-zero exit code')
             raise error.with_traceback(ex.__traceback__)
-        t_ordination = OrdinationResults.read(tstdir_absolute + '/projected-ordination.txt')
-        # now heck the projected ordination(s) match the origonals [standalone]
+        t_ordination = OrdinationResults.read(
+            tstdir_absolute + '/projected-ordination.txt')
+        # now check the projected ordination(s) match the originals
+        # [standalone]
         exp_res = ordination.samples.copy()
         res_ord = t_ordination.samples.copy()
         res_ord = res_ord.drop(exp_res.index)
@@ -548,7 +563,7 @@ class Test_qiime2_rpca(unittest.TestCase):
         np.testing.assert_allclose(exp_res.values,
                                    res_ord.values,
                                    atol=0.8)
-        # now heck the projected ordination(s) match the origonals [QIIME2]
+        # now check the projected ordination(s) match the originals [QIIME2]
         exp_res = ordination_qza.view(OrdinationResults).samples.copy()
         res_ord = t_ordination_qza.view(OrdinationResults).samples.copy()
         res_ord = res_ord.drop(exp_res.index)
@@ -559,8 +574,9 @@ class Test_qiime2_rpca(unittest.TestCase):
                                    atol=0.8)
 
     def test_qiime2_phylogenetic_rpca(self):
-        """Tests that the Q2 (without taxonomy) & standalone phylogenetic RPCA
-           match.
+        """
+        Tests that the Q2 (without taxonomy) & standalone phylogenetic RPCA
+        match.
         """
 
         in_table = get_data_path('test.biom')
@@ -588,9 +604,8 @@ class Test_qiime2_rpca(unittest.TestCase):
                                   format='newick')
         q2_tree_test = Artifact.import_data("Phylogeny[Rooted]",
                                             tree_test)
-        res = q2gemelli.actions.phylogenetic_rpca_without_taxonomy(
-            q2_table_test,
-            q2_tree_test)
+        res = q2gemelli.phylogenetic_rpca_without_taxonomy(q2_table_test,
+                                                           q2_tree_test)
         # biplot, distance, count-tree, count-table
         q2ord, q2dist, q2ctree, q2ctbl = res
         # Get the underlying data from these artifacts

@@ -12,7 +12,7 @@ from skbio.util import get_data_path
 from numpy.testing import assert_array_almost_equal
 from qiime2.plugins.gemelli.actions import (rclr_transformation,
                                             phylogenetic_rclr_transformation,
-                                            clr_transformation)  # phylogenetic_clr_transformation)
+                                            clr_transformation)
 from gemelli.scripts.__init__ import cli as sdc
 
 

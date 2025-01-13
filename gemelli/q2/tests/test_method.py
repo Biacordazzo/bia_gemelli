@@ -10,7 +10,8 @@ from skbio.util import get_data_path
 from qiime2 import Artifact
 from qiime2 import Metadata
 # from skbio.stats.composition import clr
-from qiime2.plugins import gemelli as q2gemelli
+# from qiime2.plugins import gemelli as q2gemelli
+from qiime2.plugins.gemelli import actions as q2gemelli
 from gemelli.ctf import ctf
 from gemelli.scripts._standalone_ctf import (standalone_ctf,
                                              standalone_phylogenetic_ctf)
@@ -104,10 +105,10 @@ class Test_qiime2_ctf(unittest.TestCase):
         """
 
         # Run gemelli through QIIME 2 (specifically, the Artifact API)
-        res = q2gemelli.actions.ctf(table=self.q2table,
-                                    sample_metadata=self.q2meta,
-                                    individual_id_column=self.subj,
-                                    state_column=self.state)
+        res = q2gemelli.ctf(table=self.q2table,
+                            sample_metadata=self.q2meta,
+                            individual_id_column=self.subj,
+                            state_column=self.state)
         oqza, osqza, dqza, sqza, fqza = res
         # Get the underlying data from these artifacts
         q2straj = sqza.view(pd.DataFrame)
@@ -164,11 +165,11 @@ class Test_qiime2_ctf(unittest.TestCase):
         """
 
         # Run gemelli through QIIME 2 (specifically, the Artifact API)
-        res = q2gemelli.actions.phylogenetic_ctf_without_taxonomy(self.q2table,
-                                                                  self.q2phylogeny,
-                                                                  self.q2meta,
-                                                                  self.subj,
-                                                                  self.state)
+        res = q2gemelli.phylogenetic_ctf_without_taxonomy(self.q2table,
+                                                          self.q2phylogeny,
+                                                          self.q2meta,
+                                                          self.subj,
+                                                          self.state)
         oqza, osqza, dqza, sqza, fqza, tree, ctable, _ = res
         # Get the underlying data from these artifacts
         q2straj = sqza.view(pd.DataFrame)
@@ -238,11 +239,11 @@ class Test_qiime2_ctf(unittest.TestCase):
         """Tests that ctf with rank < 3
         """
         # Run gemelli
-        res = q2gemelli.actions.ctf(table=self.q2table,
-                                    sample_metadata=self.q2meta,
-                                    individual_id_column=self.subj,
-                                    state_column=self.state,
-                                    n_components=2)
+        res = q2gemelli.ctf(table=self.q2table,
+                            sample_metadata=self.q2meta,
+                            individual_id_column=self.subj,
+                            state_column=self.state,
+                            n_components=2)
         # check exit code was 0 (indicating success)
         self.assertEqual(len(res), 5)
 
@@ -277,10 +278,10 @@ class Test_qiime2_tempted(unittest.TestCase):
         """
 
         # Run gemelli through QIIME 2 (specifically, the Artifact API)
-        res = q2gemelli.actions.tempted_factorize(table=self.q2table,
-                                                  sample_metadata=self.q2meta,
-                                                  individual_id_column=self.subj,
-                                                  state_column=self.state)
+        res = q2gemelli.tempted_factorize(table=self.q2table,
+                                          sample_metadata=self.q2meta,
+                                          individual_id_column=self.subj,
+                                          state_column=self.state)
         oqza, sqza, dqza, cqza = res
         # Get the underlying data from these artifacts
         q2straj = cqza.view(pd.DataFrame)
@@ -329,13 +330,15 @@ class Test_qiime2_tempted(unittest.TestCase):
                         absolute_sort(q2cqza.values),
                         atol=.5)
         # Run gemelli through QIIME 2 (specifically, the Artifact API)
-        res_proj = q2gemelli.actions.tempted_project(individual_biplot=res.individual_biplot,
-                                                     state_loadings=res.state_loadings,
-                                                     svd_center=res.svd_center,
-                                                     table=self.q2table,
-                                                     sample_metadata=self.q2meta,
-                                                     individual_id_column=self.subj,
-                                                     state_column=self.state)
+        res_proj = q2gemelli.tempted_project(
+            individual_biplot=res.individual_biplot,
+            state_loadings=res.state_loadings,
+            svd_center=res.svd_center,
+            table=self.q2table,
+            sample_metadata=self.q2meta,
+            individual_id_column=self.subj,
+            state_column=self.state
+        )
         # Next, run gemelli outside of QIIME 2. We're gonna check that
         # everything matches up.
         # ...First, though, we need to write the contents of self.q2table to a
@@ -384,10 +387,14 @@ class Test_qiime2_tempted(unittest.TestCase):
         sa_po = OrdinationResults.read(self.out_+'/projected-ordination.txt')
         q2_ro = res.individual_biplot.view(OrdinationResults)
         q2_po = res_proj.individual_biplot.view(OrdinationResults)
-        sa_ro.samples.index = sa_ro.samples.index.astype(float).astype(int).astype(str)
-        sa_po.samples.index = sa_po.samples.index.astype(float).astype(int).astype(str)
-        q2_ro.samples.index = q2_ro.samples.index.astype(float).astype(int).astype(str)
-        q2_po.samples.index = q2_po.samples.index.astype(float).astype(int).astype(str)
+        sa_ro.samples.index = sa_ro.samples.index.astype(float).astype(int)
+        sa_ro.samples.index = sa_ro.samples.index.astype(str)
+        sa_po.samples.index = sa_po.samples.index.astype(float).astype(int)
+        sa_po.samples.index = sa_po.samples.index.astype(str)
+        q2_ro.samples.index = q2_ro.samples.index.astype(float).astype(int)
+        q2_ro.samples.index = q2_ro.samples.index.astype(str)
+        q2_po.samples.index = q2_po.samples.index.astype(float).astype(int)
+        q2_po.samples.index = q2_po.samples.index.astype(str)
         assert_ordinationresults_equal(sa_ro, q2_ro)
         assert_ordinationresults_equal(sa_po, q2_po)
 

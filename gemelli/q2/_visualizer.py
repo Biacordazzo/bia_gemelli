@@ -72,7 +72,7 @@ def qc_rarefy(output_dir: str,
         sns.regplot(x=x, y=y, data=scatter_data, fit_reg=False)
         title_ = title_ + '\n(r=%.3f, p=%.3f)' % (r_m, p_m)
         plt.title(title_, fontsize=12, color='black')
-        plt.savefig(os.path.join(output_dir, 
+        plt.savefig(os.path.join(output_dir,
                                  'mantel-scatter-%i.svg' % (p_i + 1)))
         plt.close()
     # buld final visual

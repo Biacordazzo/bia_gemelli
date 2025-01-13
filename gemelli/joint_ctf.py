@@ -201,7 +201,7 @@ def get_prop_var(individual_loadings,
     a_hat_mat = pd.DataFrame(np.zeros((n_individuals_all, n_components)),
                              index=individual_loadings.index,
                              columns=individual_loadings.columns)
-    
+
     # sort and center individual loadings
     for component in individual_loadings.columns:
         a_hat = individual_loadings[component]
@@ -289,7 +289,7 @@ def lambda_sort(feature_loadings,
     sorted_lambdas = pd.DataFrame(np.zeros((n_mods, n_components)),
                                   index=lambdas.index,
                                   columns=components)
-    
+
     for mod in lambdas.index:
 
         # get mod-specific lambdas
@@ -333,7 +333,7 @@ def reformat_loadings(original_loadings,
         values = DataFrame
             rows = features
             columns = samples
-    
+
     n_components: int, required
         The underlying rank of the data and number of
         output dimentions.
@@ -569,7 +569,7 @@ def update_lambda(individual_id_tables, ti,
     denoms = []
 
     for i, m in enumerate(individual_id_tables.values()):
-        
+    
         phi_ = phi_hat[ti[i]]
         num = a_hat[i]*(b_hat.dot(m.values).dot(phi_))
         nums.append(num)
@@ -785,11 +785,11 @@ def decomposition_iter(table_mods, individual_id_lst,
     lambdas = {}
     common_denom = {}
     b_num = {}
-    
+
     # iterate until convergence
     t = 0
     dif = 1
-    while t <= maxiter and dif > epsilon:   
+    while t <= maxiter and dif > epsilon:
 
         # variables to save intermediate outputs
         a_num = {}
@@ -930,7 +930,7 @@ def format_time(individual_id_tables,
     for individual_id in orders_update.keys():
         update_num = (orders_update[individual_id] - input_time_range[0])
         update_den = (input_time_range[1] - input_time_range[0])
-        orders_update[individual_id] =  update_num / update_den
+        orders_update[individual_id] = update_num / update_den
     # ensure interval is in the same format
     interval_num = (interval - input_time_range[0])
     interval_den = (input_time_range[1] - input_time_range[0])
@@ -1076,7 +1076,7 @@ def formatting_iter(individual_id_tables,
                                                               norm_interval[1],
                                                               num=resolution),
                                                   tm)
-        
+
     return table_mods, times, Kmats, Kmat_outputs, norm_interval
 
 
@@ -1093,7 +1093,7 @@ def joint_ctf_helper(individual_id_tables,
     ----------
     individual_id_tables: dictionary, required
         Dictionary of 1 to n tables constructed,
-        (see build_sparse class), where n is the 
+        (see build_sparse class), where n is the
         number of modalities.
         keys = individual_ids
         values = list of DataFrame, required
@@ -1179,7 +1179,7 @@ def joint_ctf_helper(individual_id_tables,
         interval = (timestamps_all[0], timestamps_all[-1])
     # define the input time range, equal to interval if none defined
     input_time_range = (timestamps_all[0], timestamps_all[-1])
-    
+
     # format time points and keep points in defined interval
     (table_mods, times,
      Kmats, Kmat_outputs,
@@ -1418,14 +1418,14 @@ def joint_ctf(tables,
         `ValueError: The n_components must be less
          than the minimum shape of the input tensor`.
     '''
-    
+
     # note: we assume each modality has a dif table and associated
     # metadata. We also assume filtering conditions are the same
     tensors = {}
     for table, metadata, mod_id in zip(tables,
                                        sample_metadatas,
                                        modality_ids):
-        
+
         # check the table for validity and then filter
         process_results = ctf_table_processing(table,
                                                metadata,
