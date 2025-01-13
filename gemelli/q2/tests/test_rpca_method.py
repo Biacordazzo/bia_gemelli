@@ -31,6 +31,7 @@ def create_test_table(feature_prefix=''):
                                       C_=2e3,
                                       num_samples=50,
                                       num_features=500,
+                                      num_timepoints=1,
                                       mapping_on=False)
 
     feat_ids = ['%sF%d' % (feature_prefix, i)
