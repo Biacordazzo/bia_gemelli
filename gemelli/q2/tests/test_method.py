@@ -380,8 +380,8 @@ class Test_qiime2_tempted(unittest.TestCase):
             error = Exception('Command failed with non-zero exit code')
             raise error.with_traceback(ex.__traceback__)
         # check all ordinations
-        sa_ro = OrdinationResults.read(self.out_ + '/individual-ordination.txt')
-        sa_po = OrdinationResults.read(self.out_ + '/projected-ordination.txt')
+        sa_ro = OrdinationResults.read(self.out_+'/individual-ordination.txt')
+        sa_po = OrdinationResults.read(self.out_+'/projected-ordination.txt')
         q2_ro = res.individual_biplot.view(OrdinationResults)
         q2_po = res_proj.individual_biplot.view(OrdinationResults)
         sa_ro.samples.index = sa_ro.samples.index.astype(float).astype(int).astype(str)

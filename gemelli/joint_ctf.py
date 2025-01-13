@@ -56,12 +56,16 @@ class concat_tensors():
         for mod, tensor in tensors.items():
 
             # concatenate tables
-            for ind_id, table in tensor.individual_id_tables_centralized.items():
-                individual_id_tables[ind_id] = individual_id_tables.get(ind_id, []) + [table]
-                mod_id_ind[mod] = mod_id_ind.get(mod, []) + [(ind_id, len(individual_id_tables[ind_id])-1)]
+            tensor_items = tensor.individual_id_tables_centralized.items()
+            for ind_id, table in tensor_items:
+                individual_id_tables_ = individual_id_tables.get(ind_id, [])
+                individual_id_tables[ind_id] = individual_id_tables_ + [table]
+                mod_id_ind[mod] = mod_id_ind.get(mod, []) + \
+                    [(ind_id, len(individual_id_tables[ind_id])-1)]
             # concatenate state orders
             for ind_id, order in tensor.individual_id_state_orders.items():
-                individual_id_state_orders[ind_id] = individual_id_state_orders.get(ind_id, []) + [order]
+                ind_id_orders_ = individual_id_state_orders.get(ind_id, [])
+                individual_id_state_orders[ind_id] = ind_id_orders_ + [order]
 
         # store all to self
         self.individual_id_tables = individual_id_tables
@@ -191,12 +195,12 @@ def get_prop_var(individual_loadings,
         keys = modality
         values = component
     '''
-    
+
     # initialize subject and feature matrices
     n_individuals_all = individual_loadings.shape[0]
     a_hat_mat = pd.DataFrame(np.zeros((n_individuals_all, n_components)),
-                                       index=individual_loadings.index,
-                                       columns=individual_loadings.columns)
+                             index=individual_loadings.index,
+                             columns=individual_loadings.columns)
     
     # sort and center individual loadings
     for component in individual_loadings.columns:
@@ -206,9 +210,9 @@ def get_prop_var(individual_loadings,
 
     # initialize dataframe to store feature loadings
     b_hat_mat_lst = []
-    
+
     for modality in feature_loadings.keys():
-    
+
         b_hats = feature_loadings[modality]
         lambdas = lambda_coeffs.loc[modality]
         b_hats_centered = {}
@@ -367,8 +371,8 @@ def reformat_loadings(original_loadings,
         n_rows = original_loadings[first_component][mod].shape[0]
         # initialize dictionary to store loadings per modality
         mod_loadings = pd.DataFrame(np.zeros((n_rows, n_components)),
-                                              index=index,
-                                              columns=component_names)
+                                    index=index,
+                                    columns=component_names)
         # iterate over the components
         for i in range(n_components):
             component = component_names[i]
@@ -393,7 +397,7 @@ def summation_check(mod_keys,
     ----------
     mod_keys: list, required
         List of modality keys
-    
+
     feature_loadings: dictionary, required
         Feature loadings
         keys = modality
@@ -460,8 +464,8 @@ def summation_check(mod_keys,
 
     # rename columns in case order of components changed
     prop_explained.index = col_names
-    
-    return (feature_loadings, individual_loadings, 
+
+    return (feature_loadings, individual_loadings,
             state_loadings, lambda_coeff, prop_explained)
 
 
@@ -560,7 +564,7 @@ def update_lambda(individual_id_tables, ti,
         keys = modality
         values = loadings
     '''
-    
+
     nums = []
     denoms = []
 
@@ -621,17 +625,17 @@ def update_a_mod(individual_id_tables,
         Modality-specific numerator for a_hat
         keys = individual_id
         values = float
-    
+
     a_denom: dictionary
         Modality-specific denominator for a_hat
 
     b_num: np.narray
         Modality-specific numerator for b_hat
         Dimension = n_features x n_individuals
-    
+
     common_denom: dictionary
         Modality-specific common denominator for
-        a_hat and b_hat 
+        a_hat and b_hat
         keys = individual_id
         values = float
     '''
@@ -649,7 +653,7 @@ def update_a_mod(individual_id_tables,
         # save item needed for both a_hat and b_hat
         common_denom[individual_id] = np.sum(phi_ ** 2)
         # save item needed later for b_hat
-        b_num[:, i] = (m.values).dot(phi_)  #vector per individual
+        b_num[:, i] = (m.values).dot(phi_)  # vector per individual
         # a_hat specific operations
         a_num_mod = lambda_mod*b_mod.dot(m.values).dot(phi_)
         a_num[individual_id] = a_num_mod
@@ -735,7 +739,7 @@ def decomposition_iter(table_mods, individual_id_lst,
         keys = modality
         values = numpy.ndarray
             rows, columns = time points
-    
+
     Kmat_outputs: dictionary, required
         Bernoulli kernel matrix for each modality
         keys = modality
@@ -785,8 +789,8 @@ def decomposition_iter(table_mods, individual_id_lst,
     # iterate until convergence
     t = 0
     dif = 1
-    while t <= maxiter and dif > epsilon:          
-        
+    while t <= maxiter and dif > epsilon:   
+
         # variables to save intermediate outputs
         a_num = {}
         a_denom = {}
@@ -801,7 +805,7 @@ def decomposition_iter(table_mods, individual_id_lst,
             n_individuals = len(table_mod)
             first_ind = list(table_mod.keys())[0]
             n_features = table_mod[first_ind].shape[0]
-            
+
             if t == 0:
                 # initialize feature and subject loadings
                 b_hat, a_hat = initialize_tabular(table_mod,
@@ -812,40 +816,51 @@ def decomposition_iter(table_mods, individual_id_lst,
             if t > 0:
                 # update feature loadings
                 b_temp = b_num[modality]
-                common_denom_flat = np.array(list(common_denom[modality].values()))
-                b_new = np.dot(b_temp, a_hat) / np.dot(common_denom_flat, a_hat ** 2)
+                common_denom_flat = list(common_denom[modality].values())
+                common_denom_flat = np.array(common_denom_flat)
+                b_new = np.dot(b_temp, a_hat) / np.dot(common_denom_flat,
+                                                       a_hat ** 2)
                 b_hat = b_new / np.sqrt(np.sum(b_new ** 2))
                 b_hat_difs[modality] = np.sum((b_hats[modality] - b_hat) ** 2)
                 b_hats[modality] = b_hat
 
             # calculate state loadings
-            Ly = [a_hat[i] * b_hat.dot(m) for i, m in enumerate(table_mod.values())]
-            phi_hat = freg_rkhs(Ly, a_hat, ind_vec, Kmat, Kmat_output, smooth=smooth)
+            Ly = [a_hat[i] * b_hat.dot(m) for i, m in
+                  enumerate(table_mod.values())]
+            phi_hat = freg_rkhs(Ly, a_hat, ind_vec, Kmat, Kmat_output,
+                                smooth=smooth)
             phi_hat = (phi_hat / np.sqrt(np.sum(phi_hat ** 2)))
             phi_hats[modality] = phi_hat
             # calculate lambda
             lambda_mod = update_lambda(table_mod, ti, a_hat, phi_hat, b_hat)
             lambdas[modality] = lambda_mod
             # begin updating subject and feature loadings
-            (a_mod_num, a_mod_denom, 
-             b_mod_num, common_mod_denom) = update_a_mod(table_mod, n_individuals, n_features,
-                                                         b_hat, phi_hat, lambda_mod, ti)
+            (a_mod_num, a_mod_denom,
+             b_mod_num,
+             common_mod_denom) = update_a_mod(table_mod, n_individuals,
+                                              n_features, b_hat, phi_hat,
+                                              lambda_mod, ti)
             # save intermediate b-hat variables
             b_num[modality] = b_mod_num
             common_denom[modality] = common_mod_denom
             # add subject loading variables
             a_num = {**a_num, **{key: a_mod_num[key] + a_num.get(key, 0)
                                  for key in a_mod_num}}
-            a_denom = {**a_denom, **{key: a_mod_denom[key] + a_denom.get(key, 0)
-                                     for key in a_mod_denom}}
+            a_denom = {**a_denom,
+                       **{key: a_mod_denom[key] + a_denom.get(key, 0)
+                          for key in a_mod_denom}}
         # update subject loadings
-        a_tilde = np.array([a_num[id] / a_denom[id] for id in individual_id_lst])
+        a_tilde = np.array(
+            [a_num[id] / a_denom[id] for id in individual_id_lst]
+        )
         a_scaling = np.sqrt(np.sum(a_tilde ** 2))
-        a_new = np.array([a_tilde[i] / a_scaling for i in range(len(a_tilde))])
+        a_new = np.array(
+            [a_tilde[i] / a_scaling for i in range(len(a_tilde))]
+        )
         a_hat_dif = np.sum((a_hat - a_new) ** 2)
         a_hat = a_new
-        # check for convergence
-        dif = max([a_hat_dif]+list(b_hat_difs.values()))  # or take mean of b_hat_difs?
+        # check for convergence (maybe take mean of b_hat_difs?)
+        dif = max([a_hat_dif]+list(b_hat_difs.values()))
         t += 1
     print("Reached convergence in {} iterations".format(t))
 
@@ -890,13 +905,13 @@ def format_time(individual_id_tables,
     -------
     interval: tuple
         Normalized interval
-    
+
     tables_update: dictionary
         Tables with updated time points. If interval is
         defined, only time points within interval are kept
 
     ti: list of numpy.ndarray
-        List of time points within defined interval 
+        List of time points within defined interval
         per subject
 
     ind_vec: numpy.ndarray
@@ -910,20 +925,22 @@ def format_time(individual_id_tables,
     # make copy of tables to update
     tables_update = copy.deepcopy(individual_id_tables)
     orders_update = copy.deepcopy(individual_id_state_orders)
-    
+
     # normalize time points
     for individual_id in orders_update.keys():
-        orders_update[individual_id] = (orders_update[individual_id] - input_time_range[0]) \
-                                        / (input_time_range[1] - input_time_range[0])
+        update_num = (orders_update[individual_id] - input_time_range[0])
+        update_den = (input_time_range[1] - input_time_range[0])
+        orders_update[individual_id] =  update_num / update_den
     # ensure interval is in the same format
-    interval = tuple((interval - input_time_range[0]) \
-                     / (input_time_range[1] - input_time_range[0]))
-    
+    interval_num = (interval - input_time_range[0])
+    interval_den = (input_time_range[1] - input_time_range[0])
+    interval = tuple(interval_num / interval_den)
+
     # initialize variables to store time points (tps)
     Lt = []  # all normalized tps
     ind_vec = []  # individual indexes for each tp
-    ti = [[] for i in range(n_individuals)] # tps within interval per subject
-    
+    ti = [[] for i in range(n_individuals)]  # tps within interval per subject
+
     # populate variables above
     for i, (id_, time_range_i) in enumerate(orders_update.items()):
         # save all normalized time points
@@ -932,7 +949,8 @@ def format_time(individual_id_tables,
         # define time points within interval
         mask = (time_range_i >= interval[0]) & (time_range_i <= interval[1])
         temp = time_range_i[mask]
-        temp = [(resolution-1)*(tp - interval[0])/(interval[1] - interval[0]) for tp in temp]
+        temp = [(resolution-1)*(tp - interval[0])/(interval[1] - interval[0])
+                for tp in temp]
         ti[i] = np.array(list(map(int, temp)))
         # update tables and orders
         tables_update[id_] = tables_update[id_].T[mask].T
@@ -949,14 +967,14 @@ def formatting_iter(individual_id_tables,
                     mod_id_ind, input_time_range,
                     interval, resolution):
     '''
-    Format the input data for downstream tasks and 
+    Format the input data for downstream tasks and
     calculate tne kernel matrix.
 
     Parameters
     ----------
     individual_id_tables: dictionary, required
         Dictionary of 1 to n tables constructed,
-        (see build_sparse class), where n is the 
+        (see build_sparse class), where n is the
         number of modalities.
         keys = individual_ids
         values = list of DataFrame, required
@@ -965,7 +983,7 @@ def formatting_iter(individual_id_tables,
             columns = samples
 
     individual_id_state_orders: dictionary, required
-        Dictionary of 1 to n lists of time points (one 
+        Dictionary of 1 to n lists of time points (one
         per modality) for each sample.
         keys = individual_ids
         values = list of numpy.ndarray
@@ -978,7 +996,7 @@ def formatting_iter(individual_id_tables,
         Dictionary of individual IDs for each modality
         keys = modality
         values = list of tuples
-            Each tuple contains the individual id and 
+            Each tuple contains the individual id and
             the dataframe index in individual_id_tables
 
     input_time_range: tuple, required
@@ -1014,7 +1032,7 @@ def formatting_iter(individual_id_tables,
         keys = modality
         values = numpy.ndarray
             rows, columns = time points
-    
+
     Kmat_outputs: dictionary
         Bernoulli kernel matrix for each modality
         keys = modality
@@ -1031,21 +1049,21 @@ def formatting_iter(individual_id_tables,
     times = {}
     Kmats = {}
     Kmat_outputs = {}
-    
+
     # iterate through each modality
-    for modality in mod_id_ind.keys():        
+    for modality in mod_id_ind.keys():
 
         # get the individual IDs
         ind_tuple_lst = mod_id_ind[modality]
         # keep modality-specific time points
-        orders_mod = {ind[0]: individual_id_state_orders[ind[0]][ind[1]] 
+        orders_mod = {ind[0]: individual_id_state_orders[ind[0]][ind[1]]
                       for ind in ind_tuple_lst}
         # keep modality-specific tables
-        table_mod = {ind[0]: individual_id_tables[ind[0]][ind[1]] 
+        table_mod = {ind[0]: individual_id_tables[ind[0]][ind[1]]
                      for ind in ind_tuple_lst}
         n_individuals = len(table_mod)
         # format time points and keep points in the interval
-        (norm_interval, table_mod, 
+        (norm_interval, table_mod,
          ti, ind_vec, tm) = format_time(table_mod, orders_mod,
                                         n_individuals, resolution,
                                         input_time_range, interval)
@@ -1084,7 +1102,7 @@ def joint_ctf_helper(individual_id_tables,
             columns = samples
 
     individual_id_state_orders: dictionary, required
-        Dictionary of 1 to n lists of time points (one 
+        Dictionary of 1 to n lists of time points (one
         per modality) for each sample.
         keys = individual_ids
         values = list of numpy.ndarray
@@ -1097,14 +1115,14 @@ def joint_ctf_helper(individual_id_tables,
         Dictionary of individual IDs for each modality
         keys = modality
         values = list of tuples
-            Each tuple contains the individual id and 
+            Each tuple contains the individual id and
             the dataframe index in individual_id_tables
 
     interval : tuple, optional
         Start and end time points to keep
 
     resolution: int, optional : Default is 101
-        Number of time points for the temporal 
+        Number of time points for the temporal
         loading function.
 
     maxiter: int, optional : Default is 20
@@ -1128,12 +1146,12 @@ def joint_ctf_helper(individual_id_tables,
         Subject loadings
         rows = individual IDs
         columns = component number
-    
+
     feature_loadings: dictionary
         Feature loadings
         keys = component number
         values = dictionary of modality-specific loadings
-    
+
     state_loadings: dictionary
         Temporal loadings
 
@@ -1143,7 +1161,7 @@ def joint_ctf_helper(individual_id_tables,
     time_return: np.ndarray
         Time points for the temporal loading function
     '''
-    
+
     # make copy of tables to update
     tables_update = copy.deepcopy(individual_id_tables)
     orders_update = copy.deepcopy(individual_id_state_orders)
@@ -1164,17 +1182,18 @@ def joint_ctf_helper(individual_id_tables,
     
     # format time points and keep points in defined interval
     (table_mods, times,
-    Kmats, Kmat_outputs,
-    norm_interval) = formatting_iter(tables_update, 
-                                     orders_update,
-                                     mod_id_ind, 
-                                     input_time_range,
-                                     interval, resolution)
+     Kmats, Kmat_outputs,
+     norm_interval) = formatting_iter(tables_update,
+                                      orders_update,
+                                      mod_id_ind,
+                                      input_time_range,
+                                      interval, resolution)
 
     # init dataframes to fill
     n_component_col_names = ['component_' + str(i+1)
                              for i in range(n_components)]
-    individual_loadings = pd.DataFrame(np.zeros((n_individuals_all, n_components)),
+    individual_loadings = pd.DataFrame(np.zeros((n_individuals_all,
+                                                 n_components)),
                                        index=tables_update.keys(),
                                        columns=n_component_col_names)
     lambda_coeff = pd.DataFrame(np.zeros((len(table_mods), n_components)),
@@ -1197,10 +1216,10 @@ def joint_ctf_helper(individual_id_tables,
     for r in range(n_components):
         comp_name = 'component_' + str(r+1)
         print('Calculate components for {}'.format(comp_name))
-        (a_hat, b_hats, 
+        (a_hat, b_hats,
          phi_hats, lambdas) = decomposition_iter(table_mods, individual_id_lst,
                                                  times, Kmats, Kmat_outputs,
-                                                 maxiter, epsilon, 
+                                                 maxiter, epsilon,
                                                  smooth, n_components)
         # save rank-1 components
         individual_loadings.iloc[:, r] = a_hat
@@ -1208,7 +1227,7 @@ def joint_ctf_helper(individual_id_tables,
         feature_loadings[comp_name] = b_hats
         state_loadings[comp_name] = phi_hats
         # calculate residuals and update tables
-        tables_update, rsquared = update_residuals(table_mods, a_hat, b_hats, 
+        tables_update, rsquared = update_residuals(table_mods, a_hat, b_hats,
                                                    phi_hats, times, lambdas)
         table_mods = tables_update
         prop_explained.iloc[:, r] = list(rsquared.values())
@@ -1216,34 +1235,34 @@ def joint_ctf_helper(individual_id_tables,
         feature_cov_mat = feature_covariance(table_mods, b_hats, lambdas)
         feature_cov_mats[comp_name] = feature_cov_mat
         # note: could subset loadings/feature list first to calculate cov_mat
-   
-   # reformat feature and state loadings
+
+    # reformat feature and state loadings
     feature_loadings = reformat_loadings(feature_loadings,
                                          table_mods, n_components,
-                                         features=True) 
+                                         features=True)
     state_loadings = reformat_loadings(state_loadings,
                                        table_mods, n_components)
     # make sure lambdas are sorted in descending order per modality
     # print("pre-lambda sorting lambdas\n", lambda_coeff)
-    (feature_loadings, 
-    state_loadings,
-    lambda_coeff) = lambda_sort(feature_loadings, 
-                                state_loadings, lambda_coeff)
+    (feature_loadings,
+     state_loadings,
+     lambda_coeff) = lambda_sort(feature_loadings,
+                                 state_loadings, lambda_coeff)
     # calculate prop of variance explained
-    var_explained = get_prop_var(individual_loadings, feature_loadings, 
+    var_explained = get_prop_var(individual_loadings, feature_loadings,
                                  lambda_coeff, n_components)
     # revise the signs to make sure summation is nonnegative
     # and order based on coefficient of determination
-    (feature_loadings, 
+    (feature_loadings,
      individual_loadings,
      state_loadings,
      lambda_coeff,
      var_explained) = summation_check(table_mods.keys(),
-                                       feature_loadings, 
-                                       individual_loadings,
-                                       state_loadings, 
-                                       lambda_coeff,
-                                       var_explained)
+                                      feature_loadings,
+                                      individual_loadings,
+                                      state_loadings,
+                                      lambda_coeff,
+                                      var_explained)
     # return original time points
     time_return = np.linspace(norm_interval[0],
                               norm_interval[1],
@@ -1256,9 +1275,9 @@ def joint_ctf_helper(individual_id_tables,
     # concat time_return to state_loadings
     for key in state_loadings.keys():
         state_loadings[key] = pd.concat([state_loadings[key], time_return],
-                                       axis=1)
-    return (individual_loadings, feature_loadings, 
-            state_loadings, lambda_coeff, 
+                                        axis=1)
+    return (individual_loadings, feature_loadings,
+            state_loadings, lambda_coeff,
             var_explained, feature_cov_mats)
 
 
@@ -1278,7 +1297,7 @@ def joint_ctf(tables,
               epsilon: float = DEFAULT_TEMPTED_EP):
     '''
     Joint decomposition of two or more tensors
-    
+
     Parameters
     ----------
     tables: list of numpy.ndarray, required
@@ -1287,10 +1306,10 @@ def joint_ctf(tables,
         metrics should be computed.
         Each modality should contain same number of samples
         or individuals. Length of features might vary.
-    
+
     sample_metadatas: list of DataFrame, required
-        Sample metadata files in QIIME2 formatting for each 
-        modality. The file must contain the columns for 
+        Sample metadata files in QIIME2 formatting for each
+        modality. The file must contain the columns for
         individual_id_column and state_column and the rows
         matched to the table.
 
@@ -1422,15 +1441,15 @@ def joint_ctf(tables,
         # build the sparse tensor format
         tensor = build_sparse()
         tensor.construct(table,
-                        metadata,
-                        individual_id_column,
-                        state_column,
-                        transformation=lambda x: x,
-                        pseudo_count=0,
-                        branch_lengths=None,
-                        replicate_handling=replicate_handling,
-                        svd_centralized=svd_centralized,
-                        n_components_centralize=n_components_centralize)
+                         metadata,
+                         individual_id_column,
+                         state_column,
+                         transformation=lambda x: x,
+                         pseudo_count=0,
+                         branch_lengths=None,
+                         replicate_handling=replicate_handling,
+                         svd_centralized=svd_centralized,
+                         n_components_centralize=n_components_centralize)
         tensors[mod_id] = tensor
 
     # save all tensors to a class
@@ -1445,11 +1464,11 @@ def joint_ctf(tables,
                                      epsilon=epsilon,
                                      smooth=smooth,
                                      n_components=n_components)
-    
+
     (individual_loadings, feature_loadings,
-     state_loadings, eigenvalues, 
+     state_loadings, eigenvalues,
      prop_explained, feature_cov_mats) = joint_ctf_res
-    
-    return (individual_loadings, feature_loadings, 
-            state_loadings, eigenvalues, 
+
+    return (individual_loadings, feature_loadings,
+            state_loadings, eigenvalues,
             prop_explained, feature_cov_mats)

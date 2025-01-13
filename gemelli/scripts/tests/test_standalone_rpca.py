@@ -130,15 +130,17 @@ class Test_standalone_rpca(unittest.TestCase):
             raise error.with_traceback(ex.__traceback__)
 
     def test_standalone_joint_rpca(self):
-        """Checks the output produced by gemelli's Joint-RPCA standalone script.
+        """
+        Checks the output produced by gemelli's Joint-RPCA standalone script.
 
-           This is more of an "integration test" than a unit test -- the
-           details of the algorithm used by the standalone RPCA script are
-           checked in more detail in gemelli/tests/test_optspace.py, etc.
+        This is more of an "integration test" than a unit test -- the
+        details of the algorithm used by the standalone RPCA script are
+        checked in more detail in gemelli/tests/test_optspace.py, etc.
         """
         in_table = get_data_path('test.biom', subfolder='rpca_data')
         in_table_two = get_data_path('test-two.biom', subfolder='rpca_data')
-        in_sample_meta = get_data_path('test_metadata.tsv', subfolder='rpca_data')
+        in_sample_meta = get_data_path('test_metadata.tsv',
+                                       subfolder='rpca_data')
         out_ = os_path_sep.join(in_table.split(os_path_sep)[:-1])
         runner = CliRunner()
         result = runner.invoke(sdc.commands['joint-rpca'],
@@ -156,9 +158,9 @@ class Test_standalone_rpca(unittest.TestCase):
                                                        subfolder='rpca_data'))
 
         # Read the expected results
-        dist_exp = pd.read_csv(get_data_path('expected-joint-distance-matrix.tsv',
-                                             subfolder='rpca_data'),
-                               sep='\t', index_col=0)
+        dist_exp = pd.read_csv(get_data_path(
+            'expected-joint-distance-matrix.tsv', subfolder='rpca_data'),
+            sep='\t', index_col=0)
         dist_exp = dist_exp.loc[dist_res.index, dist_res.index]
         ord_exp = OrdinationResults.read(get_data_path(
                                          'expected-joint-ordination.txt',
@@ -191,7 +193,8 @@ class Test_standalone_rpca(unittest.TestCase):
         """
         in_table = get_data_path('test.biom', subfolder='rpca_data')
         in_table_two = get_data_path('test-two.biom', subfolder='rpca_data')
-        in_sample_meta = get_data_path('test_metadata.tsv', subfolder='rpca_data')
+        in_sample_meta = get_data_path('test_metadata.tsv',
+                                       subfolder='rpca_data')
         out_ = os_path_sep.join(in_table.split(os_path_sep)[:-1])
         runner = CliRunner()
         # first transform
@@ -244,9 +247,9 @@ class Test_standalone_rpca(unittest.TestCase):
                                                        subfolder='rpca_data'))
 
         # Read the expected results
-        dist_exp = pd.read_csv(get_data_path('expected-joint-distance-matrix.tsv',
-                                             subfolder='rpca_data'),
-                               sep='\t', index_col=0)
+        dist_exp = pd.read_csv(get_data_path(
+            'expected-joint-distance-matrix.tsv', subfolder='rpca_data'),
+            sep='\t', index_col=0)
         dist_exp = dist_exp.loc[dist_res.index, dist_res.index]
         ord_exp = OrdinationResults.read(get_data_path(
                                          'expected-joint-ordination.txt',

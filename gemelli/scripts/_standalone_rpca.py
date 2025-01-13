@@ -28,8 +28,7 @@ from gemelli._defaults import (DEFAULT_COMP, DEFAULT_MSC, DEFAULT_MTD,
                                DESC_TRAINTABLE, DESC_TRAINORD,
                                DESC_MTABLE, DESC_MORD, DESC_FM,
                                DESC_SM, DESC_CORRTBLORD,
-                               DESC_TJNT)
-                               #DEFAULT_TRNSFRM)
+                               DESC_TJNT)  # DEFAULT_TRNSFRM)
 
 
 @cli.command(name='phylogenetic-rpca')
@@ -227,7 +226,8 @@ def standalone_joint_rpca(in_biom: list,
     # behavior if you specify --output-dir instead).
     ord_res.write(os.path.join(output_dir, 'joint-ordination.txt'))
     dist_res.write(os.path.join(output_dir, 'joint-distance-matrix.tsv'))
-    cv_res.to_csv(os.path.join(output_dir, 'cross-validation-error.tsv'), sep='\t')
+    cv_res.to_csv(os.path.join(output_dir, 'cross-validation-error.tsv'),
+                  sep='\t')
 
 
 @cli.command(name='rpca-with-cv')
@@ -314,7 +314,8 @@ def standalone_rpca_with_cv(in_biom: str,
     # behavior if you specify --output-dir instead).
     ord_res.write(os.path.join(output_dir, 'ordination.txt'))
     dist_res.write(os.path.join(output_dir, 'distance-matrix.tsv'))
-    cv_res.to_csv(os.path.join(output_dir, 'cross-validation-error.tsv'), sep='\t')
+    cv_res.to_csv(os.path.join(output_dir, 'cross-validation-error.tsv'),
+                  sep='\t')
 
 
 @cli.command(name='rpca')

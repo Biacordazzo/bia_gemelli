@@ -197,7 +197,7 @@ def shape_noise(X,
     rows, cols = X.shape
 
     # loop through functions
-    for func, features, individuals in zip(fxs, f_intervals, 
+    for func, features, individuals in zip(fxs, f_intervals,
                                            s_intervals):
 
         for f_coord, s_coord in zip(features, individuals):

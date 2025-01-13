@@ -6,7 +6,7 @@ from biom import load_table
 from skbio import OrdinationResults
 from gemelli.tempted import (tempted_factorize,
                              tempted_project)
-from gemelli._defaults import (DEFAULT_COMP, 
+from gemelli._defaults import (DEFAULT_COMP,
                                DEFAULT_TEMPTED_EP,
                                DEFAULT_TEMPTED_SMTH,
                                DEFAULT_TEMPTED_RES,

@@ -150,10 +150,10 @@ class Testrpca(unittest.TestCase):
 class Test_qiime2_rpca(unittest.TestCase):
 
     def setUp(self):
-        self.q2table = Artifact.import_data("FeatureTable[Frequency]",
-                                            create_test_table())
-        self.q2table_two = Artifact.import_data("FeatureTable[Frequency]",
-                                                create_test_table(feature_prefix='two'))
+        self.q2table = Artifact.import_data(
+            "FeatureTable[Frequency]", create_test_table())
+        self.q2table_two = Artifact.import_data(
+            "FeatureTable[Frequency]", create_test_table(feature_prefix='two'))
         # make mock sample metadata
         ids_samples = self.q2table.view(Table).ids()
         mf_test = pd.DataFrame(ids_samples).set_index(0)
