@@ -147,7 +147,8 @@ def block_diagonal_gaus(
 
     return mat
 
-def shape_noise(X, 
+
+def shape_noise(X,
                 fxs,
                 f_intervals,
                 s_intervals,
@@ -169,61 +170,62 @@ def shape_noise(X,
         List of tuples of the form (f1, f2) where
         f1 is the start index and f2 is the end index
         of the features to apply the function to
-    
+
     s_intervals : list
         List of tuples of the form (s1, s2) where
-        s1 is the start index and s2 is the end index 
+        s1 is the start index and s2 is the end index
         of the samples to apply the function to
-    
+
     n_timepoints : int
         Number of timepoints per individual
-        Assumes that all individuals have the 
+        Assumes that all individuals have the
         same number of timepoints
-    
+
     col_handle : str
         How to handle  (individuals)
-        'individual': apply function to all 
+        'individual': apply function to all
             timepoints in each individual
         'all': apply function to all columns
-    
+
     Returns
     -------
     np.array
         The data with x-shaped noise added
     """
 
-    #get shape of true data
+    # get shape of true data
     rows, cols = X.shape
 
-    #loop through functions
-    for func, features, individuals in \
-        zip(fxs, f_intervals, s_intervals):
+    # loop through functions
+    for func, features, individuals in zip(fxs, f_intervals, 
+                                           s_intervals):
 
         for f_coord, s_coord in zip(features, individuals):
             f1, f2 = f_coord
             s1, s2 = tuple(int(idx/n_timepoints) for idx in s_coord)
-            #get sample subset
+            # get sample subset
             if col_handle == 'individual':
-                #loop through individuals
+                # loop through individuals
                 for i in range(s1, s2):
                     idx1 = i*n_timepoints
                     idx2 = (i+1)*n_timepoints
                     X_sub = X[f1:f2, idx1:idx2]
-                    X_sub_noise = np.apply_along_axis(func, 
-                                                      tps=10, 
-                                                      axis=1, 
+                    X_sub_noise = np.apply_along_axis(func,
+                                                      tps=10,
+                                                      axis=1,
                                                       arr=X_sub)
-                    #update data
+                    # update data
                     X[f1:f2, idx1:idx2] = X_sub_noise
             else:
                 X_sub = X[f1:f2, :]
-                X_sub_noise = np.apply_along_axis(func, 
-                                                  tps=cols, 
-                                                  axis=1, 
+                X_sub_noise = np.apply_along_axis(func,
+                                                  tps=cols,
+                                                  axis=1,
                                                   arr=X_sub)
-                #update data
+                # update data
                 X[f1:f2, :] = X_sub_noise
     return X
+
 
 def build_block_model(
         rank,
@@ -271,14 +273,14 @@ def build_block_model(
 
     num_samples : int
         Number of columns
-    
+
     num_timepoints : int
         Number of timepoints per individual. Assumes all
         individuals have the same number.
 
     col_handle : str
         How to handle  (individuals)
-        'individual': apply function to all 
+        'individual': apply function to all
             timepoints in each individual
         'all': apply function to all columns
 
@@ -292,10 +294,10 @@ def build_block_model(
         List of tuples of the form (f1, f2) where
         f1 is the start index and f2 is the end index
         of the features to apply the function to
-    
+
     s_intervals : list
         List of tuples of the form (s1, s2) where
-        s1 is the start index and s2 is the end index 
+        s1 is the start index and s2 is the end index
         of the samples to apply the function to
 
     mapping_on : bool
@@ -327,11 +329,10 @@ def build_block_model(
         if mapping_on:
             # make a mock mapping data
             mappning_ = pd.DataFrame(np.array([['Cluster %s' % str(x)] *
-                                            int(num_samples / rank)
-                                            for x in range(1,
-                                            rank + 1)]).flatten(),
-                                    columns=['example'],
-                                    index=['sample_' + str(x)
+                                     int(num_samples / rank)
+                                     for x in range(1, rank + 1)]).flatten(),
+                                     columns=['example'],
+                                     index=['sample_' + str(x)
                                             for x in range(1, num_samples+1)])
         X_noise = X_true.copy()
         X_noise = np.array(X_noise)
@@ -341,7 +342,7 @@ def build_block_model(
         X_noise = Heteroscedastic(X_noise, hsced)
         # Induce low-density into the matrix
         X_noise = Subsample(X_noise, spar, num_samples)
-    
+
     if fxs is not None:
         X_signal = X_noise.copy()
         # introduce specific signal(s)
@@ -351,7 +352,7 @@ def build_block_model(
                                col_handle=col_handle)
     else:
         X_signal = X_noise.copy()
-    
+
     # return the base truth and noisy data
     if mapping_on:
         return X_true, X_noise, X_signal, mappning_

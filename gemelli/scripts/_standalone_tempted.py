@@ -102,17 +102,17 @@ def standalone_tempted(in_biom: str,
                                   low_memory=False)
     # run tempted
     res_ = tempted_factorize(table,
-                                  sample_metadata,
-                                  individual_id_column,
-                                  state_column,
-                                  n_components=n_components,
-                                  replicate_handling=replicate_handling,
-                                  svd_centralized=svd_centralized,
-                                  n_components_centralize=n_components_centralize,
-                                  smooth=smooth,
-                                  resolution=resolution,
-                                  max_iterations=max_iterations,
-                                  epsilon=epsilon)
+                             sample_metadata,
+                             individual_id_column,
+                             state_column,
+                             n_components=n_components,
+                             replicate_handling=replicate_handling,
+                             svd_centralized=svd_centralized,
+                             n_components_centralize=n_components_centralize,
+                             smooth=smooth,
+                             resolution=resolution,
+                             max_iterations=max_iterations,
+                             epsilon=epsilon)
     (individual_ord,
      state_loadings,
      dists,
@@ -191,21 +191,21 @@ def standalone_tempted_transform(individual_ordination_file: str,
     ind_ordination = OrdinationResults.read(individual_ordination_file)
     # import sample metadata
     state_loadings = pd.read_csv(state_loadings_file,
-                                  sep='\t', index_col=0,
-                                  low_memory=False)
+                                 sep='\t', index_col=0,
+                                 low_memory=False)
     # import sample metadata
     svd_center = pd.read_csv(svd_center_file,
-                                  sep='\t', index_col=0,
-                                  low_memory=False)
+                             sep='\t', index_col=0,
+                             low_memory=False)
     # project new data
     pord = tempted_project(ind_ordination,
-                                            state_loadings,
-                                            svd_center,
-                                            table,
-                                            sample_metadata,
-                                            individual_id_column,
-                                            state_column,
-                                            replicate_handling)
+                           state_loadings,
+                           svd_center,
+                           table,
+                           sample_metadata,
+                           individual_id_column,
+                           state_column,
+                           replicate_handling)
     # If it doesn't already exist, create the output directory.
     # Note that there is technically a race condition here: it's ostensibly
     # possible that some process could delete the output directory after we

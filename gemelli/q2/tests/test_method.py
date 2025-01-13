@@ -9,7 +9,7 @@ from skbio.stats.distance import DistanceMatrix
 from skbio.util import get_data_path
 from qiime2 import Artifact
 from qiime2 import Metadata
-from skbio.stats.composition import clr
+# from skbio.stats.composition import clr
 from qiime2.plugins import gemelli as q2gemelli
 from gemelli.ctf import ctf
 from gemelli.scripts._standalone_ctf import (standalone_ctf,
@@ -165,10 +165,10 @@ class Test_qiime2_ctf(unittest.TestCase):
 
         # Run gemelli through QIIME 2 (specifically, the Artifact API)
         res = q2gemelli.actions.phylogenetic_ctf_without_taxonomy(self.q2table,
-                                                 self.q2phylogeny,
-                                                 self.q2meta,
-                                                 self.subj,
-                                                 self.state)
+                                                                  self.q2phylogeny,
+                                                                  self.q2meta,
+                                                                  self.subj,
+                                                                  self.state)
         oqza, osqza, dqza, sqza, fqza, tree, ctable, _ = res
         # Get the underlying data from these artifacts
         q2straj = sqza.view(pd.DataFrame)
@@ -356,22 +356,22 @@ class Test_qiime2_tempted(unittest.TestCase):
                                 self.out_])
         runner = CliRunner()
         result = runner.invoke(standalone_tempted_transform,
-                            ['--individual-ordination-file',
-                             self.out_ + '/individual-ordination.txt',
-                             '--state-loadings-file',
-                             self.out_ + '/state-loadings.tsv',
-                             '--svd-center-file',
-                             self.out_ + '/svd-center.tsv',
-                             '--in-biom',
-                             self.in_table,
-                             '--sample-metadata-file',
-                             self.in_meta,
-                             '--individual-id-column',
-                             'host_subject_id',
-                             '--state-column',
-                             'context',
-                             '--output-dir',
-                             self.out_])
+                               ['--individual-ordination-file',
+                                self.out_ + '/individual-ordination.txt',
+                                '--state-loadings-file',
+                                self.out_ + '/state-loadings.tsv',
+                                '--svd-center-file',
+                                self.out_ + '/svd-center.tsv',
+                                '--in-biom',
+                                self.in_table,
+                                '--sample-metadata-file',
+                                self.in_meta,
+                                '--individual-id-column',
+                                'host_subject_id',
+                                '--state-column',
+                                'context',
+                                '--output-dir',
+                                self.out_])
         # check that exit code was 0 (indicating success)
         try:
             self.assertEqual(0, result.exit_code)

@@ -1,7 +1,7 @@
 import qiime2.plugin.model as model
 from qiime2.plugin import ValidationError
-from qiime2.plugin import SemanticType
-from q2_types.feature_data import FeatureData
+# from qiime2.plugin import SemanticType
+# from q2_types.feature_data import FeatureData
 
 
 class CVFormat(model.TextFileFormat):
@@ -11,7 +11,7 @@ class CVFormat(model.TextFileFormat):
             header = fh.readline()
             comp_columns = [i for i, head in enumerate(header.split('\t'))
                             if 'CV' in head]
-                        # ensure there at least two components
+            # ensure there at least two components
             if len(comp_columns) < 1:
                 raise ValidationError('Not in CV format.')
 
@@ -52,7 +52,7 @@ class CorrelationFormat(model.TextFileFormat):
             # check the header column names
             header = fh.readline()
             comp_columns = [i for i, head in enumerate(header.split('\t'))]
-                        # ensure there at least two components
+            # ensure there at least two components
             if len(comp_columns) < 1:
                 raise ValidationError('Not in correct format.')
 

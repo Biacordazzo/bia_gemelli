@@ -988,7 +988,7 @@ class build(_BaseConstruct):
         mf['seq_depth'] = table.sum(0).reindex(mf.index).fillna(0)
 
         def sortset(grp_col, mf_tmp):
-            order_tmp = mf_tmp.groupby(grp_col).sum()
+            order_tmp = mf_tmp.groupby(grp_col).sum(numeric_only=True)
             order_tmp = order_tmp.sort_values('seq_depth').index
             return list(order_tmp)
 

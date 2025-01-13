@@ -33,7 +33,7 @@ def create_test_table(feature_prefix=''):
                                       num_features=500,
                                       mapping_on=False)
 
-    feat_ids = [ '%sF%d' % (feature_prefix, i)
+    feat_ids = ['%sF%d' % (feature_prefix, i)
                 for i in range(test_table.shape[0])]
     samp_ids = ['L%d' % i for i in range(test_table.shape[1])]
 
@@ -42,18 +42,18 @@ def create_test_table(feature_prefix=''):
 
 @nottest
 def create_pos_cntrl_test_table(feature_prefix='',
-                                n_samp = 100,
-                                n_clust = 10,
-                                n_feat = 1000,
-                                seq_base = 1000,
-                                multiple = 1,
-                                multiple_inc = 5):
+                                n_samp=100,
+                                n_clust=10,
+                                n_feat=1000,
+                                seq_base=1000,
+                                multiple=1,
+                                multiple_inc=5):
     """
     Build table where the sample clusters
     correlate perfectly with the seq. depth.
     """
     table_base = Subsample(block_diagonal_gaus(n_samp, n_feat, n_clust),
-                        seq_base, n_samp)
+                           seq_base, n_samp)
     # inflate seq. depth in perfect relation to clusters
     multiple = 1
     add_ = n_samp // n_clust
@@ -71,7 +71,7 @@ def create_pos_cntrl_test_table(feature_prefix='',
         i_ = i_end
         j_ = j_end
         multiple += multiple_inc
-    feat_ids = [ '%sF%d' % (feature_prefix, i)
+    feat_ids = ['%sF%d' % (feature_prefix, i)
                 for i in range(table_pos_cntrl.shape[0])]
     samp_ids = ['L%d' % i for i in range(table_pos_cntrl.shape[1])]
     bt_pos_cntrl = Table(table_pos_cntrl, feat_ids, samp_ids)
@@ -95,7 +95,7 @@ class Testqc(unittest.TestCase):
         table = self.btneg
         _, rarefied_distance = q2gemelli.actions.rpca(table,
                                                       min_sample_count=rare_depth)
-        _, unrarefied_distance = q2gemelli.actions.rpca(rarefy(table, 
+        _, unrarefied_distance = q2gemelli.actions.rpca(rarefy(table,
                                                                rare_depth).rarefied_table)
         table = table.view(Table).filter(rarefied_distance.view(DistanceMatrix).ids)
         table = Artifact.import_data('FeatureTable[Frequency]', table)
@@ -152,7 +152,7 @@ class Test_qiime2_rpca(unittest.TestCase):
         self.q2table = Artifact.import_data("FeatureTable[Frequency]",
                                             create_test_table())
         self.q2table_two = Artifact.import_data("FeatureTable[Frequency]",
-                                            create_test_table(feature_prefix='two'))
+                                                create_test_table(feature_prefix='two'))
         # make mock sample metadata
         ids_samples = self.q2table.view(Table).ids()
         mf_test = pd.DataFrame(ids_samples).set_index(0)
@@ -163,13 +163,13 @@ class Test_qiime2_rpca(unittest.TestCase):
         self.sample_metadata = Metadata(mf_test)
         # make same table but with diff IDs for transform (1)
         bt_tmp = self.q2table.view(Table).copy()
-        new_ids = {i:'t' + str(i) for i in bt_tmp.ids()}
+        new_ids = {i: 't' + str(i) for i in bt_tmp.ids()}
         bt_tmp = bt_tmp.update_ids(new_ids)
         self.q2table_rename = Artifact.import_data("FeatureTable[Frequency]",
                                                    bt_tmp)
         # make same table but with diff IDs for transform (1)
         bt_tmp = self.q2table_two.view(Table).copy()
-        new_ids = {i:'t' + str(i) for i in bt_tmp.ids()}
+        new_ids = {i: 't' + str(i) for i in bt_tmp.ids()}
         bt_tmp = bt_tmp.update_ids(new_ids)
         self.q2table_two_rename = Artifact.import_data("FeatureTable[Frequency]",
                                                        bt_tmp)

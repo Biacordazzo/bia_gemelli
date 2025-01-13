@@ -123,7 +123,7 @@ def standalone_phylogenetic_ctf(in_biom: str,
                                        sep='\t', index_col=0,
                                        low_memory=False)
         try:
-            taxonomy_table.set_index('Feature ID', inplace=True)
+            feature_metadata.set_index('Feature ID', inplace=True)
         except KeyError:
             raise TaxonomyError(
                         "Taxonomy file must have a column labled 'Feature ID'."
@@ -160,7 +160,7 @@ def standalone_phylogenetic_ctf(in_biom: str,
     # behavior if you specify --output-dir instead).
     if result_taxonomy is not None:
         result_taxonomy.to_csv(os.path.join(output_dir, 't2t-taxonomy.tsv'),
-                           sep='\t')
+                               sep='\t')
     ord_res.write(os.path.join(output_dir, 'ordination.txt'))
     # write each distance matrix
     for condition, dist in dists.items():

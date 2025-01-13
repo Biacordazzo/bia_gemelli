@@ -9,7 +9,7 @@ from gemelli.preprocessing import TaxonomyError
 from gemelli.utils import filter_ordination as _filter_ordination
 from gemelli.rpca import rpca as _rpca
 from gemelli.rpca import rpca_with_cv as _rpca_with_cv
-from gemelli.rpca import (feature_correlation_table as 
+from gemelli.rpca import (feature_correlation_table as
                           _feature_correlation_table)
 from gemelli.rpca import phylogenetic_rpca as _phylo_rpca
 from gemelli.rpca import joint_rpca as _joint_rpca
@@ -28,7 +28,9 @@ from gemelli._defaults import (DEFAULT_COMP, DEFAULT_MSC, DEFAULT_MTD,
                                DESC_TRAINTABLE, DESC_TRAINORD,
                                DESC_MTABLE, DESC_MORD, DESC_FM,
                                DESC_SM, DESC_CORRTBLORD,
-                               DESC_TJNT, DEFAULT_TRNSFRM)
+                               DESC_TJNT)
+                               #DEFAULT_TRNSFRM)
+
 
 @cli.command(name='phylogenetic-rpca')
 @click.option('--in-biom',
@@ -121,7 +123,7 @@ def standalone_phylogenetic_rpca(in_biom: str,
     phylogeny.write(os.path.join(output_dir, 'labeled-phylogeny.nwk'))
     if result_taxonomy is not None:
         result_taxonomy.to_csv(os.path.join(output_dir, 't2t-taxonomy.tsv'),
-                           sep='\t')
+                               sep='\t')
     # write the vectorized count table for Qurro / log-ratios
     with biom_open(os.path.join(output_dir, 'phylo-table.biom'), 'w') as f:
         counts_by_node.to_hdf5(f, "phylo-rpca-count-table")
@@ -396,7 +398,7 @@ def rpca_transform(in_ordination: str,
                    in_biom: str,
                    output_dir: str,
                    subset_tables: bool) -> None:
-    """ 
+    """
     Apply dimensionality reduction to table.
     The table is projected on the first principal components
     previously extracted from a training set.
@@ -437,7 +439,7 @@ def joint_pca_transform(in_ordination: str,
                         in_biom: str,
                         output_dir: str,
                         subset_tables: bool) -> None:
-    """ 
+    """
     Apply dimensionality reduction to tables.
     The tables is projected on the first principal components
     previously extracted from a training set.
@@ -484,9 +486,9 @@ def joint_pca_transform(in_ordination: str,
               help=DESC_SM)
 def filter_ordination(in_ordination: str,
                       in_biom: str,
-                      output_dir : str,
-                      match_features : bool,
-                      match_samples : bool) -> None:
+                      output_dir: str,
+                      match_features: bool,
+                      match_samples: bool) -> None:
     # import OrdinationResults
     ordination = OrdinationResults.read(in_ordination)
     # import table

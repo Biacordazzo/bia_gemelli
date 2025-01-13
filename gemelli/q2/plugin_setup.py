@@ -34,8 +34,7 @@ from ._format import (TrajectoryDirectoryFormat,
                       CVDirectoryFormat,
                       CorrelationDirectoryFormat)
 from qiime2.plugin import (Properties, Int, Float, Metadata,
-                           Str, List, Bool, Choices, Range,
-                           Visualization)
+                           Str, List, Bool, Choices, Range)
 from q2_types.ordination import PCoAResults
 from q2_types.distance_matrix import DistanceMatrix
 from q2_types.sample_data import SampleData
@@ -43,7 +42,6 @@ from q2_types.feature_data import FeatureData
 from q2_types.tree import Phylogeny, Rooted
 from q2_types.feature_table import FeatureTable, Frequency, Composition
 from q2_types.feature_data import Taxonomy
-from qiime2.plugin import Metadata
 from gemelli._defaults import (DESC_COMP, DESC_ITERATIONSALS,
                                DESC_BIN, DESC_SMETA, DESC_TREE,
                                DESC_SUBJ, DESC_COND, DESC_INIT,
@@ -54,8 +52,7 @@ from gemelli._defaults import (DESC_COMP, DESC_ITERATIONSALS,
                                DESC_ITERATIONS, DESC_MFF, DESC_TAX_Q2,
                                DESC_T2T_TAX, DESC_STBL, DESC_METACV,
                                DESC_TABLES, DESC_COLCV, DESC_TESTS,
-                               DESC_TABLES, DESC_MATCH, 
-                               DEFAULT_TRNSFRM, DESC_TRNSFRM,
+                               DESC_MATCH, DEFAULT_TRNSFRM, DESC_TRNSFRM,
                                DESC_TRAINTABLES, DESC_TRAINORDS,
                                DESC_MTABLE, DESC_MORD, DESC_FM,
                                DESC_SM, DESC_MORDOUT,
@@ -438,7 +435,7 @@ plugin.methods.register_function(
                          'state_feature_ordination': QORD,
                          'counts_by_node_tree': QTREE,
                          'counts_by_node': QTREECOUNT,
-                         'subject_table' : DESC_STBL},
+                         'subject_table': DESC_STBL},
     name='Phylogenetic Compositional Tensor Factorization (CTF) '
          'with mode 3 tensor. This means subjects have repeated '
          'measures across only one axis (e.g. time or space). '
@@ -496,9 +493,9 @@ plugin.methods.register_function(
              ('distance_matrix', DistanceMatrix),
              ('cross_validation_error', SampleData[CrossValidationResults])],
     input_descriptions={'table': DESC_BIN},
-    parameter_descriptions={'n_test_samples':DESC_TESTS,
-                            'sample_metadata':DESC_METACV,
-                            'train_test_column':DESC_COLCV,
+    parameter_descriptions={'n_test_samples': DESC_TESTS,
+                            'sample_metadata': DESC_METACV,
+                            'train_test_column': DESC_COLCV,
                             'n_components': DESC_COMP,
                             'min_sample_count': DESC_MSC,
                             'min_feature_count': DESC_MFC,
@@ -531,11 +528,11 @@ plugin.methods.register_function(
              ('distance_matrix', DistanceMatrix),
              ('cross_validation_error', SampleData[CrossValidationResults])],
     input_descriptions={'tables': DESC_TABLES},
-    parameter_descriptions={'n_test_samples':DESC_TESTS,
-                            'sample_metadata':DESC_METACV,
-                            'train_test_column':DESC_COLCV,
+    parameter_descriptions={'n_test_samples': DESC_TESTS,
+                            'sample_metadata': DESC_METACV,
+                            'train_test_column': DESC_COLCV,
                             'n_components': DESC_COMP,
-                            'rclr_transform_tables':DESC_TJNT,
+                            'rclr_transform_tables': DESC_TJNT,
                             'min_sample_count': DESC_MSC,
                             'min_feature_count': DESC_MFC,
                             'min_feature_frequency': DESC_MFF,

@@ -1,12 +1,12 @@
 import biom
-import scipy
+# import scipy
 import os
-import shutil
-import json
-import qiime2 as q2
+# import shutil
+# import json
+# import qiime2 as q2
 import q2templates
 import pandas as pd
-from urllib.parse import quote
+# from urllib.parse import quote
 from skbio import DistanceMatrix
 from gemelli.utils import qc_rarefaction as _qc_rarefaction
 import pkg_resources
@@ -31,11 +31,11 @@ def qc_rarefy(output_dir: str,
     https://doi.org/10.1101/2023.06.23.546313.
     """
     # run mantel test and get stats on comparison
-    (t_, p_, 
-     xy, p_xy, 
+    (t_, p_,
+     xy, p_xy,
      xz, pxz_, yz,
      samp_sum_dist) = _qc_rarefaction(table,
-                                      rarefied_distance, 
+                                      rarefied_distance,
                                       unrarefied_distance,
                                       permutations,
                                       True)
