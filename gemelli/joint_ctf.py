@@ -569,7 +569,7 @@ def update_lambda(individual_id_tables, ti,
     denoms = []
 
     for i, m in enumerate(individual_id_tables.values()):
-    
+
         phi_ = phi_hat[ti[i]]
         num = a_hat[i]*(b_hat.dot(m.values).dot(phi_))
         nums.append(num)
