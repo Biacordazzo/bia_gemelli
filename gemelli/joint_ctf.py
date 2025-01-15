@@ -15,7 +15,6 @@ from gemelli._defaults import (DEFAULT_COMP,
                                # DEFAULT_TEMPTED_RHC as DEFAULT_RC,
                                DEFAULT_TEMPTED_SVDC,
                                DEFAULT_TEMPTED_SVDCN as DEFAULT_TSCN)
-
 from gemelli.tempted import (freg_rkhs, bernoulli_kernel)
 
 
@@ -582,10 +581,10 @@ def update_lambda(individual_id_tables, ti,
     return lambda_new
 
 
-def update_a_mod(individual_id_tables,
-                 n_individuals, n_features,
-                 b_mod, phi_mod,
-                 lambda_mod, ti):
+def update_tabular(individual_id_tables,
+                   n_individuals, n_features,
+                   b_mod, phi_mod,
+                   lambda_mod, ti):
     '''
     Update the tabular loadings (subjects and features) loadings
 
@@ -835,20 +834,20 @@ def decomposition_iter(table_mods, individual_id_lst,
             lambda_mod = update_lambda(table_mod, ti, a_hat, phi_hat, b_hat)
             lambdas[modality] = lambda_mod
             # begin updating subject and feature loadings
-            (a_mod_num, a_mod_denom,
+            (a_mod_num, 
+             a_mod_den,
              b_mod_num,
-             common_mod_denom) = update_a_mod(table_mod, n_individuals,
-                                              n_features, b_hat, phi_hat,
-                                              lambda_mod, ti)
+             common_mod_denom) = update_tabular(table_mod, n_individuals,
+                                                n_features, b_hat, phi_hat,
+                                                lambda_mod, ti)
             # save intermediate b-hat variables
             b_num[modality] = b_mod_num
             common_denom[modality] = common_mod_denom
             # add subject loading variables
             a_num = {**a_num, **{key: a_mod_num[key] + a_num.get(key, 0)
                                  for key in a_mod_num}}
-            a_denom = {**a_denom,
-                       **{key: a_mod_denom[key] + a_denom.get(key, 0)
-                          for key in a_mod_denom}}
+            a_denom = {**a_denom, **{key: a_mod_den[key] + a_denom.get(key, 0)
+                                     for key in a_mod_den}}
         # update subject loadings
         a_tilde = np.array(
             [a_num[id] / a_denom[id] for id in individual_id_lst]
